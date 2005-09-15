@@ -1,4 +1,4 @@
-gnome-screensaver (0.0.10-1) experimental; urgency=low
+gnome-screensaver (0.0.13-1) experimental; urgency=low
 
   * Initial release (Closes: #317448)
 
