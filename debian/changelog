@@ -1,5 +1,5 @@
-gnome-screensaver (0.0.13-1) experimental; urgency=low
+gnome-screensaver (0.0.18-1) experimental; urgency=low
 
   * Initial release (Closes: #317448)
 
- -- Guilherme de S. Pastore <guilherme.pastore@terra.com.br>  Thu, 15 Sep 2005 09:32:23 -0300
+ -- Guilherme de S. Pastore <guilherme.pastore@terra.com.br>  Mon, 14 Nov 2005 12:49:39 -0200
