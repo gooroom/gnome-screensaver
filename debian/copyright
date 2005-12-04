@@ -3,11 +3,23 @@ Sat,  9 Jul 2005 18:16:18 -0300.
 
 It was downloaded from http://ftp.gnome.org/pub/GNOME/sources/gnome-screensaver
 
-Copyright (C) 2004-2005 William Jon McCann <mccann@jhu.edu>
-
 Upstream Author: William Jon McCann <mccann@jhu.edu>
 
-License:
+Copyright
+---------
+
+xscreensaver
+      Copyright (C) 1991-2004 Jamie Zawinski <jwz@jwz.org>
+
+GNOME Screensaver
+      Copyright (C) 2004-2005 William Jon McCann <mccann@jhu.edu>
+
+File transfer dialog
+      Copyright (C) 2002 Ximian, Inc.
+
+
+License
+-------
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
