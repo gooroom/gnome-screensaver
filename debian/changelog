@@ -1,3 +1,10 @@
+gnome-screensaver (0.0.23-2) experimental; urgency=low
+
+  * Completed copyright and licensing notes. Thanks to Marc 'HE'
+    Brockschmidt <he@debian.org>.
+
+ -- Guilherme de S. Pastore <guilherme.pastore@terra.com.br>  Mon, 26 Dec 2005 09:57:58 -0200
+
 gnome-screensaver (0.0.23-1) experimental; urgency=low
 
   * New upstream release.
