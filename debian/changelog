@@ -5,7 +5,7 @@ gnome-screensaver (0.0.24-1) unstable; urgency=low
 
   [ Sjoerd Simons ]
   * Upload to unstable
-  * Indicate the location of the gdm config file during compile
+  * Add --with-gdm-config=/etc/gdm/gdm.conf to DEB_CONFIGURE_EXTRA_FLAGS
   * Add debian swirl floater screensaver. Thanks to Martin-Éric Racine
     (Closes: #348281)
   * Trim down the build-depends
