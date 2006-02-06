@@ -12,9 +12,12 @@ gnome-screensaver (0.0.24-1) unstable; urgency=low
     (Closes: #348281)
   * Trim down the build-depends
   * Add libexif-dev to the build-depends. Enables the slideshow screensaver to
-    rotate pictures when needed. 
+    rotate pictures when needed.
+  * debian/patches/01_dont_modify_bg.patch 
+    + Added. Calling gtk_widget_modify_bg seems to trigger a segv, so don't
+      call it.
 
- -- Sjoerd Simons <sjoerd@debian.org>  Mon,  6 Feb 2006 18:40:53 +0100
+ -- Sjoerd Simons <sjoerd@debian.org>  Mon,  6 Feb 2006 21:39:42 +0100
 
 gnome-screensaver (0.0.23-2) experimental; urgency=low
 
