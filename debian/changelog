@@ -10,9 +10,11 @@ gnome-screensaver (0.0.24-1) unstable; urgency=low
   * Enable support for xscreensaver hacks (Closes: #344559)
   * Add debian swirl floater screensaver. Thanks to Martin-Éric Racine
     (Closes: #348281)
-  * Trim down the build-depends 
+  * Trim down the build-depends
+  * Add libexif-dev to the build-depends. Enables the slideshow screensaver to
+    rotate pictures when needed. 
 
- -- Sjoerd Simons <sjoerd@debian.org>  Mon,  6 Feb 2006 18:27:06 +0100
+ -- Sjoerd Simons <sjoerd@debian.org>  Mon,  6 Feb 2006 18:40:53 +0100
 
 gnome-screensaver (0.0.23-2) experimental; urgency=low
 
