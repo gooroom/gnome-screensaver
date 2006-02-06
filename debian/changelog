@@ -1,8 +1,12 @@
-gnome-screensaver (0.0.24-1) experimental; urgency=low
+gnome-screensaver (0.0.24-1) unstable; urgency=low
 
+  [ Guilherme de S. Pastore ]
   * New upstream release
 
- -- Guilherme de S. Pastore <guilherme.pastore@terra.com.br>  Thu,  5 Jan 2006 16:35:07 -0200
+  [ Sjoerd Simons ]
+  * Upload to unstable
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Mon,  6 Feb 2006 18:03:29 +0100
 
 gnome-screensaver (0.0.23-2) experimental; urgency=low
 
