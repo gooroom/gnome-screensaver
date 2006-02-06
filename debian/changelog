@@ -7,8 +7,11 @@ gnome-screensaver (0.0.24-1) unstable; urgency=low
   * Upload to unstable
   * Indicate the location of the gdm config file during compile, enables user
     switching (Closes: #351419)
+  * Enable support for xscreensaver hacks (Closes: #344559)
+  * Add debian swirl floater screensaver. Thanks to Martin-Éric Racine
+    (Closes: #348281) 
 
- -- Sjoerd Simons <sjoerd@debian.org>  Mon,  6 Feb 2006 18:04:13 +0100
+ -- Sjoerd Simons <sjoerd@debian.org>  Mon,  6 Feb 2006 18:19:40 +0100
 
 gnome-screensaver (0.0.23-2) experimental; urgency=low
 
