@@ -5,8 +5,10 @@ gnome-screensaver (0.0.24-1) unstable; urgency=low
 
   [ Sjoerd Simons ]
   * Upload to unstable
+  * Indicate the location of the gdm config file during compile, enables user
+    switching (Closes: #351419)
 
- -- Sjoerd Simons <sjoerd@debian.org>  Mon,  6 Feb 2006 18:03:29 +0100
+ -- Sjoerd Simons <sjoerd@debian.org>  Mon,  6 Feb 2006 18:04:13 +0100
 
 gnome-screensaver (0.0.23-2) experimental; urgency=low
 
