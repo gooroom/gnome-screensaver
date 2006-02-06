@@ -12,6 +12,6 @@ DEB_CONFIGURE_EXTRA_FLAGS := --with-gdm-config=/etc/gdm/gdm.conf \
 
 common-install-impl::
 	install -m 755 $(CURDIR)/debian/debian-floaters.desktop \
-		/usr/share/gnome-screensaver/themes/
+		$(DEB_DESTDIR)/usr/share/gnome-screensaver/themes/
 	install -m 755 $(CURDIR)/debian/debian-swirl-logo.svg \
-		/usr/share/pixmaps
+		$(DEB_DESTDIR)/usr/share/pixmaps
