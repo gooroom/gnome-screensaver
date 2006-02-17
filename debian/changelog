@@ -1,3 +1,10 @@
+gnome-screensaver (0.0.24-2) unstable; urgency=low
+
+  * debian/patches/02_multiscreen_lifelock.patch 
+    + Added. Prevent gnome-screensaver lifelock when using multiple screen.
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Fri, 17 Feb 2006 14:38:17 +0100
+
 gnome-screensaver (0.0.24-1) unstable; urgency=low
 
   [ Guilherme de S. Pastore ]
