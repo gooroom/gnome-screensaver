@@ -1,8 +1,34 @@
-gnome-screensaver (0.0.24-1) experimental; urgency=low
+gnome-screensaver (2.13.91-1) unstable; urgency=low
 
+  * New upstream release 
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Wed, 22 Feb 2006 23:02:03 +0100
+
+gnome-screensaver (0.0.24-2) unstable; urgency=low
+
+  * debian/patches/02_multiscreen_lifelock.patch 
+    + Added. Prevent gnome-screensaver lifelock when using multiple screen.
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Fri, 17 Feb 2006 14:38:17 +0100
+
+gnome-screensaver (0.0.24-1) unstable; urgency=low
+
+  [ Guilherme de S. Pastore ]
   * New upstream release
 
- -- Guilherme de S. Pastore <guilherme.pastore@terra.com.br>  Thu,  5 Jan 2006 16:35:07 -0200
+  [ Sjoerd Simons ]
+  * Upload to unstable
+  * Add --with-gdm-config=/etc/gdm/gdm.conf to DEB_CONFIGURE_EXTRA_FLAGS
+  * Add debian swirl floater screensaver. Thanks to Martin-Éric Racine
+    (Closes: #348281)
+  * Trim down the build-depends
+  * Add libexif-dev to the build-depends. Enables the slideshow screensaver to
+    rotate pictures when needed.
+  * debian/patches/01_dont_modify_bg.patch 
+    + Added. Calling gtk_widget_modify_bg seems to trigger a segv, so don't
+      call it.
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Mon,  6 Feb 2006 21:39:42 +0100
 
 gnome-screensaver (0.0.23-2) experimental; urgency=low
 

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Floating Debian
+Comment=Debian swirl logo around the screen
+Exec=floaters /usr/share/pixmaps/debian-swirl-logo.svg
+TryExec=floaters
+StartupNotify=false
+Terminal=false
+Type=Application
+Categories=GNOME;Screensaver
