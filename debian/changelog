@@ -1,3 +1,10 @@
+gnome-screensaver (2.14.0-1) experimental; urgency=low
+
+  * New upstream release 
+  * Update description.
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Fri, 17 Mar 2006 11:13:32 +0100
+
 gnome-screensaver (2.13.92-1) experimental; urgency=low
 
   * New upstream release
