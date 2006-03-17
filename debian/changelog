@@ -1,3 +1,21 @@
+gnome-screensaver (2.14.0-1) experimental; urgency=low
+
+  * New upstream release 
+  * Update description.
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Fri, 17 Mar 2006 11:13:32 +0100
+
+gnome-screensaver (2.13.92-1) experimental; urgency=low
+
+  * New upstream release
+  * debian/patches/02_multiscreen_lifelock.patch
+    + Removed. Fixed upstream
+  * debian/patches/01_dont_modify_bg.patch 
+    + Removed. Unsure if it actually fixed the bug or made the race condition
+    harder to trigger. So temporarely remove it for testing purposes
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Wed,  1 Mar 2006 14:00:18 +0100
+
 gnome-screensaver (0.0.24-2) unstable; urgency=low
 
   * debian/patches/02_multiscreen_lifelock.patch 
