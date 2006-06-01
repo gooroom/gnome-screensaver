@@ -1,3 +1,9 @@
+gnome-screensaver (2.14.2-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Loic Minier <lool@dooz.org>  Thu,  1 Jun 2006 12:02:48 +0200
+
 gnome-screensaver (2.14.1-1) unstable; urgency=medium
 
   * New upstream release.
