@@ -9,6 +9,7 @@ Standards-Version: 3.7.2
 Package: gnome-screensaver
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, dbus
+Recommends: gnome-power-manager
 Description: GNOME screen saver and locker
  gnome-screensaver is a screen saver and locker that aims to have simple,
  sane and secure defaults, and be well integrated with the GNOME desktop.
