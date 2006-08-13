@@ -1,22 +1,23 @@
 Source: gnome-screensaver
 Section: gnome
 Priority: optional
-Maintainer: Guilherme de S. Pastore <guilherme.pastore@terra.com.br>
-Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Akira TAGOH <tagoh@debian.org>, Andreas Rottmann <rotty@debian.org>, Andrew Lau <netsnipe@users.sourceforge.net>, Carlos Perelló Marín <carlos@pemas.net>, Clément Stenac <zorglub@debian.org>, Ed Boraas <ed@debian.org>, Edd Dumbill <ejad@debian.org>, Emil Soleyman-Zomalan <emil@nishra.com>, Gustavo Noronha Silva <kov@debian.org>, J.H.M. Dassen (Ray) <jdassen@debian.org>, Joe Drew <drew@debian.org>, Johannes Rohr <jr.debian@rohr.org>, Jordi Mallach <jordi@debian.org>, Jose Carlos Garcia Sogo <jsogo@debian.org>, Josselin Mouette <joss@debian.org>, Loic Minier <lool@dooz.org>, Marc 'HE' Brockschmidt <he@debian.org>, Ondřej Surý <ondrej@debian.org>, Rob Bradford <rob@debianplanet.org>, Robert McQueen <robot101@debian.org>, Ross Burton <ross@debian.org>, Sebastien Bacher <seb128@debian.org>, Sjoerd Simons <sjoerd@debian.org>, Takuo KITAME <kitame@debian.org>
-Build-Depends: cdbs, debhelper (>= 4.1.0), libdbus-glib-1-dev (>= 0.60), libxml2-dev (>= 2.6.0), libgconf2-dev (>= 2.6.1), libgtk2.0-dev (>= 2.7.0), libgnomevfs2-dev (>= 2.6.0), libgnomeui-dev (>= 2.6), libglade2-dev (>= 2.5.0), libpam0g-dev, libgnome-menu-dev (>= 2.11.1), libxau-dev, libxmu-dev, libxss-dev, libxxf86vm-dev, libxml-parser-perl, libexif-dev, gnome-pkg-tools
-Standards-Version: 3.6.2.1
+Maintainer: Guilherme de S. Pastore <gpastore@debian.org>
+Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Andrew Lau <netsnipe@users.sourceforge.net>, Clément Stenac <zorglub@debian.org>, Dafydd Harries <daf@debian.org>, Gustavo Franco <stratus@debian.org>, Gustavo Noronha Silva <kov@debian.org>, J.H.M. Dassen (Ray) <jdassen@debian.org>, Jordi Mallach <jordi@debian.org>, Jose Carlos Garcia Sogo <jsogo@debian.org>, Josselin Mouette <joss@debian.org>, Loic Minier <lool@dooz.org>, Marc 'HE' Brockschmidt <he@debian.org>, Marco Cabizza <marco87@gmail.com>, Oystein Gisnas <oystein@gisnas.net>, Ondřej Surý <ondrej@debian.org>, Ross Burton <ross@debian.org>, Sebastien Bacher <seb128@debian.org>, Sjoerd Simons <sjoerd@debian.org>
+Build-Depends: cdbs, debhelper (>= 4.1.0), libdbus-glib-1-dev (>= 0.60), libxml2-dev (>= 2.6.0), libgconf2-dev (>= 2.6.1), libgtk2.0-dev (>= 2.7.0), libgnomevfs2-dev (>= 2.6.0), libgnomeui-dev (>= 2.6), libglade2-dev (>= 2.5.0), libpam0g-dev, libgnome-menu-dev (>= 2.11.1), libxau-dev, libxmu-dev, libxss-dev, libxxf86vm-dev, libxml-parser-perl, libexif-dev, libxxf86misc-dev, gnome-pkg-tools, libgl1-mesa-dev, libpam0g-dev
+Standards-Version: 3.7.2
 
 Package: gnome-screensaver
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: GNOME ScreenSaver
+Depends: ${shlibs:Depends}, ${misc:Depends}, dbus
+Recommends: gnome-power-manager, xscreensaver-gl, rss-glx
+Description: GNOME screen saver and locker
  gnome-screensaver is a screen saver and locker that aims to have simple,
  sane and secure defaults, and be well integrated with the GNOME desktop.
  .
  It is designed to support, among other things:
  .
   * the ability to lock down configuration settings
-  * translation into many languages
+  * translation into other languages
   * user switching
  .
  Homepage: http://live.gnome.org/GnomeScreensaver
