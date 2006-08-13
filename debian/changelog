@@ -7,9 +7,12 @@ gnome-screensaver (2.15.6-1) experimental; urgency=low
       debian/rules; install debian-floaters in
       /usr/share/applications/screensavers instead of
       /usr/share/gnome-screensaver/themes.
-    - Suggest xscreensaver-gl and rss-glx for additional screensavers.
+    - Recommend xscreensaver-gl and rss-glx for additional screensavers.
+    - Depend on gnome-icon-theme >= 2.15.90, first version providing the
+      "preferences-desktop-screensaver" icon instead of "screensaver".
+  * Add CDBS' utils.
 
- -- Loic Minier <lool@dooz.org>  Sun, 13 Aug 2006 23:59:51 +0200
+ -- Loic Minier <lool@dooz.org>  Mon, 14 Aug 2006 00:20:19 +0200
 
 gnome-screensaver (2.14.3-1) unstable; urgency=low
 
