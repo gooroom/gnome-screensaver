@@ -1,3 +1,11 @@
+gnome-screensaver (2.14.3-2) unstable; urgency=low
+
+  * debian/patches/00_dbus_0.90.patch
+    - Added. Use dbus_connection_close instead of dbus_connection_disconnect,
+    fixes FTBS with libdbus-1 >= 0.90 (Closes: #387240)
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Wed, 13 Sep 2006 10:38:38 +0200
+
 gnome-screensaver (2.14.3-1) unstable; urgency=low
 
   [ Loic Minier ]
