@@ -1,3 +1,9 @@
+gnome-screensaver (2.16.0-1) experimental; urgency=low
+
+  * New upstream release.
+
+ -- Loic Minier <lool@dooz.org>  Sat, 30 Sep 2006 01:29:27 +0200
+
 gnome-screensaver (2.15.6-1) experimental; urgency=low
 
   * New upstream development releases.
