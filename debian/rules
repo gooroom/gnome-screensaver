@@ -16,3 +16,7 @@ common-install-impl::
 		$(DEB_DESTDIR)/usr/share/gnome-screensaver/themes/
 	install -m 644 $(CURDIR)/debian/debian-swirl-logo.svg \
 		$(DEB_DESTDIR)/usr/share/pixmaps
+
+binary-fixup/gnome-screensaver::
+	dh_gconf --priority=15
+		

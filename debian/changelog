@@ -1,3 +1,13 @@
+gnome-screensaver (2.14.3-3) unstable; urgency=low
+
+  * Add a gconf-defaults file.
+    + Set the default screensaver to be Debian floaters. (Closes: #367682)
+    + Enable user switch option.
+  * debian/rules: Register it with priority 15
+  * debian/control: Build-depend on debhelper 5.0.13.
+
+ -- Gustavo Franco <stratus@debian.org>  Fri, 24 Nov 2006 16:58:03 -0200
+
 gnome-screensaver (2.14.3-2) unstable; urgency=low
 
   * debian/patches/00_dbus_0.90.patch
