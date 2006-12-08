@@ -1,8 +1,9 @@
 gnome-screensaver (2.16.2-1) experimental; urgency=low
 
   * New upstream release.
+  * Remove duplicate build-dependency on libpam0g-dev.
 
- -- Josselin Mouette <joss@debian.org>  Fri,  8 Dec 2006 23:11:56 +0100
+ -- Josselin Mouette <joss@debian.org>  Fri,  8 Dec 2006 23:13:56 +0100
 
 gnome-screensaver (2.16.0-1) experimental; urgency=low
 
