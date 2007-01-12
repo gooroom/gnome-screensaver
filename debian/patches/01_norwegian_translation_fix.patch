@@ -1,0 +1,24 @@
+diff -rup ../gnome-screensaver-2.14.3.orig/po/nb.po ./po/nb.po
+--- ../gnome-screensaver-2.14.3.orig/po/nb.po	2007-01-12 16:25:46.000000000 +0100
++++ ./po/nb.po	2007-01-12 16:27:14.000000000 +0100
+@@ -576,7 +576,7 @@ msgstr "Spørr etter skjermsparerstatus"
+ 
+ #: ../src/gnome-screensaver-command.c:63
+ msgid "Tells the running screensaver process to lock the screen immediately"
+-msgstr "Tvinger kjørende spermsparer til å låse skjermen omgående"
++msgstr "Tvinger kjørende skjermsparer til å låse skjermen omgående"
+ 
+ #: ../src/gnome-screensaver-command.c:65
+ msgid "If the screensaver is active then switch to another graphics demo"
+diff -rup ../gnome-screensaver-2.14.3.orig/po/no.po ./po/no.po
+--- ../gnome-screensaver-2.14.3.orig/po/no.po	2007-01-12 16:25:46.000000000 +0100
++++ ./po/no.po	2007-01-12 16:27:35.000000000 +0100
+@@ -576,7 +576,7 @@ msgstr "Spørr etter skjermsparerstatus"
+ 
+ #: ../src/gnome-screensaver-command.c:63
+ msgid "Tells the running screensaver process to lock the screen immediately"
+-msgstr "Tvinger kjørende spermsparer til å låse skjermen omgående"
++msgstr "Tvinger kjørende skjermsparer til å låse skjermen omgående"
+ 
+ #: ../src/gnome-screensaver-command.c:65
+ msgid "If the screensaver is active then switch to another graphics demo"
