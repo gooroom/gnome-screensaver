@@ -1,4 +1,4 @@
-gnome-screensaver (2.14.3-4) UNRELEASED; urgency=low
+gnome-screensaver (2.14.3-4) unstable; urgency=low
 
   [ Sven Arvidsson ]
   * Fix spelling mistake in norwegian translation. (Closes: #402586)
