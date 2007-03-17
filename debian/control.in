@@ -3,7 +3,7 @@ Section: gnome
 Priority: optional
 Maintainer: Guilherme de S. Pastore <gpastore@debian.org>
 Uploaders: @GNOME_TEAM@
-Build-Depends: cdbs, debhelper (>= 4.1.0), libdbus-glib-1-dev (>= 0.60), libxml2-dev (>= 2.6.0), libgconf2-dev (>= 2.6.1), libgtk2.0-dev (>= 2.7.0), libgnomevfs2-dev (>= 2.6.0), libgnomeui-dev (>= 2.6), libglade2-dev (>= 2.5.0), libpam0g-dev, libgnome-menu-dev (>= 2.11.1), libxau-dev, libxmu-dev, libxss-dev, libxxf86vm-dev, libxml-parser-perl, libexif-dev, libxxf86misc-dev, gnome-pkg-tools (>= 0.10), libgl1-mesa-dev
+Build-Depends: cdbs, debhelper (>= 5.0.13), libdbus-glib-1-dev (>= 0.60), libxml2-dev (>= 2.6.0), libgconf2-dev (>= 2.6.1), libgtk2.0-dev (>= 2.7.0), libgnomevfs2-dev (>= 2.6.0), libgnomeui-dev (>= 2.6), libglade2-dev (>= 2.5.0), libpam0g-dev, libgnome-menu-dev (>= 2.11.1), libxau-dev, libxmu-dev, libxss-dev, libxxf86vm-dev, libxml-parser-perl, libexif-dev, libxxf86misc-dev, gnome-pkg-tools (>= 0.10), libgl1-mesa-dev
 Standards-Version: 3.7.2
 
 Package: gnome-screensaver
