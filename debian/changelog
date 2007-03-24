@@ -1,3 +1,11 @@
+gnome-screensaver (2.18.0-1) experimental; urgency=low
+
+  * New upstream release
+  * Built with --without-kbd-layout-indicator as libgnomekbd is not yet
+    in Debian.
+
+ -- Riccardo Setti <giskard@debian.org>  Sat, 24 Mar 2007 21:09:39 +0100
+
 gnome-screensaver (2.16.3-2) experimental; urgency=low
 
   * Merge 2.14.3-2 up-to 2.14.3-4; SVN r7317:8959.
