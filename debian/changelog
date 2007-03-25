@@ -1,10 +1,14 @@
 gnome-screensaver (2.18.0-1) experimental; urgency=low
 
+  [ Riccardo Setti ]
   * New upstream release
-  * Built with --without-kbd-layout-indicator as libgnomekbd is not yet
-    in Debian.
 
- -- Riccardo Setti <giskard@debian.org>  Sat, 24 Mar 2007 21:09:39 +0100
+  [ Loic Minier ]
+  * Build-dep on libgnomekbdui-dev (>= 0.1) for kbd-layout-indicator.
+  * Bump up libgtk2.0-dev build-dep to >= 2.10.0 to make the package
+    autobuildable.
+
+ -- Loic Minier <lool@dooz.org>  Sun, 25 Mar 2007 19:30:28 +0200
 
 gnome-screensaver (2.16.3-2) experimental; urgency=low
 
