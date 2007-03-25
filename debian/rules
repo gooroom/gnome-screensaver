@@ -12,8 +12,7 @@ include /usr/share/gnome-pkg-tools/1/rules/check-dist.mk
 DEB_CONFIGURE_EXTRA_FLAGS := --with-gdm-config=/etc/gdm/gdm.conf \
 				--with-xscreensaverdir=/usr/share/xscreensaver/config \
 				--with-xscreensaverhackdir=/usr/lib/xscreensaver \
-				--with-gdm-config=/etc/gdm/gdm.conf \
-				--without-kbd-layout-indicator
+				--with-gdm-config=/etc/gdm/gdm.conf
 
 binary-fixup/gnome-screensaver::
 	dh_gconf --priority=15
