@@ -1,3 +1,67 @@
+gnome-screensaver (2.18.1-1) experimental; urgency=low
+
+  * New upstream release.
+
+ -- Riccardo Setti <giskard@debian.org>  Wed, 25 Apr 2007 11:47:44 +0200
+
+gnome-screensaver (2.18.0-1) experimental; urgency=low
+
+  [ Riccardo Setti ]
+  * New upstream release
+
+  [ Loic Minier ]
+  * Build-dep on libgnomekbdui-dev (>= 0.1) for kbd-layout-indicator.
+  * Bump up libgtk2.0-dev build-dep to >= 2.10.0 to make the package
+    autobuildable.
+
+ -- Loic Minier <lool@dooz.org>  Sun, 25 Mar 2007 19:30:28 +0200
+
+gnome-screensaver (2.16.3-2) experimental; urgency=low
+
+  * Merge 2.14.3-2 up-to 2.14.3-4; SVN r7317:8959.
+    - Drop patch 00_dbus_0.90, obsolete.
+    - Drop patch 01_norwegian_translation_fix, merged upstream.
+
+ -- Loic Minier <lool@dooz.org>  Sat, 17 Mar 2007 13:26:32 +0100
+
+gnome-screensaver (2.16.3-1) experimental; urgency=low
+
+  * Add a get-orig-source target to retrieve the upstream tarball.
+  * Include the new check-dist Makefile to prevent accidental uploads to
+    unstable; bump build-dep on gnome-pkg-tools to >= 0.10.
+  * New upstream stable release; bug fixes and translations.
+
+ -- Loic Minier <lool@dooz.org>  Sat, 17 Mar 2007 11:43:49 +0100
+
+gnome-screensaver (2.16.2-1) experimental; urgency=low
+
+  * New upstream release.
+  * Remove duplicate build-dependency on libpam0g-dev.
+
+ -- Josselin Mouette <joss@debian.org>  Fri,  8 Dec 2006 23:13:56 +0100
+
+gnome-screensaver (2.16.0-1) experimental; urgency=low
+
+  * New upstream release.
+
+ -- Loic Minier <lool@dooz.org>  Sat, 30 Sep 2006 01:29:27 +0200
+
+gnome-screensaver (2.15.6-1) experimental; urgency=low
+
+  * New upstream development releases.
+    - Target at experimental.
+    - Build-depends on libgl1-mesa-dev, and libpam0g-dev
+    - Install Debian files via debian/gnome-screensaver.install instead of
+      debian/rules; install debian-floaters in
+      /usr/share/applications/screensavers instead of
+      /usr/share/gnome-screensaver/themes.
+    - Recommend xscreensaver-gl and rss-glx for additional screensavers.
+    - Depend on gnome-icon-theme >= 2.15.90, first version providing the
+      "preferences-desktop-screensaver" icon instead of "screensaver".
+  * Add CDBS' utils.
+
+ -- Loic Minier <lool@dooz.org>  Mon, 14 Aug 2006 00:20:19 +0200
+
 gnome-screensaver (2.14.3-4) unstable; urgency=low
 
   [ Sven Arvidsson ]

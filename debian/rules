@@ -4,7 +4,9 @@
 include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/rules/simple-patchsys.mk
 include /usr/share/cdbs/1/class/gnome.mk
+include /usr/share/cdbs/1/rules/utils.mk
 include /usr/share/gnome-pkg-tools/1/rules/uploaders.mk
+include /usr/share/gnome-pkg-tools/1/rules/check-dist.mk
 -include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
 
 DEB_CONFIGURE_EXTRA_FLAGS := --with-gdm-config=/etc/gdm/gdm.conf \
@@ -12,12 +14,6 @@ DEB_CONFIGURE_EXTRA_FLAGS := --with-gdm-config=/etc/gdm/gdm.conf \
 				--with-xscreensaverhackdir=/usr/lib/xscreensaver \
 				--with-gdm-config=/etc/gdm/gdm.conf
 
-common-install-impl::
-	install -m 644 $(CURDIR)/debian/debian-floaters.desktop \
-		$(DEB_DESTDIR)/usr/share/gnome-screensaver/themes/
-	install -m 644 $(CURDIR)/debian/debian-swirl-logo.svg \
-		$(DEB_DESTDIR)/usr/share/pixmaps
-
 binary-fixup/gnome-screensaver::
 	dh_gconf --priority=15
-		
+
