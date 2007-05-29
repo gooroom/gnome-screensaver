@@ -2,14 +2,39 @@ Source: gnome-screensaver
 Section: gnome
 Priority: optional
 Maintainer: Guilherme de S. Pastore <gpastore@debian.org>
-Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Gustavo Franco <stratus@debian.org>, Josselin Mouette <joss@debian.org>, Loic Minier <lool@dooz.org>, Sebastian Dröge <slomo@debian.org>, Sjoerd Simons <sjoerd@debian.org>
-Build-Depends: cdbs, debhelper (>= 5.0.13), libdbus-glib-1-dev (>= 0.60), libxml2-dev (>= 2.6.0), libgconf2-dev (>= 2.6.1), libgtk2.0-dev (>= 2.10.0), libgnomevfs2-dev (>= 2.6.0), libgnomeui-dev (>= 2.6), libglade2-dev (>= 2.5.0), libpam0g-dev, libgnome-menu-dev (>= 2.11.1), libxau-dev, libxmu-dev, libxss-dev, libxxf86vm-dev, libxml-parser-perl, libexif-dev, libxxf86misc-dev, gnome-pkg-tools (>= 0.10), libgl1-mesa-dev | libgl1-mesa-swx11-dev, libgnomekbdui-dev (>= 0.1)
+Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Gustavo Franco <stratus@debian.org>, Josselin Mouette <joss@debian.org>, Loic Minier <lool@dooz.org>, Sebastian Dröge <slomo@debian.org>
+Build-Depends: cdbs,
+               debhelper (>= 5.0.13),
+               libdbus-glib-1-dev (>= 0.60),
+               libxml2-dev (>= 2.6.0),
+               libgconf2-dev (>= 2.6.1),
+               libgtk2.0-dev (>= 2.10.0),
+               libgnomevfs2-dev (>= 2.6.0),
+               libgnomeui-dev (>= 2.6),
+               libglade2-dev (>= 2.5.0),
+               libpam0g-dev,
+               libgnome-menu-dev (>= 2.11.1),
+               libxau-dev,
+               libxmu-dev,
+               libxss-dev,
+               libxxf86vm-dev,
+               libxml-parser-perl,
+               libexif-dev,
+               libxxf86misc-dev,
+               gnome-pkg-tools (>= 0.10),
+               libgl1-mesa-dev | libgl1-mesa-swx11-dev,
+               libgnomekbdui-dev (>= 0.1)
 Standards-Version: 3.7.2
 
 Package: gnome-screensaver
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, dbus, gnome-icon-theme (>= 2.15.90)
-Recommends: gnome-power-manager, xscreensaver-gl, rss-glx
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         dbus,
+         gnome-icon-theme (>= 2.15.90)
+Recommends: gnome-power-manager,
+            xscreensaver-gl,
+            rss-glx
 Description: GNOME screen saver and locker
  gnome-screensaver is a screen saver and locker that aims to have simple,
  sane and secure defaults, and be well integrated with the GNOME desktop.
