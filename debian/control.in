@@ -33,7 +33,6 @@ Depends: ${shlibs:Depends},
          dbus,
          gnome-icon-theme (>= 2.15.90)
 Recommends: gnome-power-manager,
-            xscreensaver-gl,
             rss-glx
 Description: GNOME screen saver and locker
  gnome-screensaver is a screen saver and locker that aims to have simple,

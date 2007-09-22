@@ -1,9 +1,14 @@
 gnome-screensaver (2.20.0-1) unstable; urgency=low
 
+  [ Riccardo Setti ]
   * New upstream release
   * Adjusted Build-Deps
 
- -- Riccardo Setti <giskard@debian.org>  Sat, 22 Sep 2007 14:34:48 +0200
+  [ Josselin Mouette ]
+  * Remove xscreensaver-gl from Recommends as it doesn't ship any 
+    .desktop files.
+
+ -- Josselin Mouette <joss@debian.org>  Sat, 22 Sep 2007 15:07:01 +0200
 
 gnome-screensaver (2.18.2-1) unstable; urgency=low
 
