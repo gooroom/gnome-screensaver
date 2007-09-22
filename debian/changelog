@@ -1,3 +1,10 @@
+gnome-screensaver (2.20.0-1) unstable; urgency=low
+
+  * New upstream release
+  * Adjusted Build-Deps
+
+ -- Riccardo Setti <giskard@debian.org>  Sat, 22 Sep 2007 14:34:48 +0200
+
 gnome-screensaver (2.18.2-1) unstable; urgency=low
 
   * New upstream stable release.
