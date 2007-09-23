@@ -23,7 +23,8 @@ Build-Depends: cdbs,
                libxxf86misc-dev,
                gnome-pkg-tools (>= 0.10),
                libgl1-mesa-dev | libgl1-mesa-swx11-dev,
-               libgnomekbdui-dev (>= 0.1)
+               libgnomekbdui-dev (>= 0.1),
+               libnotify-dev
 Standards-Version: 3.7.2
 
 Package: gnome-screensaver
