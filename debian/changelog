@@ -1,9 +1,13 @@
 gnome-screensaver (2.20.0-2) UNRELEASED; urgency=low
 
+  [ Loic Minier ]
   * Build-dep on libnotify-dev for "Leave Message" functionality to actually
     work; thanks Hristo Hristov; Launchpad #140866; closes: #443766.
 
- -- Loic Minier <lool@dooz.org>  Mon, 24 Sep 2007 00:14:40 +0200
+  [ Sven Arvidsson ]
+  * Add man pages (Closes: #438606)
+
+ -- Sven Arvidsson <sa@whiz.se>  Thu, 27 Sep 2007 17:59:01 +0200
 
 gnome-screensaver (2.20.0-1) unstable; urgency=low
 
