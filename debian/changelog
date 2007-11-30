@@ -8,12 +8,16 @@ gnome-screensaver (2.20.0-2) UNRELEASED; urgency=low
   * Add man pages (Closes: #438606)
 
   [ Josselin Mouette ]
-  * 01_compiz_lock_bypass_CVE-2007-3920.patch: place fix of the 
+  * 01_compiz_lock_bypass_CVE-2007-3920.patch: place fix of the
     security upload in a proper separate patch.
   * gnome-screensaver.pam: add support for pam_gnome_keyring.
   * Recommend libpam-gnome-keyring.
 
- -- Josselin Mouette <joss@debian.org>  Fri, 26 Oct 2007 11:54:04 +0200
+  [ Loic Minier ]
+  * Drop duplicate --with-gdm-config flag; thanks Ted Gould and Ubuntu;
+    closes: #453512.
+
+ -- Loic Minier <lool@fox.dooz.org>  Fri, 30 Nov 2007 10:20:57 +0100
 
 gnome-screensaver (2.20.0-1.1) unstable; urgency=high
 
