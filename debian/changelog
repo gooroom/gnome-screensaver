@@ -19,6 +19,8 @@ gnome-screensaver (2.20.0-2) unstable; urgency=low
 
   [ Sebastian Dröge ]
   * ACK NMU (Closes: #446906) and upload to unstable.
+  * debian/control.in:
+    + Update Standards-Version to 3.7.3 (no additional changes needed).
 
  -- Sebastian Dröge <slomo@debian.org>  Mon, 10 Dec 2007 07:55:36 +0100
 
