@@ -1,4 +1,4 @@
-gnome-screensaver (2.20.0-2) UNRELEASED; urgency=low
+gnome-screensaver (2.20.0-2) unstable; urgency=low
 
   [ Loic Minier ]
   * Build-dep on libnotify-dev for "Leave Message" functionality to actually
@@ -17,7 +17,10 @@ gnome-screensaver (2.20.0-2) UNRELEASED; urgency=low
   * Drop duplicate --with-gdm-config flag; thanks Ted Gould and Ubuntu;
     closes: #453512.
 
- -- Loic Minier <lool@fox.dooz.org>  Fri, 30 Nov 2007 10:20:57 +0100
+  [ Sebastian Dröge ]
+  * ACK NMU (Closes: #446906) and upload to unstable.
+
+ -- Sebastian Dröge <slomo@debian.org>  Mon, 10 Dec 2007 07:55:36 +0100
 
 gnome-screensaver (2.20.0-1.1) unstable; urgency=high
 
