@@ -1,3 +1,10 @@
+gnome-screensaver (2.20.0-3) UNRELEASED; urgency=medium
+
+  * 02_clear_clipboard.patch: clear the clipboard when locking the 
+    screen. Closes: #455484.
+
+ -- Josselin Mouette <joss@debian.org>  Fri, 11 Jan 2008 14:14:21 +0100
+
 gnome-screensaver (2.20.0-2) unstable; urgency=low
 
   [ Loic Minier ]
