@@ -1,7 +1,13 @@
 gnome-screensaver (2.20.0-3) UNRELEASED; urgency=medium
 
-  * 02_clear_clipboard.patch: clear the clipboard when locking the 
+  [ Josselin Mouette ]
+  * 02_clear_clipboard.patch: clear the clipboard when locking the
     screen. Closes: #455484.
+
+  [ Loic Minier ]
+  * Add a README.Debian to document that one should disable the gnome-keyring
+    PAM module if the recommended libpam-gnome-keyring isn't installed;
+    closes: #457549.
 
  -- Josselin Mouette <joss@debian.org>  Fri, 11 Jan 2008 14:14:21 +0100
 
