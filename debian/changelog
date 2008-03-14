@@ -1,4 +1,4 @@
-gnome-screensaver (2.20.0-3) UNRELEASED; urgency=medium
+gnome-screensaver (2.22.0-1) unstable; urgency=medium
 
   [ Josselin Mouette ]
   * 02_clear_clipboard.patch: clear the clipboard when locking the
@@ -9,7 +9,12 @@ gnome-screensaver (2.20.0-3) UNRELEASED; urgency=medium
     PAM module if the recommended libpam-gnome-keyring isn't installed;
     closes: #457549.
 
- -- Josselin Mouette <joss@debian.org>  Fri, 11 Jan 2008 14:14:21 +0100
+  [ Sebastian Dröge ]
+  * New upstream stable release:
+    + Drop gnome-vfs build dependency and build depend on glib >= 2.15.0.
+    + 02_clear_clipboard.patch: Dropped, merged upstream.
+
+ -- Sebastian Dröge <slomo@debian.org>  Fri, 14 Mar 2008 10:15:47 +0100
 
 gnome-screensaver (2.20.0-2) unstable; urgency=low
 
