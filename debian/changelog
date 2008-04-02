@@ -1,3 +1,9 @@
+gnome-screensaver (2.22.1-1) unstable; urgency=low
+
+  * New upstream bugfix release.
+
+ -- Sebastian Dröge <slomo@debian.org>  Wed, 02 Apr 2008 18:54:19 +0200
+
 gnome-screensaver (2.22.0-1) unstable; urgency=medium
 
   [ Josselin Mouette ]
