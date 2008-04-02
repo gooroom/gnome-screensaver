@@ -26,6 +26,7 @@ Build-Depends: cdbs,
                libgnomekbdui-dev (>= 0.1),
                libnotify-dev
 Standards-Version: 3.7.3
+Homepage: http://live.gnome.org/GnomeScreensaver
 
 Package: gnome-screensaver
 Architecture: any
@@ -45,5 +46,3 @@ Description: GNOME screen saver and locker
   * the ability to lock down configuration settings
   * translation into other languages
   * user switching
- .
- Homepage: http://live.gnome.org/GnomeScreensaver
