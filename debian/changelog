@@ -1,3 +1,11 @@
+gnome-screensaver (2.22.2-1) unstable; urgency=high
+
+  * New upstream bugfix release:
+    + SECURITY: CVE-2008-1683 unlocks session if 
+      it fails to get user attributes via getpwnam() (Closes: #475154).
+
+ -- Sebastian Dröge <slomo@debian.org>  Wed, 16 Apr 2008 10:50:22 +0200
+
 gnome-screensaver (2.22.1-1) unstable; urgency=low
 
   * New upstream bugfix release.
