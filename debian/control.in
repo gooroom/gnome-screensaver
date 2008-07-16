@@ -32,7 +32,7 @@ Package: gnome-screensaver
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
-         dbus,
+         dbus-x11,
          gnome-icon-theme (>= 2.15.90)
 Recommends: gnome-power-manager,
             rss-glx,
