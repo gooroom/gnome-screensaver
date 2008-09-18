@@ -1,9 +1,9 @@
-gnome-screensaver (2.22.2-2) UNRELEASED; urgency=low
+gnome-screensaver (2.22.2-2) unstable; urgency=low
 
   * Suggest xscreensaver-data. Closes: #469211.
   * Depend on dbus-x11 instead of dbus.
 
- -- Josselin Mouette <joss@debian.org>  Tue, 22 Apr 2008 12:54:04 +0200
+ -- Josselin Mouette <joss@debian.org>  Thu, 18 Sep 2008 15:57:52 +0200
 
 gnome-screensaver (2.22.2-1) unstable; urgency=high
 
