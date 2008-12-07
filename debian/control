@@ -2,18 +2,19 @@ Source: gnome-screensaver
 Section: gnome
 Priority: optional
 Maintainer: Guilherme de S. Pastore <gpastore@debian.org>
-Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Josselin Mouette <joss@debian.org>, Loic Minier <lool@dooz.org>, Sebastian Dröge <slomo@debian.org>
+Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Emilio Pozuelo Monfort <pochu@ubuntu.com>, Josselin Mouette <joss@debian.org>, Loic Minier <lool@dooz.org>, Sebastian Dröge <slomo@debian.org>
 Build-Depends: cdbs,
                debhelper (>= 5.0.13),
                libdbus-glib-1-dev (>= 0.60),
                libxml2-dev (>= 2.6.0),
                libglib2.0-dev (>= 2.15.0),
                libgconf2-dev (>= 2.6.1),
-               libgtk2.0-dev (>= 2.11.5),
+               libgtk2.0-dev (>= 2.14.0),
                libgnomeui-dev (>= 2.6),
                libglade2-dev (>= 2.5.0),
                libpam0g-dev,
                libgnome-menu-dev (>= 2.11.1),
+               libgnome-desktop-dev (>= 2.23.2),
                libxau-dev,
                libxmu-dev,
                libxss-dev,
@@ -21,11 +22,14 @@ Build-Depends: cdbs,
                libxml-parser-perl,
                libexif-dev,
                libxxf86misc-dev,
+               intltool (>= 0.35),
                gnome-pkg-tools (>= 0.10),
                libgl1-mesa-dev | libgl1-mesa-swx11-dev,
                libgnomekbdui-dev (>= 0.1),
                libnotify-dev
-Standards-Version: 3.7.3
+Standards-Version: 3.8.0
+Vcs-Svn: svn://svn.debian.org/svn/pkg-gnome/desktop/experimental/gnome-screensaver
+Vcs-Browser: http://svn.debian.org/viewsvn/pkg-gnome/desktop/experimental/gnome-screensaver
 Homepage: http://live.gnome.org/GnomeScreensaver
 
 Package: gnome-screensaver
