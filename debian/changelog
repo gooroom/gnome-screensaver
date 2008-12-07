@@ -1,8 +1,108 @@
-gnome-screensaver (2.18.1-1) experimental; urgency=low
+gnome-screensaver (2.22.2-2) unstable; urgency=low
 
+  * Suggest xscreensaver-data. Closes: #469211.
+  * Depend on dbus-x11 instead of dbus.
+
+ -- Josselin Mouette <joss@debian.org>  Thu, 18 Sep 2008 15:57:52 +0200
+
+gnome-screensaver (2.22.2-1) unstable; urgency=high
+
+  * New upstream bugfix release:
+    + SECURITY: CVE-2008-1683 unlocks session if 
+      it fails to get user attributes via getpwnam() (Closes: #475154).
+
+ -- Sebastian Dröge <slomo@debian.org>  Wed, 16 Apr 2008 10:50:22 +0200
+
+gnome-screensaver (2.22.1-1) unstable; urgency=low
+
+  * New upstream bugfix release.
+  * debian/control.in:
+    + Move homepage to Homepage field.
+
+ -- Sebastian Dröge <slomo@debian.org>  Wed, 02 Apr 2008 18:54:19 +0200
+
+gnome-screensaver (2.22.0-1) unstable; urgency=medium
+
+  [ Josselin Mouette ]
+  * 02_clear_clipboard.patch: clear the clipboard when locking the
+    screen. Closes: #455484.
+
+  [ Loic Minier ]
+  * Add a README.Debian to document that one should disable the gnome-keyring
+    PAM module if the recommended libpam-gnome-keyring isn't installed;
+    closes: #457549.
+
+  [ Sebastian Dröge ]
+  * New upstream stable release:
+    + Drop gnome-vfs build dependency and build depend on glib >= 2.15.0.
+    + 02_clear_clipboard.patch: Dropped, merged upstream.
+
+ -- Sebastian Dröge <slomo@debian.org>  Fri, 14 Mar 2008 10:15:47 +0100
+
+gnome-screensaver (2.20.0-2) unstable; urgency=low
+
+  [ Loic Minier ]
+  * Build-dep on libnotify-dev for "Leave Message" functionality to actually
+    work; thanks Hristo Hristov; Launchpad #140866; closes: #443766.
+
+  [ Sven Arvidsson ]
+  * Add man pages (Closes: #438606)
+
+  [ Josselin Mouette ]
+  * 01_compiz_lock_bypass_CVE-2007-3920.patch: place fix of the
+    security upload in a proper separate patch.
+  * gnome-screensaver.pam: add support for pam_gnome_keyring.
+  * Recommend libpam-gnome-keyring.
+
+  [ Loic Minier ]
+  * Drop duplicate --with-gdm-config flag; thanks Ted Gould and Ubuntu;
+    closes: #453512.
+
+  [ Sebastian Dröge ]
+  * ACK NMU (Closes: #446906) and upload to unstable.
+  * debian/control.in:
+    + Update Standards-Version to 3.7.3 (no additional changes needed).
+
+ -- Sebastian Dröge <slomo@debian.org>  Mon, 10 Dec 2007 07:55:36 +0100
+
+gnome-screensaver (2.20.0-1.1) unstable; urgency=high
+
+  * Non-maintainer upload by the testing-security team
+  * Prevent screen lock bypass via shortcuts when compiz is running
+    (Closes: #446906) Fixes: CVE-2007-3920
+
+ -- Steffen Joeris <white@debian.org>  Wed, 24 Oct 2007 13:08:36 +0000
+
+gnome-screensaver (2.20.0-1) unstable; urgency=low
+
+  [ Riccardo Setti ]
+  * New upstream release
+  * Adjusted Build-Deps
+
+  [ Josselin Mouette ]
+  * Remove xscreensaver-gl from Recommends as it doesn't ship any 
+    .desktop files.
+
+ -- Josselin Mouette <joss@debian.org>  Sat, 22 Sep 2007 15:07:01 +0200
+
+gnome-screensaver (2.18.2-1) unstable; urgency=low
+
+  * New upstream stable release.
+  * Wrap build-deps and deps.
+  * Cleanups.
+  * Bump up Debhelper compatibility level to 5.
+
+ -- Loic Minier <lool@dooz.org>  Tue, 29 May 2007 11:56:21 +0200
+
+gnome-screensaver (2.18.1-1) unstable; urgency=low
+
+  [ Riccardo Setti ]
   * New upstream release.
 
- -- Riccardo Setti <giskard@debian.org>  Wed, 25 Apr 2007 11:47:44 +0200
+  [ Sebastian Dröge ]
+  * Upload to unstable, drop check-dist include.
+
+ -- Sebastian Dröge <slomo@debian.org>  Tue,  1 May 2007 20:33:17 +0200
 
 gnome-screensaver (2.18.0-1) experimental; urgency=low
 
