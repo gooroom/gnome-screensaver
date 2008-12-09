@@ -1,4 +1,4 @@
-gnome-screensaver (2.24.1-1) unstable; urgency=low
+gnome-screensaver (2.24.1-1) experimental; urgency=low
 
   * New upstream release.
     - Restores the X gamma value instead of resetting it if it had been
@@ -11,8 +11,11 @@ gnome-screensaver (2.24.1-1) unstable; urgency=low
     - patches/01_compiz_lock_bypass_CVE-2007-3920.patch:
       + Removed, it has been properly fixed in the X server.
         See http://bugzilla.gnome.org/show_bug.cgi?id=488264.
+    - debian/gnome-screensaver.manpages,
+      debian/gnome-screensaver*.1:
+      - Removed, the manpages are now shipped and installed upstream.
 
- -- Emilio Pozuelo Monfort <pochu@ubuntu.com>  Sun, 07 Dec 2008 23:37:17 +0100
+ -- Emilio Pozuelo Monfort <pochu@ubuntu.com>  Tue, 09 Dec 2008 18:13:56 +0100
 
 gnome-screensaver (2.22.2-2) unstable; urgency=low
 
