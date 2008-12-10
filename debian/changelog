@@ -20,6 +20,9 @@ gnome-screensaver (2.24.1-1) experimental; urgency=low
   * Don’t run dh_gconf twice.
   * Require libgnomekbd-dev 2.24 because of the merge with libgnomekbdui 
     and to ensure using libgnomekbd3.
+  * Include simple-patchsys.
+  * 01_manpages_whatis.patch: new patch; fixes bad whatis entries in the 
+    manual pages.
 
  -- Josselin Mouette <joss@debian.org>  Wed, 10 Dec 2008 12:44:24 +0100
 

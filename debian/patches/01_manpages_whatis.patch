@@ -1,0 +1,22 @@
+--- data/gnome-screensaver-preferences.1.orig	2008-12-10 16:08:22.593332252 +0100
++++ data/gnome-screensaver-preferences.1	2008-12-10 16:09:20.140829071 +0100
+@@ -15,7 +15,7 @@
+ .\"51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ .TH gnome-screensaver-preferences 1 "2007\-09\-27" "GNOME"
+ .SH NAME
+-GNOME Screensaver Preferences \- configure GNOME Screensaver
++gnome-screensaver-preferences \- configure GNOME Screensaver
+ .SH SYNOPSIS
+ .B gnome-screensaver-preferences
+ .RI [ OPTIONS... ]
+--- data/gnome-screensaver.1.orig	2008-12-10 16:07:48.236829401 +0100
++++ data/gnome-screensaver.1	2008-12-10 16:08:06.332830500 +0100
+@@ -15,7 +15,7 @@
+ .\"51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ .TH gnome-screensaver 1 "2007\-09\-27" "GNOME"
+ .SH NAME
+-GNOME Screensaver \- screen saver and locker
++gnome-screensaver \- screen saver and locker
+ .SH SYNOPSIS
+ .B gnome-screensaver
+ .RI [ OPTIONS... ]
