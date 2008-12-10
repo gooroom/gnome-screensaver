@@ -25,7 +25,7 @@ Build-Depends: cdbs,
                intltool (>= 0.35),
                gnome-pkg-tools (>= 0.10),
                libgl1-mesa-dev | libgl1-mesa-swx11-dev,
-               libgnomekbdui-dev (>= 0.1),
+               libgnomekbd-dev (>= 2.24),
                libnotify-dev
 Standards-Version: 3.8.0
 Vcs-Svn: svn://svn.debian.org/svn/pkg-gnome/desktop/experimental/gnome-screensaver
