@@ -12,6 +12,6 @@ DEB_CONFIGURE_EXTRA_FLAGS += \
 			--enable-locking \
 			--with-libgl
 
-binary-fixup/gnome-screensaver::
-	dh_gconf --priority=15
+DEB_DH_GCONF_ARGS += --priority=15
 
+LDFLAGS += -Wl,-z,defs -Wl,-O1 -Wl,--as-needed

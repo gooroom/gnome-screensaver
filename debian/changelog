@@ -1,5 +1,6 @@
 gnome-screensaver (2.24.1-1) experimental; urgency=low
 
+  [ Emilio Pozuelo Monfort ]
   * New upstream release.
     - Restores the X gamma value instead of resetting it if it had been
       modified. Closes: #496685.
@@ -15,7 +16,10 @@ gnome-screensaver (2.24.1-1) experimental; urgency=low
       debian/gnome-screensaver*.1:
       - Removed, the manpages are now shipped and installed upstream.
 
- -- Emilio Pozuelo Monfort <pochu@ubuntu.com>  Tue, 09 Dec 2008 18:13:56 +0100
+  [ Josselin Mouette ]
+  * Don’t run dh_gconf twice.
+
+ -- Josselin Mouette <joss@debian.org>  Wed, 10 Dec 2008 12:44:24 +0100
 
 gnome-screensaver (2.22.2-2) unstable; urgency=low
 
