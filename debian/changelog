@@ -1,3 +1,31 @@
+gnome-screensaver (2.24.1-1) experimental; urgency=low
+
+  [ Emilio Pozuelo Monfort ]
+  * New upstream release.
+    - Restores the X gamma value instead of resetting it if it had been
+      modified. Closes: #496685.
+    - Update build dependencies.
+    - Standards-Version is 3.8.0, no changes needed.
+    - Add Vcs-* fields.
+    - Remove --with-gdm-config from DEB_CONFIGURE_EXTRA_FLAGS, it's been
+      removed upstream.
+    - patches/01_compiz_lock_bypass_CVE-2007-3920.patch:
+      + Removed, it has been properly fixed in the X server.
+        See http://bugzilla.gnome.org/show_bug.cgi?id=488264.
+    - debian/gnome-screensaver.manpages,
+      debian/gnome-screensaver*.1:
+      - Removed, the manpages are now shipped and installed upstream.
+
+  [ Josselin Mouette ]
+  * Don’t run dh_gconf twice.
+  * Require libgnomekbd-dev 2.24 because of the merge with libgnomekbdui 
+    and to ensure using libgnomekbd3.
+  * Include simple-patchsys.
+  * 01_manpages_whatis.patch: new patch; fixes bad whatis entries in the 
+    manual pages.
+
+ -- Josselin Mouette <joss@debian.org>  Wed, 10 Dec 2008 12:44:24 +0100
+
 gnome-screensaver (2.22.2-2) unstable; urgency=low
 
   * Suggest xscreensaver-data. Closes: #469211.

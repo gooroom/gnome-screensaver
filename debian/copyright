@@ -18,34 +18,7 @@ xscreensaver
 
 
 GNOME Screensaver
-      Copyright (C) 2004-2005 William Jon McCann <mccann@jhu.edu>
-
-      This program is free software; you can redistribute it and/or modify
-      it under the terms of the GNU General Public License as published by
-      the Free Software Foundation; either version 2 of the License, or
-      (at your option) any later version.
-
-File transfer dialog
-      Copyright (C) 2002 Ximian, Inc.
-
-      This program is free software; you can redistribute it and/or modify
-      it under the terms of the GNU General Public License as published by
-      the Free Software Foundation; either version 2 of the License, or
-      (at your option) any later version.
-
-
-Fast User Switch Applet
-      Copyright (C) 2004-2005 James M. Cape <jcape@ignore-your.tv>
-
-      This program is free software; you can redistribute it and/or modify
-      it under the terms of the GNU General Public License as published by
-      the Free Software Foundation; either version 2 of the License, or
-      (at your option) any later version.
-
-GDM Communication
-      Copyright (C) 2001 Queen of England
-      Copyright (C) 2002-2003 George Lebl
-      Copyright (C) 2005 James M. Cape
+      Copyright (C) 2004-2008 William Jon McCann <mccann@jhu.edu>
 
       This program is free software; you can redistribute it and/or modify
       it under the terms of the GNU General Public License as published by
@@ -54,8 +27,8 @@ GDM Communication
 
 Floater saver
       Copyright (C) 2005 Ray Strode <rstrode@redhat.com>,
-      		    	 Matthias Clasen <mclasen@redhat.com>,
-			 Søren Sandmann <sandmann@redhat.com>
+      Copyright (C) 2005 Matthias Clasen <mclasen@redhat.com>,
+      Copyright (C) 2005 Søren Sandmann <sandmann@redhat.com>
 
       This program is free software; you can redistribute it and/or modify
       it under the terms of the GNU General Public License as published by
