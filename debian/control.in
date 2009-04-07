@@ -27,7 +27,7 @@ Build-Depends: cdbs,
                libgl1-mesa-dev | libgl1-mesa-swx11-dev,
                libgnomekbd-dev (>= 2.24),
                libnotify-dev
-Standards-Version: 3.8.0
+Standards-Version: 3.8.1
 Vcs-Svn: svn://svn.debian.org/svn/pkg-gnome/desktop/experimental/gnome-screensaver
 Vcs-Browser: http://svn.debian.org/viewsvn/pkg-gnome/desktop/experimental/gnome-screensaver
 Homepage: http://live.gnome.org/GnomeScreensaver
