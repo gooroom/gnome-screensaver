@@ -13,3 +13,21 @@ DEB_CONFIGURE_EXTRA_FLAGS += \
 			--with-libgl
 
 LDFLAGS += -Wl,-z,defs -Wl,-O1 -Wl,--as-needed
+
+
+INFILES := $(wildcard debian/*.desktop.in)
+OUTFILES := $(INFILES:.desktop.in=.desktop)
+
+%.desktop: %.desktop.in
+	intltool-merge -d debian/po-up $< $@
+
+build/gnome-screensaver:: $(OUTFILES)
+
+clean::
+	rm -f $(OUTFILES)
+
+update-po::
+	ls $(INFILES) | sed 's#^#../#' >debian/po-up/POTFILES.in
+	cd debian/po-up && intltool-update -g debian --pot && \
+		for i in *.po; do intltool-update -g debian --dist $${i%.po}; done
+	rm -f debian/po-up/POTFILES.in

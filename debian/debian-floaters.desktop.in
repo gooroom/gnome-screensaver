@@ -1,9 +1,9 @@
 [Desktop Entry]
-Name=Floating Debian
-Comment=Debian swirl logo around the screen
+_Name=Floating Debian
+_Comment=Debian swirl logos floating around the screen
 Exec=/usr/lib/gnome-screensaver/gnome-screensaver/floaters /usr/share/pixmaps/debian-swirl-logo.svg
 TryExec=floaters
 StartupNotify=false
 Terminal=false
 Type=Application
-Categories=GNOME;Screensaver
+Categories=GNOME;
