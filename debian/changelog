@@ -8,6 +8,9 @@ gnome-screensaver (2.26.1-1) UNRELEASED; urgency=low
   * Use unstable for Vcs-*
   * Standards-Version is 3.8.2, no changes needed.
   * debian/rules: install gconf-defaults file with default priority.
+  * debian/debian-floaters.desktop:
+    - Remove deprecated Encoding key.
+    - Add full path to the Exec command, as floaters is not in PATH.
 
  -- Emilio Pozuelo Monfort <pochu@ubuntu.com>  Wed, 17 Jun 2009 22:08:42 +0200
 
