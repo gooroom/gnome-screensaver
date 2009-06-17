@@ -1,3 +1,16 @@
+gnome-screensaver (2.26.1-1) UNRELEASED; urgency=low
+
+  * New upstream release.
+  * debian/watch: don't uupdate.
+  * debian/copyright: updated.
+  * debian/patches/01_manpages_whatis.patch: removed, fixed upstream.
+  * debian/rules: remove simple-patchsys.mk
+  * Use unstable for Vcs-*
+  * Standards-Version is 3.8.2, no changes needed.
+  * debian/rules: install gconf-defaults file with default priority.
+
+ -- Emilio Pozuelo Monfort <pochu@ubuntu.com>  Wed, 17 Jun 2009 22:08:42 +0200
+
 gnome-screensaver (2.24.1-2) unstable; urgency=low
 
   * Upload to unstable.
