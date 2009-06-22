@@ -1,0 +1,26 @@
+# translation of gnome-screensaver-debian to Portuguese
+# Copyright (C) 2009 the gnome-screensaver's copyright holder
+# This file is distributed under the same license as the gnome-screensaver package.
+#
+# Américo Monteiro <a_monteiro@netcabo.pt>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-screensaver-debian\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-06-17 23:27+0200\n"
+"PO-Revision-Date: 2009-06-22 20:04+0100\n"
+"Last-Translator: Américo Monteiro <a_monteiro@netcabo.pt>\n"
+"Language-Team: Portuguese <traduz@debianpt.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: ../../debian/debian-floaters.desktop.in.h:1
+msgid "Debian swirl logos floating around the screen"
+msgstr "Logotipos espiral Debian flutuando pelo écran"
+
+#: ../../debian/debian-floaters.desktop.in.h:2
+msgid "Floating Debian"
+msgstr "Debian flutuando"
+
