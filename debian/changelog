@@ -24,6 +24,7 @@ gnome-screensaver (2.26.1-1) unstable; urgency=low
   [ Josselin Mouette ]
   * Add French translation for the desktop file.
   * Enable building of docbook documentation.
+  * rules, gnome-screensaver.docs: install it in a non-Redhatish place.
   * A bit of cleanup in build-dependencies.
 
  -- Josselin Mouette <joss@debian.org>  Fri, 26 Jun 2009 21:46:05 +0200
