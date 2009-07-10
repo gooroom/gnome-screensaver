@@ -38,7 +38,8 @@ Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
          dbus-x11,
-         gnome-icon-theme (>= 2.15.90)
+         gnome-icon-theme (>= 2.15.90),
+         gnome-session (>= 2.26)
 Recommends: gnome-power-manager,
             rss-glx,
             libpam-gnome-keyring

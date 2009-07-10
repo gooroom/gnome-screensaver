@@ -2,7 +2,7 @@ Source: gnome-screensaver
 Section: gnome
 Priority: optional
 Maintainer: Guilherme de S. Pastore <gpastore@debian.org>
-Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Emilio Pozuelo Monfort <pochu@ubuntu.com>, Josselin Mouette <joss@debian.org>, Sebastian Dröge <slomo@debian.org>
+Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Josselin Mouette <joss@debian.org>, Sebastian Dröge <slomo@debian.org>
 Build-Depends: cdbs,
                debhelper (>= 5.0.13),
                gnome-pkg-tools (>= 0.10),
@@ -38,7 +38,8 @@ Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
          dbus-x11,
-         gnome-icon-theme (>= 2.15.90)
+         gnome-icon-theme (>= 2.15.90),
+         gnome-session (>= 2.26)
 Recommends: gnome-power-manager,
             rss-glx,
             libpam-gnome-keyring
