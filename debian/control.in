@@ -13,7 +13,6 @@ Build-Depends: cdbs,
                libgtk2.0-dev (>= 2.14.0),
                libgnome-menu-dev (>= 2.11.1),
                libgnome-desktop-dev (>= 2.23.2),
-               libglade2-dev (>= 1:2.5.0),
                libgnomekbd-dev (>= 2.24),
                libxt-dev,
                libxext-dev,
@@ -28,7 +27,7 @@ Build-Depends: cdbs,
                libxxf86misc-dev,
                libgl1-mesa-dev | libgl1-mesa-swx11-dev,
                libnotify-dev
-Standards-Version: 3.8.2
+Standards-Version: 3.8.3
 Vcs-Svn: svn://svn.debian.org/svn/pkg-gnome/desktop/unstable/gnome-screensaver
 Vcs-Browser: http://svn.debian.org/viewsvn/pkg-gnome/desktop/unstable/gnome-screensaver
 Homepage: http://live.gnome.org/GnomeScreensaver
