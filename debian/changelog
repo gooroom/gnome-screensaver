@@ -1,3 +1,10 @@
+gnome-screensaver (2.28.0-2) UNRELEASED; urgency=low
+
+  * Move the autostart file to /usr/share/gnome/autostart.
+  * Remove the old one in the postinst.
+
+ -- Josselin Mouette <joss@debian.org>  Tue, 03 Nov 2009 15:29:43 +0100
+
 gnome-screensaver (2.28.0-1) unstable; urgency=low
 
   * New upstream release.

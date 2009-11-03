@@ -16,6 +16,8 @@ DEB_CONFIGURE_EXTRA_FLAGS += \
 LDFLAGS += -Wl,-z,defs -Wl,-O1 -Wl,--as-needed
 
 binary-post-install/gnome-screensaver::
+	mv debian/gnome-screensaver/etc/xdg/autostart \
+		debian/gnome-screensaver/usr/share/gnome/autostart
 	rm -rf debian/gnome-screensaver/usr/share/doc/gnome-screensaver-*
 
 INFILES := $(wildcard debian/*.desktop.in)
