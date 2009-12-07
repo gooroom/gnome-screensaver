@@ -2,6 +2,8 @@ gnome-screensaver (2.28.0-2) UNRELEASED; urgency=low
 
   * Move the autostart file to /usr/share/gnome/autostart.
   * Remove the old one in the postinst.
+  * Removed libxxf86misc-dev build-dependency. This extension has been 
+    removed in Xorg 7.4. Closes: #559689.
 
  -- Josselin Mouette <joss@debian.org>  Tue, 03 Nov 2009 15:29:43 +0100
 
