@@ -1,4 +1,4 @@
-gnome-screensaver (2.28.0-2) UNRELEASED; urgency=low
+gnome-screensaver (2.28.0-2) unstable; urgency=low
 
   * Move the autostart file to /usr/share/gnome/autostart.
   * Remove the old one in the postinst.
@@ -8,7 +8,7 @@ gnome-screensaver (2.28.0-2) UNRELEASED; urgency=low
   * 01_session_inhibitors.patch: stolen from upstream git. Fix a leak of 
     session inhibitors. Closes: #560049.
 
- -- Josselin Mouette <joss@debian.org>  Tue, 03 Nov 2009 15:29:43 +0100
+ -- Josselin Mouette <joss@debian.org>  Mon, 04 Jan 2010 19:09:35 +0100
 
 gnome-screensaver (2.28.0-1) unstable; urgency=low
 
