@@ -1,3 +1,13 @@
+gnome-screensaver (2.28.0-3) unstable; urgency=low
+
+  * New upstream bugfix release.
+    - CVE-2010-0414, handle monitor removal more securely. Closes: #569084.
+    - debian/patches/01_session_inhibitors.patch:
+      + Removed, fixed upstream.
+  * Standards-Version is 3.8.4, no changes needed.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Wed, 10 Feb 2010 09:24:22 +0100
+
 gnome-screensaver (2.28.0-2) unstable; urgency=low
 
   * Move the autostart file to /usr/share/gnome/autostart.
