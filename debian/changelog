@@ -1,3 +1,10 @@
+gnome-screensaver (2.30.0-2) UNRELEASED; urgency=low
+
+  * Depend on gnome-session-bin instead of gnome-session.
+    Closes: #552436.
+
+ -- Josselin Mouette <joss@debian.org>  Thu, 16 Sep 2010 14:09:55 +0200
+
 gnome-screensaver (2.30.0-1) unstable; urgency=low
 
   * New upstream stable release:
