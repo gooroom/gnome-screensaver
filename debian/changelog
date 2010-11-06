@@ -1,6 +1,5 @@
 gnome-screensaver (2.30.0-2) UNRELEASED; urgency=low
 
-  * Switch to 3.0 source format.
   * Depend on gnome-session-bin instead of gnome-session.
     Closes: #552436.
   * Only suggest rss-glx. Closes: #599634.
