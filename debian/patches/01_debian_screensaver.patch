@@ -11,7 +11,7 @@
      </key>
      <key name="themes" type="as">
 -      <default>[]</default>
-+      <default>[debian-floaters]</default>
++      <default>['screensavers-debian-floaters']</default>
        <summary>Screensaver themes</summary>
        <description>This key specifies the list of themes to be used by the screensaver. It's ignored when "mode" key is  "blank-only", should provide the theme name when "mode" is "single", and should provide a list of themes when "mode" is "random".</description>
      </key>
