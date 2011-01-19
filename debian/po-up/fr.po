@@ -1,0 +1,10 @@
+# Debian gnome-screensaver translation
+#
+
+#: ../../debian/debian-floaters.desktop.in.h:1
+msgid "Debian swirl logos floating around the screen"
+msgstr "Des logos Debian bougeant çà et là sur l’écran"
+
+#: ../../debian/debian-floaters.desktop.in.h:2
+msgid "Floating Debian"
+msgstr "Spirales flottantes"

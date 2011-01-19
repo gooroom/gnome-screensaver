@@ -1,3 +1,102 @@
+gnome-screensaver (2.30.0-2) unstable; urgency=low
+
+  * Depend on gnome-session-bin instead of gnome-session.
+    Closes: #552436.
+  * Only suggest rss-glx. Closes: #599634.
+
+ -- Josselin Mouette <joss@debian.org>  Sat, 06 Nov 2010 13:43:45 +0100
+
+gnome-screensaver (2.30.0-1) unstable; urgency=low
+
+  * New upstream stable release:
+    + debian/control.in:
+      - Update build dependencies.
+
+ -- Sebastian Dröge <slomo@debian.org>  Tue, 04 May 2010 10:01:30 +0200
+
+gnome-screensaver (2.28.3-1) unstable; urgency=high
+
+  * New upstream bugfix release.
+    - CVE-2010-0422, handle monitor hotplugging more securely.
+    - Urgency high for this and the previous security updates.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Mon, 15 Feb 2010 19:13:51 +0100
+
+gnome-screensaver (2.28.2-1) unstable; urgency=low
+
+  * New upstream bugfix release.
+    - CVE-2010-0414, handle monitor removal more securely. Closes: #569084.
+    - debian/patches/01_session_inhibitors.patch:
+      + Removed, fixed upstream.
+  * Standards-Version is 3.8.4, no changes needed.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Wed, 10 Feb 2010 09:59:34 +0100
+
+gnome-screensaver (2.28.0-2) unstable; urgency=low
+
+  * Move the autostart file to /usr/share/gnome/autostart.
+  * Remove the old one in the postinst.
+  * Removed libxxf86misc-dev build-dependency. This extension has been 
+    removed in Xorg 7.4. Closes: #559689.
+  * Add quilt support.
+  * 01_session_inhibitors.patch: stolen from upstream git. Fix a leak of 
+    session inhibitors. Closes: #560049.
+
+ -- Josselin Mouette <joss@debian.org>  Mon, 04 Jan 2010 19:09:35 +0100
+
+gnome-screensaver (2.28.0-1) unstable; urgency=low
+
+  * New upstream release.
+    - Remove libglade2-dev build dependency, no longer needed.
+  * Standards-Version is 3.8.3, no changes needed.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Thu, 24 Sep 2009 18:01:13 +0200
+
+gnome-screensaver (2.26.1-2) unstable; urgency=low
+
+  * Depend on gnome-session 2.26, it is useless without it.
+    Closes: #536381.
+
+ -- Josselin Mouette <joss@debian.org>  Sat, 11 Jul 2009 11:34:43 +0200
+
+gnome-screensaver (2.26.1-1) unstable; urgency=low
+
+  [ Emilio Pozuelo Monfort ]
+  * New upstream release.
+  * debian/watch: don't uupdate.
+  * debian/copyright: updated.
+  * debian/patches/01_manpages_whatis.patch: removed, fixed upstream.
+  * debian/rules: remove simple-patchsys.mk
+  * Use unstable for Vcs-*
+  * Standards-Version is 3.8.2, no changes needed.
+  * debian/rules: install gconf-defaults file with default priority.
+  * debian/debian-floaters.desktop:
+    - Remove deprecated Encoding key.
+    - Add trailing semicolon to Categories.
+    - Add full path to the Exec command, as floaters is not in PATH.
+    - Add OnlyShowIn: GNOME.
+  * Add magic to make debian-floaters.desktop translatable. Thanks
+    Josselin Mouette for the explanations.
+    - Spanish translation by Francisco Javier Cuadrado.
+    - Swedish translation by Martin Bagge.
+    - German translation by Helge Kreutzmann. Closes: #533646.
+    - Portuguese translation by Américo Monteiro.
+
+  [ Josselin Mouette ]
+  * Add French translation for the desktop file.
+  * Enable building of docbook documentation.
+  * rules, gnome-screensaver.docs: install it in a non-Redhatish place.
+  * A bit of cleanup in build-dependencies.
+
+ -- Josselin Mouette <joss@debian.org>  Fri, 26 Jun 2009 21:46:05 +0200
+
+gnome-screensaver (2.24.1-2) unstable; urgency=low
+
+  * Upload to unstable.
+  * Standards version is 3.8.1.
+
+ -- Josselin Mouette <joss@debian.org>  Tue, 07 Apr 2009 11:28:17 +0200
+
 gnome-screensaver (2.24.1-1) experimental; urgency=low
 
   [ Emilio Pozuelo Monfort ]

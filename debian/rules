@@ -3,7 +3,7 @@
 include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/class/gnome.mk
 include /usr/share/cdbs/1/rules/utils.mk
-include /usr/share/cdbs/1/rules/simple-patchsys.mk
+include /usr/share/cdbs/1/rules/patchsys-quilt.mk
 include /usr/share/gnome-pkg-tools/1/rules/uploaders.mk
 -include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
 
@@ -11,8 +11,29 @@ DEB_CONFIGURE_EXTRA_FLAGS += \
 			--with-xscreensaverdir=/usr/share/xscreensaver/config \
 			--with-xscreensaverhackdir=/usr/lib/xscreensaver \
 			--enable-locking \
-			--with-libgl
-
-DEB_DH_GCONF_ARGS += --priority=15
+			--with-libgl \
+			--enable-docbook-docs
 
 LDFLAGS += -Wl,-z,defs -Wl,-O1 -Wl,--as-needed
+
+binary-post-install/gnome-screensaver::
+	mv debian/gnome-screensaver/etc/xdg/autostart \
+		debian/gnome-screensaver/usr/share/gnome/autostart
+	rm -rf debian/gnome-screensaver/usr/share/doc/gnome-screensaver-*
+
+INFILES := $(wildcard debian/*.desktop.in)
+OUTFILES := $(INFILES:.desktop.in=.desktop)
+
+%.desktop: %.desktop.in
+	intltool-merge -d debian/po-up $< $@
+
+build/gnome-screensaver:: $(OUTFILES)
+
+clean::
+	rm -f $(OUTFILES)
+
+update-po::
+	ls $(INFILES) | sed 's#^#../#' >debian/po-up/POTFILES.in
+	cd debian/po-up && intltool-update -g debian --pot && \
+		for i in *.po; do intltool-update -g debian --dist $${i%.po}; done
+	rm -f debian/po-up/POTFILES.in
