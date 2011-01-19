@@ -1,8 +1,14 @@
-gnome-screensaver (2.91.3-1) UNRELEASED; urgency=low
+gnome-screensaver (2.91.3-1) experimental; urgency=low
 
   * New upstream release.
     + debian/control.in:
       - Update build dependencies.
+    + debian/rules:
+      - Remove obsolete configure flag.
+    + debian/gconf-defaults,
+      debian/patches/01_debian_screensaver.patch:
+      - GConf is gone. Patch the gsettings schema to have the Debian
+        screensaver by default.
   * debian/control.in,
     debian/rules,
     debian/source/format:
@@ -11,7 +17,7 @@ gnome-screensaver (2.91.3-1) UNRELEASED; urgency=low
     debian/patches/0002-add-a-gnome-3-style-panel-with-a-clock.patch:
     + Taken from upstream git, make the screensaver more GNOME 3.
 
- -- Emilio Pozuelo Monfort <pochu@debian.org>  Wed, 19 Jan 2011 21:10:47 +0000
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Wed, 19 Jan 2011 22:16:20 +0000
 
 gnome-screensaver (2.30.0-2) unstable; urgency=low
 
