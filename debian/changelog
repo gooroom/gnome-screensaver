@@ -1,3 +1,10 @@
+gnome-screensaver (2.30.0-3) unstable; urgency=low
+
+  * Disable libnotify support, the function simply doesn’t work at all.
+    Closes: #606830.
+
+ -- Josselin Mouette <joss@debian.org>  Mon, 24 Jan 2011 17:46:22 +0100
+
 gnome-screensaver (2.30.0-2) unstable; urgency=low
 
   * Depend on gnome-session-bin instead of gnome-session.
