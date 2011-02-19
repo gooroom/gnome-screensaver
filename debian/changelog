@@ -1,4 +1,4 @@
-gnome-screensaver (2.91.4-1) UNRELEASED; urgency=low
+gnome-screensaver (2.91.4-1) experimental; urgency=low
 
   * New upstream release.
     + debian/control.in:
@@ -6,8 +6,10 @@ gnome-screensaver (2.91.4-1) UNRELEASED; urgency=low
     + debian/patches/0001-remove-cancel-button-and-set-a-minimum-width.patch,
       debian/patches/0002-add-a-gnome-3-style-panel-with-a-clock.patch:
       - Removed, included upstream.
+  * debian/control.in:
+    - Update for the new gtk+ package names.
 
- -- Emilio Pozuelo Monfort <pochu@debian.org>  Tue, 08 Feb 2011 23:33:27 +0000
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Sat, 19 Feb 2011 14:34:10 +0000
 
 gnome-screensaver (2.91.3-1) experimental; urgency=low
 
