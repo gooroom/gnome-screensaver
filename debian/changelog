@@ -1,3 +1,11 @@
+gnome-screensaver (2.91.90-1) experimental; urgency=low
+
+  * New upstream release.
+    * debian/control.in, debian/patches/:
+      - Schema has been moved to gsettings-desktop-schemas, remove patch.
+
+ -- Frederic Peters <fpeters@debian.org>  Tue, 22 Feb 2011 21:16:48 +0100
+
 gnome-screensaver (2.91.4-1) experimental; urgency=low
 
   * New upstream release.

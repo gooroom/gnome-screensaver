@@ -25,7 +25,8 @@ Build-Depends: cdbs,
                libxss-dev,
                x11proto-xf86vidmode-dev,
                libxxf86vm-dev,
-               libgl1-mesa-dev | libgl1-mesa-swx11-dev
+               libgl1-mesa-dev | libgl1-mesa-swx11-dev,
+               gsettings-desktop-schemas-dev (>= 0.1.7-2)
 Standards-Version: 3.8.4
 Vcs-Svn: svn://svn.debian.org/svn/pkg-gnome/desktop/unstable/gnome-screensaver
 Vcs-Browser: http://svn.debian.org/viewsvn/pkg-gnome/desktop/unstable/gnome-screensaver
@@ -37,7 +38,8 @@ Depends: ${shlibs:Depends},
          ${misc:Depends},
          dbus-x11,
          gnome-icon-theme (>= 2.15.90),
-         gnome-session-bin (>= 2.26)
+         gnome-session-bin (>= 2.26),
+         gsettings-desktop-schemas (>= 0.1.7-2)
 Recommends: gnome-power-manager,
             libpam-gnome-keyring
 Suggests: xscreensaver-data, rss-glx
