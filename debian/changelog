@@ -1,3 +1,15 @@
+gnome-screensaver (2.91.91-1) experimental; urgency=low
+
+  * New upstream release.
+  * debian/debian-floaters.desktop.in, debian/debian-swirl-logo.svg,
+    debian/gnome-screensaver.install, debian/rules, debian/po-up:
+    remove Floating Debian Swirl screensaver, there is no theme support
+    anymore.
+  * debian/rules: remove xscreensaver hacks configure flag, ditto.
+  * debian/control.in: do not suggest xscreensaver-data or rss-glx, ditto.
+
+ -- Frederic Peters <fpeters@debian.org>  Tue, 08 Mar 2011 18:04:52 +0100
+
 gnome-screensaver (2.91.90-1) experimental; urgency=low
 
   * New upstream release.
