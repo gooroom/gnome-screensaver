@@ -1,3 +1,12 @@
+gnome-screensaver (2.91.92-1) experimental; urgency=low
+
+  * New upstream release.
+  * debian/control.in: bump libgnome-desktop and gsettings-desktop-schemas
+    dependencies, as the gsettings key for background picture has been
+    changed.
+
+ -- Frederic Peters <fpeters@debian.org>  Tue, 22 Mar 2011 14:38:48 +0100
+
 gnome-screensaver (2.91.91-1) experimental; urgency=low
 
   * New upstream release.

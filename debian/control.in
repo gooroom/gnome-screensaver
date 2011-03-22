@@ -11,7 +11,7 @@ Build-Depends: cdbs,
                libglib2.0-dev (>= 2.15.0),
                libgtk-3-dev (>= 3.0.0),
                libgnome-menu-dev (>= 2.11.1),
-               libgnome-desktop-3-dev (>= 2.91.5),
+               libgnome-desktop-3-dev (>= 2.91.92),
                libgnomekbd-dev (>= 2.24),
                libxklavier-dev,
                libx11-dev,
@@ -26,7 +26,7 @@ Build-Depends: cdbs,
                x11proto-xf86vidmode-dev,
                libxxf86vm-dev,
                libgl1-mesa-dev | libgl1-mesa-swx11-dev,
-               gsettings-desktop-schemas-dev (>= 0.1.7-2)
+               gsettings-desktop-schemas-dev (>= 2.91.91)
 Standards-Version: 3.8.4
 Vcs-Svn: svn://svn.debian.org/svn/pkg-gnome/desktop/unstable/gnome-screensaver
 Vcs-Browser: http://svn.debian.org/viewsvn/pkg-gnome/desktop/unstable/gnome-screensaver
@@ -39,7 +39,7 @@ Depends: ${shlibs:Depends},
          dbus-x11,
          gnome-icon-theme (>= 2.15.90),
          gnome-session-bin (>= 2.26),
-         gsettings-desktop-schemas (>= 0.1.7-2)
+         gsettings-desktop-schemas (>= 2.91.92)
 Recommends: gnome-power-manager,
             libpam-gnome-keyring
 Description: GNOME screen saver and locker
