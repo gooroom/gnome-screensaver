@@ -1,3 +1,11 @@
+gnome-screensaver (3.0.0-2) experimental; urgency=low
+
+  * Team upload.
+  * Bump build-dep on libgnomekbd-dev to ensure we have a version linked with
+    libgtk3-0.
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Sun, 10 Apr 2011 19:00:51 +0000
+
 gnome-screensaver (3.0.0-1) experimental; urgency=low
 
   * Team upload.
