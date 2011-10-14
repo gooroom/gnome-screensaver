@@ -4,6 +4,8 @@ gnome-screensaver (3.0.1-1) UNRELEASED; urgency=low
   * New upstream release.
   * debian/watch:
     - Switch to .xz tarballs.
+  * debian/control:
+    - Remove Build-Depends on libgnome-menu-dev.
 
  -- Michael Biebl <biebl@debian.org>  Fri, 14 Oct 2011 12:44:41 +0200
 
