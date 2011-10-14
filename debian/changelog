@@ -1,4 +1,4 @@
-gnome-screensaver (3.0.1-1) UNRELEASED; urgency=low
+gnome-screensaver (3.0.1-1) unstable; urgency=low
 
   * Upload to unstable.
   * New upstream release.
@@ -10,7 +10,7 @@ gnome-screensaver (3.0.1-1) UNRELEASED; urgency=low
     - Bump Standards-Version to 3.9.2. No further changes.
   * Bump debhelper compatibility level to 8.
 
- -- Michael Biebl <biebl@debian.org>  Fri, 14 Oct 2011 12:44:41 +0200
+ -- Michael Biebl <biebl@debian.org>  Fri, 14 Oct 2011 12:52:40 +0200
 
 gnome-screensaver (3.0.0-2) experimental; urgency=low
 
