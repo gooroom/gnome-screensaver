@@ -7,6 +7,7 @@ gnome-screensaver (3.0.1-1) UNRELEASED; urgency=low
   * debian/control:
     - Remove Build-Depends on libgnome-menu-dev.
     - Set pkg-gnome-maintainers@lists.alioth.debian.org as Maintainer.
+    - Bump Standards-Version to 3.9.2. No further changes.
   * Bump debhelper compatibility level to 8.
 
  -- Michael Biebl <biebl@debian.org>  Fri, 14 Oct 2011 12:44:41 +0200
