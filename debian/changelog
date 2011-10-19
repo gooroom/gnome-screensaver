@@ -1,7 +1,7 @@
 gnome-screensaver (3.0.1-2) unstable; urgency=low
 
   * Remove obsolete gnome-screensavers.menu conffile on upgrades.
-    Closes: #645446
+    Closes: #645448
 
  -- Michael Biebl <biebl@debian.org>  Wed, 19 Oct 2011 10:52:38 +0200
 
