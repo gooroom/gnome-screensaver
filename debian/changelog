@@ -1,6 +1,7 @@
 gnome-screensaver (3.0.1-2) UNRELEASED; urgency=low
 
-  * Remove obsolete gnome-settings.menu conffile on upgrades. Closes: #645446
+  * Remove obsolete gnome-screensavers.menu conffile on upgrades.
+    Closes: #645446
 
  -- Michael Biebl <biebl@debian.org>  Fri, 14 Oct 2011 13:36:44 +0200
 
