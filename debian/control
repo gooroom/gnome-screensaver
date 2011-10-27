@@ -7,7 +7,7 @@ Source: gnome-screensaver
 Section: gnome
 Priority: optional
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Uploaders: Emilio Pozuelo Monfort <pochu@debian.org>, Frederic Peters <fpeters@debian.org>, Josselin Mouette <joss@debian.org>, Michael Biebl <biebl@debian.org>
+Uploaders: Emilio Pozuelo Monfort <pochu@debian.org>, Frederic Peters <fpeters@debian.org>, Michael Biebl <biebl@debian.org>
 Build-Depends: cdbs,
                debhelper (>= 8.1.0~),
                gnome-pkg-tools (>= 0.10),
