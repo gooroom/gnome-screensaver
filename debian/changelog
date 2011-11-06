@@ -1,3 +1,32 @@
+gnome-screensaver (3.0.1-3) unstable; urgency=low
+
+  * Bump dependency on gnome-session-bin to (>= 3.0) to avoid partial upgrades
+    which can result in having the screen no longer locked on lid-close.
+    Closes: #645427
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 27 Oct 2011 15:34:04 +0200
+
+gnome-screensaver (3.0.1-2) unstable; urgency=low
+
+  * Remove obsolete gnome-screensavers.menu conffile on upgrades.
+    Closes: #645448
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 19 Oct 2011 10:52:38 +0200
+
+gnome-screensaver (3.0.1-1) unstable; urgency=low
+
+  * Upload to unstable.
+  * New upstream release.
+  * debian/watch:
+    - Switch to .xz tarballs.
+  * debian/control:
+    - Remove Build-Depends on libgnome-menu-dev.
+    - Set pkg-gnome-maintainers@lists.alioth.debian.org as Maintainer.
+    - Bump Standards-Version to 3.9.2. No further changes.
+  * Bump debhelper compatibility level to 8.
+
+ -- Michael Biebl <biebl@debian.org>  Fri, 14 Oct 2011 12:52:40 +0200
+
 gnome-screensaver (3.0.0-2) experimental; urgency=low
 
   * Team upload.
