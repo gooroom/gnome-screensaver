@@ -8,7 +8,8 @@ include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
 
 DEB_CONFIGURE_EXTRA_FLAGS += \
 			--enable-locking \
-			--enable-docbook-docs
+			--enable-docbook-docs \
+			--without-systemd
 
 LDFLAGS += -Wl,-z,defs -Wl,-O1 -Wl,--as-needed
 

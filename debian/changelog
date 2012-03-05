@@ -1,10 +1,9 @@
 gnome-screensaver (3.2.2-1) unstable; urgency=low
 
   * New upstream release.
-  * Build-Depend on libsystemd-login-dev to enable systemd support on
-    Linux architectures.
+  * Pass --without-systemd to avoid building with systemd support for now.
 
- -- Jordi Mallach <jordi@debian.org>  Mon, 05 Mar 2012 17:28:51 +0100
+ -- Jordi Mallach <jordi@debian.org>  Mon, 05 Mar 2012 20:42:38 +0100
 
 gnome-screensaver (3.2.0-2) unstable; urgency=low
 
