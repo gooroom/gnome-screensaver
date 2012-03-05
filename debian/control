@@ -7,7 +7,7 @@ Source: gnome-screensaver
 Section: gnome
 Priority: optional
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Uploaders: Frederic Peters <fpeters@debian.org>, Michael Biebl <biebl@debian.org>, Sjoerd Simons <sjoerd@debian.org>
+Uploaders: Frederic Peters <fpeters@debian.org>, Jordi Mallach <jordi@debian.org>, Michael Biebl <biebl@debian.org>, Sjoerd Simons <sjoerd@debian.org>
 Build-Depends: cdbs,
                debhelper (>= 8.1.0~),
                gnome-pkg-tools (>= 0.10),
@@ -17,6 +17,7 @@ Build-Depends: cdbs,
                libgtk-3-dev (>= 3.0.0),
                libgnome-desktop-3-dev (>= 3.1.91),
                libgnomekbd-dev (>= 2.91.91),
+               libsystemd-login-dev [linux-any],
                libxklavier-dev,
                libx11-dev,
                libxt-dev,
