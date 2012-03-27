@@ -1,8 +1,10 @@
 gnome-screensaver (3.4.0-1) UNRELEASED; urgency=low
 
   * New upstream release.
+  * Drop Build-Depends on libgl1-mesa-dev | libgl1-mesa-swx11-dev, no longer
+    required.
 
- -- Michael Biebl <biebl@debian.org>  Tue, 27 Mar 2012 03:00:16 +0200
+ -- Michael Biebl <biebl@debian.org>  Tue, 27 Mar 2012 17:32:41 +0200
 
 gnome-screensaver (3.2.2-1) unstable; urgency=low
 
