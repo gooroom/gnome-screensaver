@@ -2,8 +2,9 @@ gnome-screensaver (3.4.1-1) UNRELEASED; urgency=low
 
   * New upstream release.
   * Update Vcs-* URLs.
+  * Bump Standards-Version to 3.9.3.
 
- -- Michael Biebl <biebl@debian.org>  Sun, 15 Apr 2012 16:20:35 +0200
+ -- Michael Biebl <biebl@debian.org>  Sun, 15 Apr 2012 16:21:06 +0200
 
 gnome-screensaver (3.4.0-1) unstable; urgency=low
 
