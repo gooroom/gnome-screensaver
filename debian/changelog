@@ -1,12 +1,11 @@
-gnome-screensaver (3.4.1-1) UNRELEASED; urgency=low
+gnome-screensaver (3.4.1-1) unstable; urgency=low
 
   * New upstream release.
   * Update Vcs-* URLs.
   * Bump Standards-Version to 3.9.3.
-  * Update and rewrite debian/copyright using the machine-readable copyright
-    format 1.0.
+  * Update debian/copyright using the machine-readable copyright format 1.0.
 
- -- Michael Biebl <biebl@debian.org>  Sun, 15 Apr 2012 16:30:16 +0200
+ -- Michael Biebl <biebl@debian.org>  Sun, 15 Apr 2012 16:30:50 +0200
 
 gnome-screensaver (3.4.0-1) unstable; urgency=low
 
