@@ -7,7 +7,7 @@ Source: gnome-screensaver
 Section: gnome
 Priority: optional
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Uploaders: Frederic Peters <fpeters@debian.org>, Jordi Mallach <jordi@debian.org>, Michael Biebl <biebl@debian.org>, Sjoerd Simons <sjoerd@debian.org>
+Uploaders: Jordi Mallach <jordi@debian.org>, Michael Biebl <biebl@debian.org>, Sjoerd Simons <sjoerd@debian.org>
 Build-Depends: cdbs,
                debhelper (>= 8.1.0~),
                gnome-pkg-tools (>= 0.10),
@@ -33,8 +33,8 @@ Build-Depends: cdbs,
                libxxf86vm-dev,
                gsettings-desktop-schemas-dev (>= 2.91.91)
 Standards-Version: 3.9.2
-Vcs-Svn: svn://svn.debian.org/svn/pkg-gnome/desktop/unstable/gnome-screensaver
-Vcs-Browser: http://svn.debian.org/viewsvn/pkg-gnome/desktop/unstable/gnome-screensaver
+Vcs-Svn: svn://anonscm.debian.org/svn/pkg-gnome/desktop/unstable/gnome-screensaver
+Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-gnome/desktop/unstable/gnome-screensaver
 Homepage: http://live.gnome.org/GnomeScreensaver
 
 Package: gnome-screensaver
