@@ -12,6 +12,8 @@ Build-Depends: cdbs,
                libgtk-3-dev (>= 3.0.0),
                libgnome-desktop-3-dev (>= 3.1.91),
                libgnomekbd-dev (>= 2.91.91),
+#               libsystemd-login-dev [linux-any],
+#               libsystemd-daemon-dev [linux-any],
                libxklavier-dev,
                libx11-dev,
                libxt-dev,
@@ -24,11 +26,10 @@ Build-Depends: cdbs,
                libxss-dev,
                x11proto-xf86vidmode-dev,
                libxxf86vm-dev,
-               libgl1-mesa-dev | libgl1-mesa-swx11-dev,
                gsettings-desktop-schemas-dev (>= 2.91.91)
-Standards-Version: 3.9.2
-Vcs-Svn: svn://svn.debian.org/svn/pkg-gnome/desktop/unstable/gnome-screensaver
-Vcs-Browser: http://svn.debian.org/viewsvn/pkg-gnome/desktop/unstable/gnome-screensaver
+Standards-Version: 3.9.3
+Vcs-Svn: svn://anonscm.debian.org/svn/pkg-gnome/desktop/unstable/gnome-screensaver
+Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-gnome/desktop/unstable/gnome-screensaver
 Homepage: http://live.gnome.org/GnomeScreensaver
 
 Package: gnome-screensaver

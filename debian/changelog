@@ -1,3 +1,33 @@
+gnome-screensaver (3.4.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Update Vcs-* URLs.
+  * Bump Standards-Version to 3.9.3.
+  * Update debian/copyright using the machine-readable copyright format 1.0.
+
+ -- Michael Biebl <biebl@debian.org>  Sun, 15 Apr 2012 16:30:50 +0200
+
+gnome-screensaver (3.4.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Drop Build-Depends on libgl1-mesa-dev | libgl1-mesa-swx11-dev, no longer
+    required.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 27 Mar 2012 17:34:18 +0200
+
+gnome-screensaver (3.2.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Pass --without-systemd to avoid building with systemd support for now.
+
+ -- Jordi Mallach <jordi@debian.org>  Mon, 05 Mar 2012 20:42:38 +0100
+
+gnome-screensaver (3.2.0-2) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 07 Dec 2011 07:49:55 +0100
+
 gnome-screensaver (3.2.0-1) experimental; urgency=low
 
   * New upstream release
