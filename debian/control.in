@@ -28,7 +28,7 @@ Build-Depends: cdbs,
                libxxf86vm-dev,
                gsettings-desktop-schemas-dev (>= 2.91.91)
 Standards-Version: 3.9.3
-Vcs-Svn: svn://anonscm.debian.org/svn/pkg-gnome/desktop/unstable/gnome-screensaver
+Vcs-Svn: svn://anonscm.debian.org/pkg-gnome/desktop/unstable/gnome-screensaver
 Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-gnome/desktop/unstable/gnome-screensaver
 Homepage: http://live.gnome.org/GnomeScreensaver
 
