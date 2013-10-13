@@ -1,4 +1,4 @@
-gnome-screensaver (3.6.1-1) UNRELEASED; urgency=low
+gnome-screensaver (3.6.1-1) unstable; urgency=low
 
   [ Jeremy Bicha ]
   * Update homepage
@@ -14,8 +14,9 @@ gnome-screensaver (3.6.1-1) UNRELEASED; urgency=low
   * debian/patches/01_fallback_session.patch:
     + Fix session detection so that gnome-screensaver starts, the session
       is now called gnome-flashback instead of gnome-fallback.
+  * Upload to unstable.
 
- -- Laurent Bigonville <bigon@debian.org>  Sun, 22 Sep 2013 23:48:16 +0200
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Sun, 13 Oct 2013 23:11:04 +0200
 
 gnome-screensaver (3.6.0-1) experimental; urgency=low
 
