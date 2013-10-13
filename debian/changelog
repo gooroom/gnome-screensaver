@@ -1,3 +1,23 @@
+gnome-screensaver (3.6.1-1) UNRELEASED; urgency=low
+
+  [ Jeremy Bicha ]
+  * Update homepage
+
+  [ Laurent Bigonville ]
+  * New upstream release
+  * debian/control.in:
+    - Bump Standards-Version to 3.9.4 (no further changes)
+    - Add autotools-dev to the build-dependencies, so config.{guess,sub} are
+      being updated during build
+
+ -- Laurent Bigonville <bigon@debian.org>  Sun, 22 Sep 2013 23:48:16 +0200
+
+gnome-screensaver (3.6.0-1) experimental; urgency=low
+
+  * New upstream release
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Mon, 15 Oct 2012 09:33:57 +0200
+
 gnome-screensaver (3.4.1-1) unstable; urgency=low
 
   * New upstream release.
