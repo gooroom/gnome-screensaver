@@ -10,6 +10,11 @@ gnome-screensaver (3.6.1-1) UNRELEASED; urgency=low
     - Add autotools-dev to the build-dependencies, so config.{guess,sub} are
       being updated during build
 
+  [ Emilio Pozuelo Monfort ]
+  * debian/patches/01_fallback_session.patch:
+    + Fix session detection so that gnome-screensaver starts, the session
+      is now called gnome-flashback instead of gnome-fallback.
+
  -- Laurent Bigonville <bigon@debian.org>  Sun, 22 Sep 2013 23:48:16 +0200
 
 gnome-screensaver (3.6.0-1) experimental; urgency=low
