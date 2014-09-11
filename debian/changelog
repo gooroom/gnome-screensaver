@@ -1,3 +1,10 @@
+gnome-screensaver (3.6.1-2) UNRELEASED; urgency=medium
+
+  * Add missing permissive license to debian/copyright (Closes: #749519)
+  * Add a missing copyright holder while I'm there
+
+ -- Simon McVittie <smcv@debian.org>  Thu, 11 Sep 2014 20:29:38 +0100
+
 gnome-screensaver (3.6.1-1) unstable; urgency=low
 
   [ Jeremy Bicha ]
