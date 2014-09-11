@@ -1,5 +1,6 @@
-gnome-screensaver (3.6.1-2) UNRELEASED; urgency=medium
+gnome-screensaver (3.6.1-2) unstable; urgency=medium
 
+  * Team upload
   * Add missing permissive license to debian/copyright (Closes: #749519)
   * Add a missing copyright holder while I'm there
   * Add patch from upstream to enable gnome-screensaver to be included
