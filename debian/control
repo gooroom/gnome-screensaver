@@ -2,7 +2,6 @@
 # 
 # Modifications should be made to debian/control.in instead.
 # This file is regenerated automatically in the clean target.
-
 Source: gnome-screensaver
 Section: gnome
 Priority: optional
@@ -10,7 +9,9 @@ Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.
 Uploaders: Emilio Pozuelo Monfort <pochu@debian.org>, Jordi Mallach <jordi@debian.org>, Michael Biebl <biebl@debian.org>, Sjoerd Simons <sjoerd@debian.org>
 Build-Depends: cdbs,
                debhelper (>= 8.1.0~),
+               dh-autoreconf,
                autotools-dev,
+               gnome-common,
                gnome-pkg-tools (>= 0.10),
                intltool (>= 0.35.0),
                libdbus-glib-1-dev (>= 0.30),
@@ -47,6 +48,7 @@ Depends: ${shlibs:Depends},
          gnome-icon-theme (>= 2.15.90),
          gnome-session-bin (>= 3.0),
          gsettings-desktop-schemas (>= 2.91.92)
+Breaks: gnome-session-flashback (<< 3.8.1-1~)
 Recommends: gnome-power-manager,
             libpam-gnome-keyring
 Description: GNOME screen saver and locker

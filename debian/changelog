@@ -2,8 +2,16 @@ gnome-screensaver (3.6.1-2) UNRELEASED; urgency=medium
 
   * Add missing permissive license to debian/copyright (Closes: #749519)
   * Add a missing copyright holder while I'm there
+  * Add patch from upstream to enable gnome-screensaver to be included
+    in the autostart list for non-GNOME sessions, by requiring session files
+    to include it in RequiredComponents if desired and removing its
+    AutostartCondition (Closes: #733059)
+    - depend on dh-autoreconf and gnome-common so we can autoreconfiscate
+    - remove fallback -> flashback patch, no longer relevant
+    - Breaks versions of gnome-session-flashback that do not explicitly pull
+      it in
 
- -- Simon McVittie <smcv@debian.org>  Thu, 11 Sep 2014 20:29:38 +0100
+ -- Simon McVittie <smcv@debian.org>  Thu, 11 Sep 2014 21:26:06 +0100
 
 gnome-screensaver (3.6.1-1) unstable; urgency=low
 
