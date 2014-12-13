@@ -1,0 +1,120 @@
+From f8f9beb6a3bf81240d36bfec43e5db9b102ea91e Mon Sep 17 00:00:00 2001
+From: Martin Pitt <martinpitt@gnome.org>
+Date: Wed, 1 May 2013 10:55:49 -0700
+Subject: [PATCH] Lock screen on suspend
+
+Listen for logind's PrepareForSleep signal, and lock the screen (if configured
+to do so). This mirrors what gnome-shell's screensaver does.
+---
+ src/gs-listener-dbus.c | 28 ++++++++++++++++++++++++++++
+ src/gs-listener-dbus.h |  1 +
+ src/gs-monitor.c       | 20 ++++++++++++++++++++
+ 3 files changed, 49 insertions(+)
+
+--- a/src/gs-listener-dbus.c
++++ b/src/gs-listener-dbus.c
+@@ -83,6 +83,7 @@ struct GSListenerPrivate
+ 
+ enum {
+         LOCK,
++        CONFIG_LOCK,
+         QUIT,
+         SIMULATE_USER_ACTIVITY,
+         ACTIVE_CHANGED,
+@@ -872,6 +873,17 @@ listener_dbus_handle_system_message (DBu
+                         }
+ 
+                         return DBUS_HANDLER_RESULT_HANDLED;
++                } else if (dbus_message_is_signal (message, SYSTEMD_LOGIND_INTERFACE, "PrepareForSleep")) {
++                        gboolean active;
++                        if (dbus_message_get_args (message, NULL,
++                                    DBUS_TYPE_BOOLEAN, &active,
++                                    DBUS_TYPE_INVALID) && active) {
++                                gs_debug ("systemd notified that system is about to sleep");
++                                g_signal_emit (listener, signals [CONFIG_LOCK], 0);
++                        } else {
++                                gs_debug ("cannot parse PrepareForSleep");
++                        }
++                        return DBUS_HANDLER_RESULT_HANDLED;
+                 } else if (dbus_message_is_signal (message, DBUS_INTERFACE_PROPERTIES, "PropertiesChanged")) {
+ 
+                         if (_listener_message_path_is_our_session (listener, message)) {
+@@ -1186,6 +1198,16 @@ gs_listener_class_init (GSListenerClass
+                               g_cclosure_marshal_VOID__VOID,
+                               G_TYPE_NONE,
+                               0);
++        signals [CONFIG_LOCK] =
++                g_signal_new ("config-lock",
++                              G_TYPE_FROM_CLASS (object_class),
++                              G_SIGNAL_RUN_LAST,
++                              G_STRUCT_OFFSET (GSListenerClass, config_lock),
++                              NULL,
++                              NULL,
++                              g_cclosure_marshal_VOID__VOID,
++                              G_TYPE_NONE,
++                              0);
+         signals [QUIT] =
+                 g_signal_new ("quit",
+                               G_TYPE_FROM_CLASS (object_class),
+@@ -1371,6 +1393,12 @@ gs_listener_acquire (GSListener *listene
+                                             ",interface='"DBUS_INTERFACE_PROPERTIES"'"
+                                             ",member='PropertiesChanged'",
+                                             NULL);
++                        dbus_bus_add_match (listener->priv->system_connection,
++                                            "type='signal'"
++                                            ",sender='"SYSTEMD_LOGIND_SERVICE"'"
++                                            ",interface='"SYSTEMD_LOGIND_INTERFACE"'"
++                                            ",member='PrepareForSleep'",
++                                            NULL);
+ 
+                         return (res != -1);
+                 }
+--- a/src/gs-listener-dbus.h
++++ b/src/gs-listener-dbus.h
+@@ -45,6 +45,7 @@ typedef struct
+         GObjectClass       parent_class;
+ 
+         void            (* lock)                     (GSListener *listener);
++        void            (* config_lock)              (GSListener *listener);
+         void            (* quit)                     (GSListener *listener);
+         void            (* simulate_user_activity)   (GSListener *listener);
+         gboolean        (* active_changed)           (GSListener *listener,
+--- a/src/gs-monitor.c
++++ b/src/gs-monitor.c
+@@ -210,6 +210,19 @@ listener_lock_cb (GSListener *listener,
+ }
+ 
+ static void
++listener_config_lock_cb (GSListener *listener,
++                         GSMonitor  *monitor)
++{
++        if (! monitor->priv->prefs->lock_disabled) {
++		gs_debug ("Locking the screen suspend");
++		gs_monitor_lock_screen (monitor);
++        } else {
++                gs_debug ("Locking disabled by the administrator");
++        }
++
++}
++
++static void
+ listener_quit_cb (GSListener *listener,
+                   GSMonitor  *monitor)
+ {
+@@ -328,6 +341,7 @@ static void
+ disconnect_listener_signals (GSMonitor *monitor)
+ {
+         g_signal_handlers_disconnect_by_func (monitor->priv->listener, listener_lock_cb, monitor);
++        g_signal_handlers_disconnect_by_func (monitor->priv->listener, listener_config_lock_cb, monitor);
+         g_signal_handlers_disconnect_by_func (monitor->priv->listener, listener_quit_cb, monitor);
+         g_signal_handlers_disconnect_by_func (monitor->priv->listener, listener_active_changed_cb, monitor);
+         g_signal_handlers_disconnect_by_func (monitor->priv->listener, listener_simulate_user_activity_cb, monitor);
+@@ -339,6 +353,8 @@ connect_listener_signals (GSMonitor *mon
+ {
+         g_signal_connect (monitor->priv->listener, "lock",
+                           G_CALLBACK (listener_lock_cb), monitor);
++        g_signal_connect (monitor->priv->listener, "config-lock",
++                          G_CALLBACK (listener_config_lock_cb), monitor);
+         g_signal_connect (monitor->priv->listener, "quit",
+                           G_CALLBACK (listener_quit_cb), monitor);
+         g_signal_connect (monitor->priv->listener, "active-changed",

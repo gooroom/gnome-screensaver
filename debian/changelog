@@ -1,3 +1,22 @@
+gnome-screensaver (3.6.1-3) UNRELEASED; urgency=medium
+
+  * Team upload.
+
+  [ Faidon Liambotis ]
+  * Reenable support for locking the screen on suspend (closes: #773026).
+    - Build with systemd support by passing --with-systemd=auto to configure
+      and build-depending on libsystemd-login-dev. Use "auto" and a
+      [linux-any] dependency to keep compatibility with non-Linux systems.
+    - 00git_logind_check.patch from Ubuntu/upstream, to make this dependent on
+      just logind, not systemd-as-pid1, as recommended by systemd upstream &
+      Debian systemd maintainers. Drops libsystemd-daemon-dev build-dep.
+    - 31_lock_screen_on_suspend.patch from Ubuntu, to listen for logind's
+      PrepareForSleep signal, similarly to gnome-shell's behavior.
+    - 14_no_fade_on_user_switch.patch from Ubuntu, as to not fade on screen
+      lock. Prevents leaking of the screen contents on resume from suspend.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Sat, 13 Dec 2014 15:00:54 +0300
+
 gnome-screensaver (3.6.1-2) unstable; urgency=medium
 
   * Team upload

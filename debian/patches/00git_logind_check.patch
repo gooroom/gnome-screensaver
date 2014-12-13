@@ -1,0 +1,55 @@
+From fd353244020cf53ce58f4abf69a5ec7893ca1fd1 Mon Sep 17 00:00:00 2001
+From: Martin Pitt <martinpitt@gnome.org>
+Date: Thu, 21 Mar 2013 10:24:20 +0000
+Subject: Check for logind, not for systemd
+
+It is possible to build systemd without logind, in which case
+/sys/fs/cgroup/systemd would still exist. Check for /run/systemd/seats instead,
+as recommended by systemd upstream.
+
+For details, see:
+<https://mail.gnome.org/archives/desktop-devel-list/2013-March/msg00092.html>
+
+Drop the now unnecessary linking against libsystemd-daemon.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=696264
+---
+--- a/configure.ac
++++ b/configure.ac
+@@ -601,7 +601,7 @@ AC_ARG_WITH(systemd,
+             [with_systemd=$withval], [with_systemd=auto])
+ 
+ PKG_CHECK_MODULES(SYSTEMD,
+-                  [libsystemd-login libsystemd-daemon],
++                  [libsystemd-login],
+                   [have_systemd=yes], [have_systemd=no])
+ 
+ if test "x$with_systemd" = "xauto" ; then
+--- a/src/gs-listener-dbus.c
++++ b/src/gs-listener-dbus.c
+@@ -25,6 +25,7 @@
+ #include <stdio.h>
+ #include <time.h>
+ #include <string.h>
++#include <unistd.h>
+ 
+ #include <glib/gi18n.h>
+ 
+@@ -33,7 +34,6 @@
+ #include <dbus/dbus-glib-lowlevel.h>
+ 
+ #ifdef WITH_SYSTEMD
+-#include <systemd/sd-daemon.h>
+ #include <systemd/sd-login.h>
+ #endif
+ 
+@@ -1479,7 +1479,8 @@ gs_listener_init (GSListener *listener)
+         listener->priv = GS_LISTENER_GET_PRIVATE (listener);
+ 
+ #ifdef WITH_SYSTEMD
+-        listener->priv->have_systemd = sd_booted () > 0;
++        /* check if logind is running */
++        listener->priv->have_systemd = (access("/run/systemd/seats/", F_OK) >= 0);
+ #endif
+ 
+         gs_listener_dbus_init (listener);
