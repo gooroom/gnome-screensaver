@@ -3,7 +3,7 @@ gnome-screensaver (3.6.1-3) UNRELEASED; urgency=medium
   * Team upload.
 
   [ Faidon Liambotis ]
-  * Reenable support for locking the screen on suspend (closes: #773026).
+  * Re-enable support for locking the screen on suspend (closes: #773026).
     - Build with systemd support by passing --with-systemd=auto to configure
       and build-depending on libsystemd-login-dev. Use "auto" and a
       [linux-any] dependency to keep compatibility with non-Linux systems.
