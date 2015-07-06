@@ -1,0 +1,16 @@
+Description: build against libsystemd library
+Author: Dmitry Shachnev <mitya57@debian.org>
+Forwarded: no
+Last-Update: 2015-07-06
+
+--- a/configure.ac
++++ b/configure.ac
+@@ -601,7 +601,7 @@
+             [with_systemd=$withval], [with_systemd=auto])
+ 
+ PKG_CHECK_MODULES(SYSTEMD,
+-                  [libsystemd-login],
++                  [libsystemd],
+                   [have_systemd=yes], [have_systemd=no])
+ 
+ if test "x$with_systemd" = "xauto" ; then
