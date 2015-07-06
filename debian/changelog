@@ -1,4 +1,4 @@
-gnome-screensaver (3.6.1-5) UNRELEASED; urgency=medium
+gnome-screensaver (3.6.1-5) unstable; urgency=medium
 
   * Build against the new systemd library (closes: #779746).
   * Bump Standards-Version to 3.9.6, no changes needed.
