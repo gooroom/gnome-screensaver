@@ -1,3 +1,10 @@
+gnome-screensaver (3.6.1-6) UNRELEASED; urgency=medium
+
+  * debian/patches/01_no_autostart.patch: Only autostart in GNOME Flashback
+    sessions (closes: #790632).
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Mon, 13 Jul 2015 13:35:28 +0300
+
 gnome-screensaver (3.6.1-5) unstable; urgency=medium
 
   * Build against the new systemd library (closes: #779746).
