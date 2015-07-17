@@ -1,4 +1,4 @@
-gnome-screensaver (3.6.1-6) UNRELEASED; urgency=medium
+gnome-screensaver (3.6.1-6) unstable; urgency=medium
 
   * debian/patches/01_no_autostart.patch: Only autostart in GNOME Flashback
     sessions (closes: #790632).
