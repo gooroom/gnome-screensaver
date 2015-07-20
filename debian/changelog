@@ -1,3 +1,11 @@
+gnome-screensaver (3.6.1-7) UNRELEASED; urgency=medium
+
+  * d/p/0001-gs-lock-plug-Disconnect-signal-handler-from-right-ob.patch:
+    Cherry-pick patch from upstream to disconnect a signal from the right
+    place.
+
+ -- Iain Lane <iain@orangesquash.org.uk>  Mon, 20 Jul 2015 14:17:00 +0100
+
 gnome-screensaver (3.6.1-6) unstable; urgency=medium
 
   * debian/patches/01_no_autostart.patch: Only autostart in GNOME Flashback
