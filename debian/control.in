@@ -39,7 +39,6 @@ Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends},
          ${misc:Depends},
          dbus-x11,
-         gnome-icon-theme (>= 2.15.90),
          gnome-session-bin (>= 3.0),
          gsettings-desktop-schemas (>= 2.91.92)
 Breaks: gnome-session-flashback (<< 3.8.1-1~)
