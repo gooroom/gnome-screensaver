@@ -1,18 +1,18 @@
 #!/usr/bin/make -f
+-include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
 
-include /usr/share/cdbs/1/rules/autoreconf.mk
-include /usr/share/cdbs/1/rules/debhelper.mk
-include /usr/share/cdbs/1/class/gnome.mk
-include /usr/share/cdbs/1/rules/utils.mk
-include /usr/share/gnome-pkg-tools/1/rules/uploaders.mk
-include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,-z,defs -Wl,-O1 -Wl,--as-needed
 
-DEB_CONFIGURE_EXTRA_FLAGS += \
-			--enable-locking \
-			--enable-docbook-docs \
-			--with-systemd=auto
+%:
+	dh $@ --with gnome
 
-LDFLAGS += -Wl,-z,defs -Wl,-O1 -Wl,--as-needed
+override_dh_auto_configure:
+	dh_auto_configure -- \
+		--enable-locking \
+		--enable-docbook-docs \
+		--with-systemd=auto
 
-binary-post-install/gnome-screensaver::
+override_dh_install:
 	rm -rf debian/gnome-screensaver/usr/share/doc/gnome-screensaver-*
+	dh_install

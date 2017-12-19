@@ -11,6 +11,7 @@ gnome-screensaver (3.6.1-8) UNRELEASED; urgency=medium
     - Update Vcs fields for conversion to git
   * Add debian/gbp.conf
   * Bump Standards-Version to 4.1.2
+  * Switch from cdbs to dh
 
  -- Jeremy Bicha <jbicha@debian.org>  Mon, 18 Dec 2017 20:13:14 -0500
 
