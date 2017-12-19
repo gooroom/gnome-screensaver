@@ -1,2 +1,3 @@
 NEWS
-usr/share/doc/gnome-screensaver-*/spec/*.html
+doc/gnome-screensaver.html
+doc/docbook.css
