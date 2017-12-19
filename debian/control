@@ -39,10 +39,9 @@ Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
          default-dbus-session-bus | dbus-session-bus,
-         gnome-session-bin (>= 3.0),
          gsettings-desktop-schemas (>= 2.91.92)
 Breaks: gnome-session-flashback (<< 3.8.1-1~)
-Recommends: gnome-power-manager,
+Recommends: gnome-power-manager | xfce4-power-manager,
             libpam-gnome-keyring
 Description: GNOME screen saver and locker
  gnome-screensaver is a screen saver and locker that aims to have simple,
