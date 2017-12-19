@@ -8,8 +8,11 @@ gnome-screensaver (3.6.1-8) UNRELEASED; urgency=medium
   * debian/control.in:
     - Depend on default-dbus-session-bus | dbus-session-bus instead of
       dbus-x11
+    - Update Vcs fields for conversion to git
+  * Add debian/gbp.conf
+  * Bump Standards-Version to 4.1.2
 
- -- Laurent Bigonville <bigon@debian.org>  Fri, 20 May 2016 22:23:18 +0200
+ -- Jeremy Bicha <jbicha@debian.org>  Mon, 18 Dec 2017 20:13:14 -0500
 
 gnome-screensaver (3.6.1-7) unstable; urgency=medium
 
