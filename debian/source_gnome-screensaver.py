@@ -1,5 +1,5 @@
-+#!/usr/bin/python
-+
+#!/usr/bin/python
+
 '''Apport package hook for gnome-screensaver
 
 (c) 2010 Canonical Ltd.
