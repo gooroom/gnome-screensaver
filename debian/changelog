@@ -1,5 +1,7 @@
-gnome-screensaver (3.6.1-9) unstable; urgency=medium
+gnome-screensaver (3.6.1-10) unstable; urgency=medium
 
+  * Update package description to mention that this is no longer
+    used by GNOME Shell. Thanks Simon McVittie! (Closes: #895478)
   * Update Vcs fields for migration to https://salsa.debian.org/
   * Fix typo in apport hook shebang
   * Bump Standards-Version to 4.3.0
