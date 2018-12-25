@@ -39,12 +39,16 @@ Depends: ${shlibs:Depends},
 Breaks: gnome-session-flashback (<< 3.8.1-1~)
 Recommends: gnome-power-manager | xfce4-power-manager,
             libpam-gnome-keyring
-Description: GNOME screen saver and locker
- gnome-screensaver is a screen saver and locker that aims to have simple,
- sane and secure defaults, and be well integrated with the GNOME desktop.
+Description: Screensaver and screen lock formerly used in GNOME
+ gnome-screensaver is a simple screen saver and screen lock, used in older
+ versions of the GNOME desktop environment.
  .
  It is designed to support, among other things:
  .
   * the ability to lock down configuration settings
   * translation into other languages
   * user switching
+ .
+ This package is not necessary in the GNOME desktop environment, because
+ GNOME Shell contains its own screen lock implementation. It is
+ used by alternative desktop environments such as GNOME Flashback.
