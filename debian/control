@@ -54,5 +54,5 @@ Description: Screensaver and screen lock formerly used in GNOME
   * user switching
  .
  This package is not necessary in the GNOME desktop environment, because
- GNOME Shell contains its own screen lock implementation. It is
- used by alternative desktop environments such as GNOME Flashback.
+ GNOME Shell contains its own screen lock implementation. It can be
+ used with alternative desktop environments such as GNOME Flashback.
