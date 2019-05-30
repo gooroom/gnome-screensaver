@@ -1,0 +1,1130 @@
+diff --git a/configure.ac b/configure.ac
+index 93e31e0..806655a 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -83,6 +83,10 @@ PKG_CHECK_MODULES(GNOME_SCREENSAVER_COMMAND,
+ AC_SUBST(GNOME_SCREENSAVER_COMMAND_CFLAGS)
+ AC_SUBST(GNOME_SCREENSAVER_COMMAND_LIBS)
+ 
++PKG_CHECK_MODULES(WEBKIT_GTK, webkit2gtk-4.0 >= 2.12.0)
++AC_SUBST(WEBKIT_GTK_CFLAGS)
++AC_SUBST(WEBKIT_GTK_LIBS)
++
+ AC_PATH_XTRA
+ 
+ ALL_X_LIBS="$X_LIBS $X_PRE_LIBS -lXext -lX11 $X_EXTRA_LIBS"
+diff --git a/po/POTFILES.in b/po/POTFILES.in
+index 95dbcc4..7d3aa84 100644
+--- a/po/POTFILES.in
++++ b/po/POTFILES.in
+@@ -8,3 +8,5 @@ src/gs-auth-pam.c
+ src/gs-listener-dbus.c
+ src/gs-lock-plug.c
+ src/gs-window-x11.c
++src/cloud-screensaver-dialog.c
++src/grmoawebview.c
+diff --git a/src/Makefile.am b/src/Makefile.am
+index 1dd5d46..1a911be 100644
+--- a/src/Makefile.am
++++ b/src/Makefile.am
+@@ -29,6 +29,7 @@ INCLUDES =							\
+ 	$(LIBGNOMEKBDUI_CFLAGS)					\
+ 	$(LIBNOTIFY_CFLAGS)					\
+ 	$(SYSTEMD_CFLAGS)					\
++	$(WEBKIT_GTK_CFLAGS)					\
+ 	$(NULL)
+ 
+ bin_PROGRAMS = \
+@@ -38,6 +39,7 @@ bin_PROGRAMS = \
+ 
+ libexec_PROGRAMS = \
+ 	gnome-screensaver-dialog	\
++	cloud-screensaver-dialog	\
+ 	$(NULL)
+ 
+ noinst_PROGRAMS = 	\
+@@ -150,6 +152,30 @@ gnome_screensaver_dialog_LDADD =	\
+ 	$(LIBNOTIFY_LIBS)		\
+ 	$(NULL)
+ 
++cloud_screensaver_dialog_SOURCES = 	\
++	cloud-auth-fail-css.h \
++	cloud-screensaver-dialog.c	\
++	grmoawebview.c	\
++	gs-debug.c		\
++	gs-debug.h		\
++	setuid.c		\
++	setuid.h		\
++	subprocs.c		\
++	subprocs.h		\
++	gs-auth.h		\
++	gs-lock-plug.c	\
++	gs-lock-plug.h	\
++	$(AUTH_SOURCES)		\
++	$(NULL)
++
++cloud_screensaver_dialog_LDADD =	\
++	$(GNOME_SCREENSAVER_DIALOG_LIBS)	\
++	$(SAVER_LIBS)			\
++	$(AUTH_LIBS)			\
++	$(WEBKIT_GTK_LIBS)		\
++	$(LIBGNOMEKBDUI_LIBS)		\
++	$(NULL)
++
+ BUILT_SOURCES = 		\
+ 	gs-marshal.c 		\
+ 	gs-marshal.h		\
+diff --git a/src/cloud-auth-fail-css.h b/src/cloud-auth-fail-css.h
+new file mode 100644
+index 0000000..fcd244d
+--- /dev/null
++++ b/src/cloud-auth-fail-css.h
+@@ -0,0 +1,48 @@
++/*
++ * Copyright (c) 2015 - 2017 gooroom <gooroom@gooroom.kr>
++ *
++ * This program is free software; you can redistribute it and/or modify
++ * it under the terms of the GNU General Public License as published by
++ * the Free Software Foundation; either version 2 of the License, or
++ * (at your option) any later version.
++ *
++ * This program is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ * GNU General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License along
++ * with this program; if not, write to the Free Software Foundation, Inc.,
++ * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
++ *
++ */
++
++#ifndef __CLOUD_AUTH_FAIL_CSS_H__
++#define __CLOUD_AUTH_FAIL_CSS_H__
++
++#include <stdio.h>
++
++const char *CSS = ""
++"<html>\n"
++"  <head>\n"
++"    <meta charset=\"utf-8\"/>\n"
++"    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n"
++"    <style type=\"text/css\">\n"
++"      * { margin:0; padding:0 }\n"
++"      p {margin:11px 0 22px; overflow:hidden }\n"
++"      ins {color:#777; text-decoration:none }\n"
++"      img {display: block; border: 0; margin-left: auto; margin-right: auto }\n"
++"    </style>\n"
++"  </head>\n"
++"  <body>\n"
++"    <p><img height=\"39\" width=\"140\" alt=\"HTML5\" src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAAAnCAYAAADdG6ATAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAABBFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iCiAgICAgICAgICAgIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIgogICAgICAgICAgICB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIj4KICAgICAgICAgPHhtcE1NOkRlcml2ZWRGcm9tIHJkZjpwYXJzZVR5cGU9IlJlc291cmNlIj4KICAgICAgICAgICAgPHN0UmVmOmluc3RhbmNlSUQ+eG1wLmlpZDpFM0JDRkU5Q0I1QzQxMUU1OUQ3MEQ4ODE4RjUwRjQ5OTwvc3RSZWY6aW5zdGFuY2VJRD4KICAgICAgICAgICAgPHN0UmVmOmRvY3VtZW50SUQ+eG1wLmRpZDpFM0JDRkU5REI1QzQxMUU1OUQ3MEQ4ODE4RjUwRjQ5OTwvc3RSZWY6ZG9jdW1lbnRJRD4KICAgICAgICAgPC94bXBNTTpEZXJpdmVkRnJvbT4KICAgICAgICAgPHhtcE1NOkRvY3VtZW50SUQ+eG1wLmRpZDpFM0JDRkU5RkI1QzQxMUU1OUQ3MEQ4ODE4RjUwRjQ5OTwveG1wTU06RG9jdW1lbnRJRD4KICAgICAgICAgPHhtcE1NOkluc3RhbmNlSUQ+eG1wLmlpZDpFM0JDRkU5RUI1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\"></p>\n"
++"    <div style=\"text-align:center\">\n"
++"      <h3>%s</h3>\n"
++"      <p><ins>%s</ins></p>\n"
++"    </div>\n"
++"  </body>\n"
++"</html>";
++
++ 
++
++#endif
+diff --git a/src/cloud-screensaver-dialog.c b/src/cloud-screensaver-dialog.c
+new file mode 100644
+index 0000000..b44684a
+--- /dev/null
++++ b/src/cloud-screensaver-dialog.c
+@@ -0,0 +1,549 @@
++/* -*- Mode: C; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
++ *
++ * Copyright (C) 2004-2006 William Jon McCann <mccann@jhu.edu>
++ *
++ * This program is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU General Public License as
++ * published by the Free Software Foundation; either version 2 of the
++ * License, or (at your option) any later version.
++ *
++ * This program is distributed in the hope that it will be useful, but
++ * WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this program; if not, write to the Free Software
++ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
++ * 02110-1301, USA.
++ *
++ * Authors: William Jon McCann <mccann@jhu.edu>
++ *
++ */
++
++#include "config.h"
++
++#include <stdlib.h>
++#include <string.h>
++#include <sys/time.h>
++#include <sys/types.h>
++#include <sys/wait.h>
++#include <unistd.h>
++#include <signal.h>
++#include <pwd.h>
++
++#include <glib/gi18n.h>
++#include <gdk/gdkx.h>
++#include <gtk/gtk.h>
++#include <gtk/gtkx.h>
++
++#include <webkit2/webkit2.h>
++
++#include "gs-auth.h"
++#include "setuid.h"
++#include "gs-lock-plug.h"
++#include "gs-debug.h"
++
++#include "grmoawebview.h"
++#include "cloud-auth-fail-css.h"
++
++
++enum {
++	ACCOUNT_TYPE_LOCAL = 0,
++	ACCOUNT_TYPE_GOOROOM,
++	ACCOUNT_TYPE_GOOGLE,
++	ACCOUNT_TYPE_NAVER,
++	ACCOUNT_TYPE_UNKNOWN
++};
++
++static GtkWidget *g_webview = NULL;
++static GDBusProxy *gcl_proxy = NULL;
++
++
++
++
++
++static char *
++get_id_string (GtkWidget *widget)
++{
++	char *id = NULL;
++
++	g_return_val_if_fail (widget != NULL, NULL);
++	g_return_val_if_fail (GTK_IS_WIDGET (widget), NULL);
++
++	id = g_strdup_printf ("%" G_GUINT32_FORMAT, (guint32) GDK_WINDOW_XID (gtk_widget_get_window (widget)));
++
++	return id;
++}
++
++static gboolean
++print_id (GtkWidget *widget)
++{
++	char *id;
++
++	gs_profile_start (NULL);
++
++	id = get_id_string (widget);
++
++	printf ("WINDOW ID=%s\n", id);
++	fflush (stdout);
++
++	gs_profile_end (NULL);
++
++	g_free (id);
++
++	return FALSE;
++}
++
++static void
++response_ok (void)
++{
++	printf ("RESPONSE=OK\n");
++	fflush (stdout);
++}
++
++static gboolean
++quit_response_ok (void)
++{
++	response_ok ();
++	gtk_main_quit ();
++
++	return FALSE;
++}
++
++static void
++response_lock_init_failed (void)
++{
++	/* if we fail to lock then we should drop the dialog */
++	response_ok ();
++}
++
++static int
++get_account_type (void)
++{
++	int acc_type = ACCOUNT_TYPE_LOCAL;
++	const char *user = g_get_user_name ();
++	struct passwd *user_entry = getpwnam (user);
++	if (!user_entry)
++		return ACCOUNT_TYPE_UNKNOWN;
++
++	char **tokens = g_strsplit (user_entry->pw_gecos, ",", -1);
++	if (tokens && (g_strv_length (tokens) > 4)) {
++		if (tokens[4]) {
++			if (g_str_equal (tokens[4], "gooroom-account") ||
++                g_str_equal (tokens[4], "gooroom-online-account")) {
++				acc_type = ACCOUNT_TYPE_GOOROOM;
++			} else if (g_str_equal (tokens[4], "google-account")) {
++				acc_type = ACCOUNT_TYPE_GOOGLE;
++			} else if (g_str_equal (tokens[4], "naver-account")) {
++				acc_type = ACCOUNT_TYPE_NAVER;
++			} else {
++				acc_type = ACCOUNT_TYPE_LOCAL;
++			}
++		}
++	}
++
++	g_strfreev (tokens);
++
++	return acc_type;
++}
++
++static gchar *
++get_url (void)
++{
++	gchar *url = NULL;
++
++	int account_type = get_account_type ();
++
++	if (account_type == ACCOUNT_TYPE_GOOGLE)
++	{
++		const char *END_POINT     = "https://accounts.google.com/o/oauth2/auth";
++		const char *CLIENT_ID     = "530820566685-k3kfkmu92e2shgpouotc6te3cdp5p2lh.apps.googleusercontent.com";
++		const char *REDIRECT_URI  = "http://localhost:5000";
++		const char *SCOPE         = "profile email";
++		const char *RESPONSE_TYPE = "code";
++
++		url = g_strdup_printf ("%s?"
++                               "client_id=%s&"
++                               "redirect_uri=%s&"
++                               "scope=%s&"
++                               "response_type=%s",
++                               END_POINT, CLIENT_ID, REDIRECT_URI, SCOPE, RESPONSE_TYPE);
++	}
++	else if (account_type == ACCOUNT_TYPE_NAVER)
++	{
++		const char *END_POINT     = "https://nid.naver.com/oauth2.0/authorize";
++		const char *CLIENT_ID     = "9Mbn19F_0ouV4f2MHH31";
++		const char *REDIRECT_URI  = "http://localhost:5000";
++		const char *STATE         = "0ab1cd2ef3gh4ij5kl6mn7op8qr9st0uvwxyz0AB1CD2EF3GH4IJ5KL6MN7OP8QR9ST0UVWXYZ";
++		const char *RESPONSE_TYPE = "code";
++
++		url = g_strdup_printf ("%s?"
++                               "client_id=%s&"
++                               "redirect_uri=%s&"
++                               "state=%s&"
++                               "response_type=%s",
++                               END_POINT, CLIENT_ID, REDIRECT_URI, STATE, RESPONSE_TYPE);
++	}
++
++	return url;
++}
++
++static gboolean
++auth_message_handler (GSAuthMessageStyle style,
++                      const char        *msg,
++                      char             **response,
++                      gpointer           data)
++{
++	*response = NULL;
++	gchar *passwd = NULL;
++	gboolean ret = TRUE;
++
++
++	if (data)
++		passwd = (gchar *)data;
++
++	switch (style)
++	{
++		case GS_AUTH_MESSAGE_PROMPT_ECHO_ON:
++		{
++			if (msg != NULL)
++				*response = passwd;
++			break;
++		}
++		case GS_AUTH_MESSAGE_PROMPT_ECHO_OFF:
++		{
++			if (msg != NULL)
++				*response = passwd;
++			break;
++		}
++		case GS_AUTH_MESSAGE_ERROR_MSG:
++		break;
++
++		case GS_AUTH_MESSAGE_TEXT_INFO:
++		break;
++
++		default:
++			g_assert_not_reached ();
++	}
++
++	if (*response == NULL)
++		ret = FALSE;
++
++	/* we may have pending events that should be processed before continuing back into PAM */
++	while (gtk_events_pending ())
++		gtk_main_iteration ();
++
++	return ret;
++}
++
++static gboolean
++reset_idle_cb (gpointer data)
++{
++	gchar *url = get_url ();
++
++	/* reload webview url */
++	GtkWidget *embed = grmoa_web_view_get_view (GRMOA_WEB_VIEW (g_webview));
++	webkit_web_view_load_uri (WEBKIT_WEB_VIEW (embed), url);
++
++	g_free (url);
++
++	return FALSE;
++}
++
++static gboolean
++handle_auth_failure_idle (gpointer data)
++{
++	GtkWidget *embed;
++	const char *p1 = _("Invalid Credentials");
++	const char *p2 = _("It does not match the information of the logged-in user.<br>Please try again.");
++
++	gchar *html = g_strdup_printf (CSS, p1, p2);
++
++	embed = grmoa_web_view_get_view (GRMOA_WEB_VIEW (g_webview));
++	webkit_web_view_load_html (WEBKIT_WEB_VIEW (embed), html, "file://");
++
++	g_free (html);
++
++	g_timeout_add (5 * 1000, (GSourceFunc)reset_idle_cb, NULL);
++
++	return FALSE;
++}
++
++static void
++cloud_login_signal_handler (GDBusProxy *proxy,
++                            gchar      *sender_name,
++                            gchar      *signal_name,
++                            GVariant   *parameters,
++                            gpointer    data)
++{
++	if (g_strcmp0 (signal_name, "AuthorizationCode") == 0) {
++		if (g_variant_is_of_type (parameters, G_VARIANT_TYPE ("(s)"))) {
++			const gchar *auth_code;
++			g_variant_get (parameters, "(&s)", &auth_code);
++
++			gboolean res = FALSE;
++
++			res = gs_auth_verify_user (g_get_user_name (), g_getenv ("DISPLAY"),
++					auth_message_handler, g_strdup (auth_code), NULL);
++
++			if (!res) {
++				printf ("NOTICE=AUTH FAILED\n");
++				fflush (stdout);
++
++				g_idle_add ((GSourceFunc)handle_auth_failure_idle, NULL);
++			} else {
++				g_idle_add ((GSourceFunc)quit_response_ok, NULL);
++			}
++		}
++	}
++}
++
++static gboolean
++init_cloud_login_daemon (void)
++{
++	GError *error = NULL;
++
++	gcl_proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
++			G_DBUS_CALL_FLAGS_NONE,
++			NULL,
++			"kr.gooroom.CloudLogin",
++			"/kr/gooroom/CloudLogin",
++			"kr.gooroom.CloudLogin",
++			NULL,
++			&error);
++
++	if (gcl_proxy) {
++		g_signal_connect (gcl_proxy, "g-signal", G_CALLBACK (cloud_login_signal_handler), NULL);
++		return TRUE;
++	}
++
++	if (error != NULL) {
++		g_warning ("Failed to create proxy: %s", error->message);
++		g_error_free (error);
++	} else {
++		g_warning ("Failed to create proxy");
++	}
++
++	return FALSE;
++}
++
++static void
++show_cb (GtkWidget *widget,
++         gpointer   data)
++{
++        print_id (widget);
++}
++
++static gboolean
++show_webview_dialog_idle (gpointer data)
++{
++	GtkPlug *plug;
++	GtkWidget *embed;
++
++	plug = g_object_new (GTK_TYPE_PLUG, NULL);
++	gtk_window_set_focus_on_map (GTK_WINDOW (plug), TRUE);
++
++	g_signal_connect (plug, "show", G_CALLBACK (show_cb), NULL);
++
++	gtk_widget_realize (GTK_WIDGET (plug));
++
++	gchar *url = get_url ();
++
++	g_webview = grmoa_web_view_new ();
++	gtk_widget_set_hexpand (g_webview, TRUE);
++	gtk_widget_set_vexpand (g_webview, TRUE);
++	embed = grmoa_web_view_get_view (GRMOA_WEB_VIEW (g_webview));
++	webkit_web_view_load_uri (WEBKIT_WEB_VIEW (embed), url);
++
++	g_free (url);
++
++	gtk_container_add (GTK_CONTAINER (plug), g_webview);
++
++	gtk_widget_show_all (GTK_WIDGET (plug));
++
++	gboolean was_modal = gtk_window_get_modal (GTK_WINDOW (plug));
++	if (!was_modal) {
++		gtk_window_set_modal (GTK_WINDOW (plug), TRUE);
++	}
++
++	GMainLoop *loop = g_main_loop_new (NULL, FALSE);
++	g_main_loop_run (loop);
++
++	g_main_loop_unref (loop);
++
++	return FALSE;
++}
++
++/*
++ * Copyright (c) 1991-2004 Jamie Zawinski <jwz@jwz.org>
++ * Copyright (c) 2005 William Jon McCann <mccann@jhu.edu>
++ *
++ * Initializations that potentially take place as a priveleged user:
++   If the executable is setuid root, then these initializations
++   are run as root, before discarding privileges.
++*/
++static gboolean
++privileged_initialization (int     *argc,
++                           char   **argv,
++                           gboolean verbose)
++{
++        gboolean ret;
++        char    *nolock_reason;
++        char    *orig_uid;
++        char    *uid_message;
++
++        gs_profile_start (NULL);
++
++#ifndef NO_LOCKING
++        /* before hack_uid () for proper permissions */
++        gs_auth_priv_init ();
++#endif /* NO_LOCKING */
++
++        ret = hack_uid (&nolock_reason,
++                        &orig_uid,
++                        &uid_message);
++
++        if (nolock_reason) {
++                g_debug ("Locking disabled: %s", nolock_reason);
++        }
++
++        if (uid_message && verbose) {
++                g_print ("Modified UID: %s", uid_message);
++        }
++
++        g_free (nolock_reason);
++        g_free (orig_uid);
++        g_free (uid_message);
++
++        gs_profile_end (NULL);
++
++        return ret;
++}
++
++
++/*
++ * Copyright (c) 1991-2004 Jamie Zawinski <jwz@jwz.org>
++ * Copyright (c) 2005 William Jon McCann <mccann@jhu.edu>
++ *
++ * Figure out what locking mechanisms are supported.
++ */
++static gboolean
++lock_initialization (int     *argc,
++                     char   **argv,
++                     char   **nolock_reason,
++                     gboolean verbose)
++{
++        if (nolock_reason != NULL) {
++                *nolock_reason = NULL;
++        }
++
++#ifdef NO_LOCKING
++        if (nolock_reason != NULL) {
++                *nolock_reason = g_strdup ("not compiled with locking support");
++        }
++
++        return FALSE;
++#else /* !NO_LOCKING */
++
++        /* Finish initializing locking, now that we're out of privileged code. */
++        if (! gs_auth_init ()) {
++                if (nolock_reason != NULL) {
++                        *nolock_reason = g_strdup ("error getting password");
++                }
++
++                return FALSE;
++        }
++
++        /* If locking is currently enabled, but the environment indicates that
++           we have been launched as GDM's "Background" program, then disable
++           locking just in case.
++        */
++        if (getenv ("RUNNING_UNDER_GDM")) {
++                if (nolock_reason != NULL) {
++                        *nolock_reason = g_strdup ("running under GDM");
++                }
++
++                return FALSE;
++        }
++
++        /* If the server is XDarwin (MacOS X) then disable locking.
++           (X grabs only affect X programs, so you can use Command-Tab
++           to bring any other Mac program to the front, e.g., Terminal.)
++        */
++        {
++                gboolean macos = FALSE;
++
++#ifdef __APPLE__
++                /* Disable locking if *running* on Apple hardware, since we have no
++                   reliable way to determine whether the server is running on MacOS.
++                   Hopefully __APPLE__ means "MacOS" and not "Linux on Mac hardware"
++                   but I'm not really sure about that.
++                */
++                macos = TRUE;
++#endif
++
++                if (macos) {
++                        if (nolock_reason != NULL) {
++                                *nolock_reason = g_strdup ("Cannot lock securely on MacOS X");
++                        }
++
++                        return FALSE;
++                }
++        }
++
++#endif /* NO_LOCKING */
++
++        return TRUE;
++}
++
++int
++main (int    argc,
++      char **argv)
++{
++	char *nolock_reason = NULL;
++
++#ifdef ENABLE_NLS
++	bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
++#ifdef HAVE_BIND_TEXTDOMAIN_CODESET
++	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
++#endif
++	textdomain (GETTEXT_PACKAGE);
++#endif
++
++	gs_profile_start (NULL);
++
++	if (! privileged_initialization (&argc, argv, TRUE)) {
++                response_lock_init_failed ();
++		exit (1);
++	}
++
++	gtk_init (&argc, &argv);
++
++	if (! lock_initialization (&argc, argv, &nolock_reason, TRUE)) {
++		if (nolock_reason != NULL) {
++			g_debug ("Screen locking disabled: %s", nolock_reason);
++			g_free (nolock_reason);
++		}
++                response_lock_init_failed ();
++		exit (1);
++	}
++
++	gs_debug_init (TRUE, FALSE);
++
++	if (!init_cloud_login_daemon ()) {
++                response_lock_init_failed ();
++	}
++
++	g_idle_add ((GSourceFunc)show_webview_dialog_idle, NULL);
++
++	gtk_main ();
++
++	if (gcl_proxy)
++		g_object_unref (gcl_proxy);
++
++	gs_profile_end (NULL);
++	gs_debug_shutdown ();
++
++	return 0;
++}
+diff --git a/src/grmoawebview.c b/src/grmoawebview.c
+new file mode 100644
+index 0000000..266399a
+--- /dev/null
++++ b/src/grmoawebview.c
+@@ -0,0 +1,178 @@
++/* -*- mode: C; c-file-style: "gnu"; indent-tabs-mode: nil; -*-
++ *
++ * Copyright © 2015 Damián Nohales
++ * Copyright © 2012 – 2017 Red Hat, Inc.
++ *
++ * This library is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU Lesser General Public
++ * License as published by the Free Software Foundation; either
++ * version 2 of the License, or (at your option) any later version.
++ *
++ * This library is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * Lesser General Public License for more details.
++ *
++ * You should have received a copy of the GNU Lesser General
++ * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
++ */
++
++/* Based on code by the Epiphany team.
++ */
++
++#include <glib.h>
++#include <JavaScriptCore/JavaScript.h>
++#include <webkit2/webkit2.h>
++
++#include "grmoawebview.h"
++
++struct _GrmoaWebView
++{
++  GtkWidget *progress_bar;
++  GtkWidget *web_view;
++  WebKitWebContext *context;
++  gulong clear_notify_progress_id;
++  gulong notify_progress_id;
++};
++
++struct _GrmoaWebViewClass
++{
++  GtkOverlayClass parent_class;
++};
++
++
++G_DEFINE_TYPE (GrmoaWebView, grmoa_web_view, GTK_TYPE_OVERLAY)
++
++
++static gboolean
++web_view_clear_notify_progress_cb (gpointer user_data)
++{
++  GrmoaWebView *self = GRMOA_WEB_VIEW (user_data);
++
++  gtk_widget_hide (self->progress_bar);
++  self->clear_notify_progress_id = 0;
++  return FALSE;
++}
++
++static void
++web_view_notify_estimated_load_progress_cb (GObject    *object,
++                                            GParamSpec *pspec,
++                                            gpointer    user_data)
++{
++  GrmoaWebView *self = GRMOA_WEB_VIEW (user_data);
++  WebKitWebView *web_view = WEBKIT_WEB_VIEW (object);
++  gboolean loading;
++  const gchar *uri;
++  gdouble progress;
++
++  if (self->clear_notify_progress_id != 0)
++    {
++      g_source_remove (self->clear_notify_progress_id);
++      self->clear_notify_progress_id = 0;
++    }
++
++  uri = webkit_web_view_get_uri (web_view);
++  if (!uri || g_str_equal (uri, "about:blank"))
++    return;
++
++  progress = webkit_web_view_get_estimated_load_progress (web_view);
++  loading = webkit_web_view_is_loading (web_view);
++
++  if (progress == 1.0 || !loading)
++    self->clear_notify_progress_id = g_timeout_add (500, web_view_clear_notify_progress_cb, self);
++  else
++    gtk_widget_show (self->progress_bar);
++
++  gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (self->progress_bar),
++                                 (loading || progress == 1.0) ? progress : 0.0);
++}
++
++static void
++grmoa_web_view_constructed (GObject *object)
++{
++  GrmoaWebView *self = GRMOA_WEB_VIEW (object);
++  const gchar *const *language_names;
++
++  G_OBJECT_CLASS (grmoa_web_view_parent_class)->constructed (object);
++
++  self->context = webkit_web_context_new ();
++  language_names = g_get_language_names ();
++  webkit_web_context_set_preferred_languages (self->context, language_names);
++
++  self->web_view = GTK_WIDGET (g_object_new (WEBKIT_TYPE_WEB_VIEW,
++                                             "web-context", self->context,
++                                             NULL));
++
++  gtk_widget_set_size_request (self->web_view, 480, 600);
++  gtk_container_add (GTK_CONTAINER (self), self->web_view);
++
++  self->progress_bar = gtk_progress_bar_new ();
++  gtk_style_context_add_class (gtk_widget_get_style_context (self->progress_bar),
++                               GTK_STYLE_CLASS_OSD);
++  gtk_widget_set_halign (self->progress_bar, GTK_ALIGN_FILL);
++  gtk_widget_set_valign (self->progress_bar, GTK_ALIGN_START);
++  gtk_overlay_add_overlay (GTK_OVERLAY (self), self->progress_bar);
++
++  self->notify_progress_id = g_signal_connect (self->web_view,
++                                               "notify::estimated-load-progress",
++                                               G_CALLBACK (web_view_notify_estimated_load_progress_cb),
++                                               self);
++}
++
++static void
++grmoa_web_view_dispose (GObject *object)
++{
++  GrmoaWebView *self = GRMOA_WEB_VIEW (object);
++
++  g_clear_object (&self->context);
++
++  if (self->clear_notify_progress_id != 0)
++    {
++      g_source_remove (self->clear_notify_progress_id);
++      self->clear_notify_progress_id = 0;
++    }
++
++  if (self->notify_progress_id != 0)
++    {
++      g_signal_handler_disconnect (self->web_view, self->notify_progress_id);
++      self->notify_progress_id = 0;
++    }
++
++  G_OBJECT_CLASS (grmoa_web_view_parent_class)->dispose (object);
++}
++
++static void
++grmoa_web_view_finalize (GObject *object)
++{
++  GrmoaWebView *self = GRMOA_WEB_VIEW (object);
++
++  G_OBJECT_CLASS (grmoa_web_view_parent_class)->finalize (object);
++}
++
++static void
++grmoa_web_view_init (GrmoaWebView *self)
++{
++}
++
++static void
++grmoa_web_view_class_init (GrmoaWebViewClass *klass)
++{
++  GObjectClass *object_class;
++
++  object_class = G_OBJECT_CLASS (klass);
++  object_class->constructed = grmoa_web_view_constructed;
++  object_class->dispose = grmoa_web_view_dispose;
++  object_class->finalize = grmoa_web_view_finalize;
++}
++
++GtkWidget *
++grmoa_web_view_new (void)
++{
++  return g_object_new (GRMOA_TYPE_WEB_VIEW, NULL);
++}
++
++GtkWidget *
++grmoa_web_view_get_view (GrmoaWebView *self)
++{
++  return self->web_view;
++}
+diff --git a/src/grmoawebview.h b/src/grmoawebview.h
+new file mode 100644
+index 0000000..1891f45
+--- /dev/null
++++ b/src/grmoawebview.h
+@@ -0,0 +1,39 @@
++/* -*- mode: C; c-file-style: "gnu"; indent-tabs-mode: nil; -*-
++ *
++ * Copyright © 2012 – 2017 Red Hat, Inc.
++ *
++ * This library is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU Lesser General Public
++ * License as published by the Free Software Foundation; either
++ * version 2 of the License, or (at your option) any later version.
++ *
++ * This library is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * Lesser General Public License for more details.
++ *
++ * You should have received a copy of the GNU Lesser General
++ * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
++ */
++
++#ifndef __GRMOA_WEB_VIEW_H__
++#define __GRMOA_WEB_VIEW_H__
++
++#include <gtk/gtk.h>
++
++G_BEGIN_DECLS
++
++#define GRMOA_TYPE_WEB_VIEW            (grmoa_web_view_get_type ())
++#define GRMOA_WEB_VIEW(object)         (G_TYPE_CHECK_INSTANCE_CAST ((object), GRMOA_TYPE_WEB_VIEW, GrmoaWebView))
++#define GRMOA_IS_WEB_VIEW(object)      (G_TYPE_CHECK_INSTANCE_TYPE ((object), GRMOA_TYPE_WEB_VIEW))
++
++typedef struct _GrmoaWebView      GrmoaWebView;
++typedef struct _GrmoaWebViewClass GrmoaWebViewClass;
++
++GType         grmoa_web_view_get_type     (void) G_GNUC_CONST;
++GtkWidget    *grmoa_web_view_new          (void);
++GtkWidget    *grmoa_web_view_get_view     (GrmoaWebView *self);
++
++G_END_DECLS
++
++#endif /* __GRMOA_WEB_VIEW_H__ */
+diff --git a/src/gs-window-x11.c b/src/gs-window-x11.c
+index d267f59..5f0af02 100644
+--- a/src/gs-window-x11.c
++++ b/src/gs-window-x11.c
+@@ -27,6 +27,7 @@
+ #include <sys/wait.h>
+ #include <string.h>
+ #include <stdlib.h>
++#include <pwd.h>
+ 
+ #include <glib/gi18n.h>
+ #include <gtk/gtk.h>
+@@ -59,6 +60,15 @@ enum {
+         DIALOG_RESPONSE_OK
+ };
+ 
++enum {
++	ACCOUNT_TYPE_LOCAL = 0,
++	ACCOUNT_TYPE_GOOROOM,
++	ACCOUNT_TYPE_GOOGLE,
++	ACCOUNT_TYPE_NAVER,
++	ACCOUNT_TYPE_UNKNOWN
++};
++
++
+ #define MAX_QUEUED_EVENTS 16
+ #define INFO_BAR_SECONDS 30
+ 
+@@ -1343,8 +1353,6 @@ lock_command_watch (GIOChannel   *source,
+ 
+                 switch (status) {
+                 case G_IO_STATUS_NORMAL:
+-                        gs_debug ("command output: %s", line);
+-
+                         if (strstr (line, "WINDOW ID=") != NULL) {
+                                 guint32 id;
+                                 char    c;
+@@ -1431,6 +1439,42 @@ is_user_switch_enabled (GSWindow *window)
+         return window->priv->user_switch_enabled;
+ }
+ 
++static void
++chromium_process_watch_cb (GPid pid, gint status, gpointer user_data)
++{
++	g_spawn_close_pid (pid);
++}
++
++static int
++get_account_type (void)
++{
++	int account_type = ACCOUNT_TYPE_LOCAL;
++	const char *user = g_get_user_name ();
++	struct passwd *user_entry = getpwnam (user);
++	if (!user_entry)
++		return ACCOUNT_TYPE_UNKNOWN;
++
++	char **tokens = g_strsplit (user_entry->pw_gecos, ",", -1);
++	if (tokens && (g_strv_length (tokens) > 4)) {
++		if (tokens[4]) {
++			if (g_str_equal (tokens[4], "gooroom-account") ||
++                g_str_equal (tokens[4], "gooroom-online-account")) {
++				account_type = ACCOUNT_TYPE_GOOROOM;
++			} else if (g_str_equal (tokens[4], "google-account")) {
++				account_type = ACCOUNT_TYPE_GOOGLE;
++			} else if (g_str_equal (tokens[4], "naver-account")) {
++				account_type = ACCOUNT_TYPE_NAVER;
++			} else {
++				account_type = ACCOUNT_TYPE_LOCAL;
++			}
++		}
++	}
++
++	g_strfreev (tokens);
++
++	return account_type;
++}
++
+ static void
+ popup_dialog (GSWindow *window)
+ {
+@@ -1440,29 +1484,41 @@ popup_dialog (GSWindow *window)
+ 
+         gs_debug ("Popping up dialog");
+ 
+-        tmp = g_build_filename (LIBEXECDIR, "gnome-screensaver-dialog", NULL);
+-        command = g_string_new (tmp);
+-        g_free (tmp);
++        int account_type = get_account_type ();
+ 
+-        if (is_logout_enabled (window)) {
+-                command = g_string_append (command, " --enable-logout");
+-                g_string_append_printf (command, " --logout-command='%s'", window->priv->logout_command);
+-        }
++        if (account_type == ACCOUNT_TYPE_UNKNOWN)
++                return;
+ 
+-        if (window->priv->status_message) {
+-                char *quoted;
++        if ((account_type == ACCOUNT_TYPE_NAVER) ||
++            (account_type == ACCOUNT_TYPE_GOOGLE)) {
++                tmp = g_build_filename (LIBEXECDIR, "cloud-screensaver-dialog", NULL);
++                command = g_string_new (tmp);
++                g_free (tmp);
++        } else {
++                tmp = g_build_filename (LIBEXECDIR, "gnome-screensaver-dialog", NULL);
++                command = g_string_new (tmp);
++                g_free (tmp);
+ 
+-                quoted = g_shell_quote (window->priv->status_message);
+-                g_string_append_printf (command, " --status-message=%s", quoted);
+-                g_free (quoted);
+-        }
++                if (is_logout_enabled (window)) {
++                        command = g_string_append (command, " --enable-logout");
++                        g_string_append_printf (command, " --logout-command='%s'", window->priv->logout_command);
++                }
+ 
+-        if (is_user_switch_enabled (window)) {
+-                command = g_string_append (command, " --enable-switch");
+-        }
++                if (window->priv->status_message) {
++                        char *quoted;
+ 
+-        if (gs_debug_enabled ()) {
+-                command = g_string_append (command, " --verbose");
++                        quoted = g_shell_quote (window->priv->status_message);
++                        g_string_append_printf (command, " --status-message=%s", quoted);
++                        g_free (quoted);
++                }
++
++                if (is_user_switch_enabled (window)) {
++                        command = g_string_append (command, " --enable-switch");
++                }
++
++                if (gs_debug_enabled ()) {
++                        command = g_string_append (command, " --verbose");
++                }
+         }
+ 
+         gtk_widget_hide (window->priv->drawing_area);
+@@ -2181,6 +2237,24 @@ on_clock_changed (GnomeWallClock *clock,
+         update_clock (GS_WINDOW (user_data));
+ }
+ 
++static gboolean
++on_request_unlock_idle (gpointer data)
++{
++        gs_window_request_unlock (GS_WINDOW (data));
++
++        return FALSE;
++}
++
++static void
++on_refresh_button_clicked (GtkWidget *button, gpointer data)
++{
++        GSWindow *window = GS_WINDOW (data);
++
++        gs_window_cancel_unlock_request (window);
++
++        g_timeout_add (500, (GSourceFunc)on_request_unlock_idle, window);
++}
++
+ static char *
+ get_user_display_name (void)
+ {
+@@ -2214,6 +2288,34 @@ update_name_label (GSWindow *window)
+         g_free (name);
+ }
+ 
++static GtkWidget *
++refresh_button_new (int all_states, GdkRGBA *fg)
++{
++    GtkWidget *button;
++    GtkWidget *hbox, *icon, *label;
++    char *markup;
++
++    button = gtk_button_new ();
++
++    gtk_button_set_relief (GTK_BUTTON (button), GTK_RELIEF_NONE);
++    gtk_widget_set_can_focus (button, FALSE);
++    gtk_widget_set_name (button, "gs-panel-button");
++
++    hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 5);
++    gtk_container_add (GTK_CONTAINER (button), hbox);
++
++    icon = gtk_image_new_from_icon_name ("view-refresh-symbolic", GTK_ICON_SIZE_BUTTON);
++    gtk_widget_override_color (icon, all_states, fg);
++    gtk_box_pack_start (GTK_BOX (hbox), icon, FALSE, FALSE, 0);
++
++    label = gtk_label_new (NULL);
++    markup = g_strdup_printf ("<b><span foreground=\"#ccc\">%s</span></b>", _("Refresh"));
++    gtk_label_set_markup (GTK_LABEL (label), markup);
++    gtk_box_pack_end (GTK_BOX (hbox), label, FALSE, FALSE, 0);
++
++    return button;
++}
++
+ static void
+ create_panel (GSWindow *window)
+ {
+@@ -2249,6 +2351,15 @@ create_panel (GSWindow *window)
+         left_hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
+         gtk_box_pack_start (GTK_BOX (window->priv->panel), left_hbox, TRUE, TRUE, 0);
+ 
++        if ((get_account_type () == ACCOUNT_TYPE_NAVER) ||
++            (get_account_type () == ACCOUNT_TYPE_GOOGLE))
++        {
++            GtkWidget *refresh_button = refresh_button_new (all_states, &fg);
++            gtk_box_pack_start (GTK_BOX (left_hbox), refresh_button, FALSE, FALSE, 0);
++
++            g_signal_connect (refresh_button, "clicked", G_CALLBACK (on_refresh_button_clicked), window);
++        }
++
+         alignment = gtk_alignment_new (0.5, 0.5, 1, 1);
+         gtk_box_pack_start (GTK_BOX (window->priv->panel), alignment, FALSE, FALSE, 0);
+         window->priv->clock = gtk_label_new (NULL);
