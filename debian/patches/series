@@ -5,4 +5,3 @@
 libsystemd.patch
 0001-gs-lock-plug-Disconnect-signal-handler-from-right-ob.patch
 0001-gooroom-cloud-login.patch
-0002-gooroom-set-background-picture-uri.patch
