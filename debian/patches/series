@@ -4,4 +4,3 @@
 31_lock_screen_on_suspend.patch
 libsystemd.patch
 0001-gs-lock-plug-Disconnect-signal-handler-from-right-ob.patch
-0001-gooroom-cloud-login.patch
