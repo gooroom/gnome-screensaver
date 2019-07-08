@@ -1,0 +1,37 @@
+diff --git a/src/gs-manager.c b/src/gs-manager.c
+index ed3c1b9..1e51371 100644
+--- a/src/gs-manager.c
++++ b/src/gs-manager.c
+@@ -570,23 +570,23 @@ static GSettings *
+ get_system_settings (void)
+ {
+         GSettings *settings;
+-        gchar **keys;
+-        gchar **k;
++//        gchar **keys;
++//        gchar **k;
+ 
+         /* FIXME: we need to bind system settings instead of user but
+          *        that's currently impossible, not implemented yet.
+          *        Hence, reset to system default values.
+          */
+         /* TODO: Ideally we would like to bind some other key, screensaver-specific. */
+-        settings = g_settings_new ("org.gnome.desktop.background");
++        settings = g_settings_new ("org.gnome.desktop.screensaver");
+ 
+-        g_settings_delay (settings);
++//        g_settings_delay (settings);
+ 
+-        keys = g_settings_list_keys (settings);
+-        for (k = keys; *k; k++) {
+-                g_settings_reset (settings, *k);
+-        }
+-        g_strfreev (keys);
++//        keys = g_settings_list_keys (settings);
++//        for (k = keys; *k; k++) {
++//                g_settings_reset (settings, *k);
++//        }
++//        g_strfreev (keys);
+ 
+         return settings;
+ }
