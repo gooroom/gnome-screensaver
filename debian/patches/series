@@ -5,3 +5,4 @@
 libsystemd.patch
 0001-gs-lock-plug-Disconnect-signal-handler-from-right-ob.patch
 1001-gooroom-enable-screensaver-background.patch
+1002-gooroom-ui.patch
