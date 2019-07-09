@@ -28,7 +28,8 @@ Build-Depends: debhelper (>= 11),
                libxss-dev,
                x11proto-xf86vidmode-dev,
                libxxf86vm-dev,
-               gsettings-desktop-schemas-dev (>= 2.91.91)
+               gsettings-desktop-schemas-dev (>= 2.91.91),
+               libwebkit2gtk-4.0-dev
 Standards-Version: 4.3.0
 Vcs-Browser: https://salsa.debian.org/gnome-team/gnome-screensaver
 Vcs-Git: https://salsa.debian.org/gnome-team/gnome-screensaver.git
