@@ -1,8 +1,22 @@
 diff --git a/src/gs-manager.c b/src/gs-manager.c
-index ed3c1b9..1e51371 100644
+index 32c2305..16546f6 100644
 --- a/src/gs-manager.c
 +++ b/src/gs-manager.c
-@@ -570,23 +570,23 @@ static GSettings *
+@@ -555,13 +555,11 @@ background_settings_change_event_cb (GSettings *settings,
+                                      gint       n_keys,
+                                      GSManager   *manager)
+ {
+-#if 0
+         /* FIXME: since we bind user settings instead of system ones,
+          *        watching for changes is no longer valid.
+          */
+         gnome_bg_load_from_preferences (manager->priv->bg,
+                                         manager->priv->settings);
+-#endif
+ 
+         return FALSE;
+ }
+@@ -570,23 +568,23 @@ static GSettings *
  get_system_settings (void)
  {
          GSettings *settings;
