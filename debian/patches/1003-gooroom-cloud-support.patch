@@ -13,103 +13,91 @@ index 93e31e0..806655a 100644
  AC_PATH_XTRA
  
  ALL_X_LIBS="$X_LIBS $X_PRE_LIBS -lXext -lX11 $X_EXTRA_LIBS"
-diff --git a/data/theme/theme.css b/data/theme/theme.css
-index 4640adb..59da5fa 100644
---- a/data/theme/theme.css
-+++ b/data/theme/theme.css
-@@ -6,41 +6,6 @@
-   -gtk-icon-shadow: none; }
- 
- 
--/*
--#panel_box {
--  border: none;
--  box-shadow: none;
--  background-image: none;
--  background-color: rgba(0, 0, 0, 0.8);
--  min-height: 40px; }
--  #panel_box #panel_button {
--    color: #ffffff;
--    border: none;
--    border-radius: 0;
--    box-shadow: none;
--    background-image: none;
--    background-color: transparent; }
--    #panel_box #panel_button:hover {
--      background: rgba(255, 255, 255, 0.4); }
--    #panel_box #panel_button:active,
--    #panel_box #panel_button:checked  {
--      background: rgba(0, 255, 255, 0.6); }
--    #panel_box #panel_button:disabled {
--      color: @insensitive_fg_color; }
--  #panel_box #indicator_button {
--    color: #ffffff;
--    padding: 0;
--    border-radius: 0;
--    border: none;
--    background-color: transparent; }
--    #panel_box #indicator_button:hover {
--      border: none;
--      background-color: rgba(255, 255, 255, 0.5); }
--    #panel_box #indicator_button:active,
--    #panel_box #indicator_button:checked {
--      background-color: rgba(0, 255, 255, 0.6); }
--*/
--
- #login_window {
-   min-height: 400px;
-   min-width: 560px;
 diff --git a/po/POTFILES.in b/po/POTFILES.in
-index fe19a05..43b27a1 100644
+index fe19a05..b4eb200 100644
 --- a/po/POTFILES.in
 +++ b/po/POTFILES.in
-@@ -8,5 +8,7 @@ src/gs-auth-pam.c
+@@ -8,5 +8,6 @@ src/gs-auth-pam.c
  src/gs-listener-dbus.c
  src/gs-lock-plug.c
  src/gs-window-x11.c
 +src/gs-lock-cloud-plug.c
  [type: gettext/glade]src/gs-lock-plug.ui
+-
 +[type: gettext/glade]src/gs-lock-cloud-plug.ui
+diff --git a/po/en_GB.po b/po/en_GB.po
+index 112b6a3..75acdda 100644
+--- a/po/en_GB.po
++++ b/po/en_GB.po
+@@ -271,6 +271,25 @@ msgstr "%a %l:%M %p"
+ msgid "<span font='18px'><b>Screen Locked</b></span>"
+ msgstr "<span font='18px'><b>Screen LOcked</b></span>"
+ 
++msgid "Refresh"
++msgstr "Refresh"
++
++#: ../src/gs-lock-cloud-plug.c:429
++msgid "Invalid Credentials"
++msgstr "Invalid Credentials"
++
++#: ../src/gs-lock-cloud-plug.c:430
++msgid "It does not match the information of the logged-in user.<br>Please try again."
++msgstr "It does not match the information of the logged-in user.<br>Please try again."
++
++#: ../src/gs-lock-cloud-plug.c:573
++msgid "Could not load authentication window. Please run gcl-daemon service"
++msgstr "Could not load authentication window. Please run gcl-daemon service"
++
++#: ../src/gs-lock-cloud-plug.c:577
++msgid "Could not load authentication window. Please install gooroom-cloud-login-service package."
++msgstr "Could not load authentication window. Please install gooroom-cloud-login-service package."
++
+ #~ msgid "Set your screensaver preferences"
+ #~ msgstr "Set your screensaver preferences"
  
 diff --git a/po/ko.po b/po/ko.po
-index 30b5eaf..98de011 100644
+index f402382..e6ebf45 100644
 --- a/po/ko.po
 +++ b/po/ko.po
-@@ -268,6 +268,25 @@ msgstr "(%a) %p %l:%M"
+@@ -269,6 +269,29 @@ msgstr "(%a) %p %l:%M"
  msgid "<span font='18px'><b>Screen Locked</b></span>"
  msgstr "<span font='18px'><b>화면 잠김</b></span>"
  
 +msgid "Refresh"
 +msgstr "새로고침"
 +
++#: ../src/gs-lock-cloud-plug.c:429
 +msgid "Invalid Credentials"
 +msgstr "인증 실패"
 +
++#: ../src/gs-lock-cloud-plug.c:430
 +msgid "It does not match the information of the logged-in user.<br>Please try again."
 +msgstr "현재 로그인한 사용자의 정보와 일치하지 않습니다.<br>다시 시도해 주세요."
 +
-+msgid "Could not load authentication window. Please install gooroom-cloud-login-service package."
-+msgstr ""
-+"인증창을 로딩할 수 없습니다.\n"
-+"gooroom-cloud-login-service 패키지를 설치해 주십시오."
-+
++#: ../src/gs-lock-cloud-plug.c:573
 +msgid "Could not load authentication window. Please run gcl-daemon service"
 +msgstr ""
 +"인증창을 로딩할 수 없습니다.\n"
 +"gcl-daemon 서비스를 실행하십시오."
 +
++#: ../src/gs-lock-cloud-plug.c:577
++msgid "Could not load authentication window. Please install gooroom-cloud-login-service package."
++msgstr ""
++"인증창을 로딩할 수 없습니다.\n"
++"gooroom-cloud-login-service 패키지를 설치해 주십시오."
++
  #~ msgid "Screensaver themes"
  #~ msgstr "화면 보호기 테마"
  
 diff --git a/src/Makefile.am b/src/Makefile.am
-index 8aabeca..fe83f33 100644
+index 8aabeca..c4bca4a 100644
 --- a/src/Makefile.am
 +++ b/src/Makefile.am
 @@ -11,6 +11,7 @@ INCLUDES =							\
  	$(GNOME_SCREENSAVER_CFLAGS)				\
  	$(GNOME_SCREENSAVER_DIALOG_CFLAGS)			\
  	$(GNOME_SCREENSAVER_CAPPLET_CFLAGS)			\
-+	$(WEBKIT_GTK_CFLAGS)	\
++	$(WEBKIT_GTK_CFLAGS)    \
  	$(DISABLE_DEPRECATED_CFLAGS)				\
  	-DPREFIX=\""$(prefix)"\" 				\
  	-DBINDIR=\""$(bindir)"\"				\
@@ -120,11 +108,11 @@ index 8aabeca..fe83f33 100644
 +	gs-lock-plug-common.c   \
  	gs-lock-plug.h	\
  	gs-lock-plug.c	\
-+	gs-lock-cloud-plug.h	\
-+	gs-lock-cloud-plug.c	\
-+	cloud-auth-fail-css.h	\
-+	grmoawebview.h	\
-+	grmoawebview.c	\
++	gs-lock-cloud-plug.h    \
++	gs-lock-cloud-plug.c    \
++	cloud-auth-fail-css.h   \
++	grmoawebview.h  \
++	grmoawebview.c  \
  	gs-window.h		\
  	gs-prefs.c		\
  	gs-prefs.h		\
@@ -132,18 +120,18 @@ index 8aabeca..fe83f33 100644
  	$(SAVER_LIBS)			\
  	$(SYSTEMD_LIBS)                 \
  	$(AUTH_LIBS)                 \
-+	$(WEBKIT_GTK_LIBS)	\
++	$(WEBKIT_GTK_LIBS)  \
  	$(NULL)
  
  gnome_screensaver_LDFLAGS = -export-dynamic
 diff --git a/src/cloud-auth-fail-css.h b/src/cloud-auth-fail-css.h
 new file mode 100644
-index 0000000..fcd244d
+index 0000000..bbaf214
 --- /dev/null
 +++ b/src/cloud-auth-fail-css.h
 @@ -0,0 +1,48 @@
 +/*
-+ * Copyright (c) 2015 - 2017 gooroom <gooroom@gooroom.kr>
++ * Copyright (c) 2015-2019 Gooroom <gooroom@gooroom.kr>
 + *
 + * This program is free software; you can redistribute it and/or modify
 + * it under the terms of the GNU General Public License as published by
@@ -204,14 +192,15 @@ index 8a630a4..c1742c3 100644
      <gresource prefix="/org/gnome/screensaver">
 diff --git a/src/grmoawebview.c b/src/grmoawebview.c
 new file mode 100644
-index 0000000..1b7926f
+index 0000000..edbe97a
 --- /dev/null
 +++ b/src/grmoawebview.c
-@@ -0,0 +1,216 @@
+@@ -0,0 +1,159 @@
 +/* -*- mode: C; c-file-style: "gnu"; indent-tabs-mode: nil; -*-
 + *
 + * Copyright © 2015 Damián Nohales
 + * Copyright © 2012 – 2017 Red Hat, Inc.
++ * Copyright (c) 2015-2019 Gooroom <gooroom@gooroom.kr>
 + *
 + * This library is free software; you can redistribute it and/or
 + * modify it under the terms of the GNU Lesser General Public
@@ -296,60 +285,6 @@ index 0000000..1b7926f
 +                                   (loading || progress == 1.0) ? progress : 0.0);
 +}
 +
-+#if 0
-+static void
-+grmoa_web_view_constructed (GObject *object)
-+{
-+  GrmoaWebView *self = GRMOA_WEB_VIEW (object);
-+  const gchar *const *language_names;
-+
-+  G_OBJECT_CLASS (grmoa_web_view_parent_class)->constructed (object);
-+
-+  self->context = webkit_web_context_new ();
-+  language_names = g_get_language_names ();
-+  webkit_web_context_set_preferred_languages (self->context, language_names);
-+
-+  self->web_view = GTK_WIDGET (g_object_new (WEBKIT_TYPE_WEB_VIEW,
-+                                             "web-context", self->context,
-+                                             NULL));
-+
-+  gtk_widget_set_size_request (self->web_view, 480, 600);
-+  gtk_container_add (GTK_CONTAINER (self), self->web_view);
-+
-+  self->progress_bar = gtk_progress_bar_new ();
-+  gtk_style_context_add_class (gtk_widget_get_style_context (self->progress_bar),
-+                               GTK_STYLE_CLASS_OSD);
-+  gtk_widget_set_halign (self->progress_bar, GTK_ALIGN_FILL);
-+  gtk_widget_set_valign (self->progress_bar, GTK_ALIGN_START);
-+  gtk_overlay_add_overlay (GTK_OVERLAY (self), self->progress_bar);
-+
-+  self->notify_progress_id = g_signal_connect (self->web_view,
-+                                               "notify::estimated-load-progress",
-+                                               G_CALLBACK (web_view_notify_estimated_load_progress_cb),
-+                                               self);
-+}
-+
-+static void
-+grmoa_web_view_dispose (GObject *object)
-+{
-+	GrmoaWebView *self = GRMOA_WEB_VIEW (object);
-+
-+	g_clear_object (&self->priv->context);
-+
-+	if (self->priv->clear_notify_progress_id != 0) {
-+		g_source_remove (self->priv->clear_notify_progress_id);
-+		self->priv->clear_notify_progress_id = 0;
-+	}
-+
-+	if (self->priv->notify_progress_id != 0) {
-+		g_signal_handler_disconnect (self->priv->web_view, self->priv->notify_progress_id);
-+		self->priv->notify_progress_id = 0;
-+	}
-+
-+	G_OBJECT_CLASS (grmoa_web_view_parent_class)->dispose (object);
-+}
-+#endif
-+
 +static void
 +grmoa_web_view_finalize (GObject *object)
 +{
@@ -387,7 +322,6 @@ index 0000000..1b7926f
 +                                 "web-context", priv->context,
 +                                 NULL));
 +
-+//	gtk_widget_set_size_request (priv->web_view, 480, 600);
 +	gtk_container_add (GTK_CONTAINER (self), priv->web_view);
 +
 +	priv->progress_bar = gtk_progress_bar_new ();
@@ -407,9 +341,6 @@ index 0000000..1b7926f
 +{
 +	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 +
-+//	object_class->constructed = grmoa_web_view_constructed;
-+//	object_class->dispose = grmoa_web_view_dispose;
-+
 +	object_class->finalize = grmoa_web_view_finalize;
 +}
 +
@@ -426,13 +357,14 @@ index 0000000..1b7926f
 +}
 diff --git a/src/grmoawebview.h b/src/grmoawebview.h
 new file mode 100644
-index 0000000..9638e2f
+index 0000000..9afcc09
 --- /dev/null
 +++ b/src/grmoawebview.h
-@@ -0,0 +1,57 @@
+@@ -0,0 +1,58 @@
 +/* -*- mode: C; c-file-style: "gnu"; indent-tabs-mode: nil; -*-
 + *
 + * Copyright © 2012 – 2017 Red Hat, Inc.
++ * Copyright (C) 2015-2019 Gooroom <gooroom@gooroom.kr>
 + *
 + * This library is free software; you can redistribute it and/or
 + * modify it under the terms of the GNU Lesser General Public
@@ -489,15 +421,15 @@ index 0000000..9638e2f
 +#endif /* __GRMOA_WEB_VIEW_H__ */
 diff --git a/src/gs-lock-cloud-plug.c b/src/gs-lock-cloud-plug.c
 new file mode 100644
-index 0000000..e12b631
+index 0000000..706520c
 --- /dev/null
 +++ b/src/gs-lock-cloud-plug.c
-@@ -0,0 +1,678 @@
+@@ -0,0 +1,646 @@
 +/* -*- Mode: C; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
 + *
-+ * Copyright (C) 2015-2017 Gooroom <gooroom@gooroom.kr>.
 + * Copyright (C) 2004-2008 William Jon McCann <mccann@jhu.edu>
 + * Copyright (C) 2008-2011 Red Hat, Inc.
++ * Copyright (C) 2015-2019 Gooroom <gooroom@gooroom.kr>.
 + *
 + * This program is free software; you can redistribute it and/or modify
 + * it under the terms of the GNU General Public License as published by
@@ -1139,47 +1071,15 @@ index 0000000..e12b631
 +
 +	return result;
 +}
-+
-+#if 0
-+int
-+gs_lock_cloud_plug_get_account_type (void)
-+{
-+	int acc_type = ACCOUNT_TYPE_LOCAL;
-+	const char *user = g_get_user_name ();
-+	struct passwd *user_entry = getpwnam (user);
-+	if (!user_entry)
-+		return ACCOUNT_TYPE_UNKNOWN;
-+
-+	char **tokens = g_strsplit (user_entry->pw_gecos, ",", -1);
-+	if (tokens && (g_strv_length (tokens) > 4)) {
-+		if (tokens[4]) {
-+			if (g_str_equal (tokens[4], "gooroom-account") ||
-+                g_str_equal (tokens[4], "gooroom-online-account")) {
-+				acc_type = ACCOUNT_TYPE_GOOROOM;
-+			} else if (g_str_equal (tokens[4], "google-account")) {
-+				acc_type = ACCOUNT_TYPE_GOOGLE;
-+			} else if (g_str_equal (tokens[4], "naver-account")) {
-+				acc_type = ACCOUNT_TYPE_NAVER;
-+			} else {
-+				acc_type = ACCOUNT_TYPE_LOCAL;
-+			}
-+		}
-+	}
-+
-+	g_strfreev (tokens);
-+
-+	return acc_type;
-+}
-+#endif
 diff --git a/src/gs-lock-cloud-plug.h b/src/gs-lock-cloud-plug.h
 new file mode 100644
-index 0000000..9949235
+index 0000000..c90c983
 --- /dev/null
 +++ b/src/gs-lock-cloud-plug.h
 @@ -0,0 +1,65 @@
 +/* -*- Mode: C; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
 + *
-+ * Copyright (C) 2015-2017 Gooroom <gooroom@gooroom.kr>.
++ * Copyright (C) 2015-2019 Gooroom <gooroom@gooroom.kr>.
 + *
 + * This program is free software; you can redistribute it and/or modify
 + * it under the terms of the GNU General Public License as published by
@@ -1402,13 +1302,13 @@ index 0000000..30fee6b
 +</interface>
 diff --git a/src/gs-lock-plug-common.c b/src/gs-lock-plug-common.c
 new file mode 100644
-index 0000000..9ea3c69
+index 0000000..c770957
 --- /dev/null
 +++ b/src/gs-lock-plug-common.c
 @@ -0,0 +1,60 @@
 +/* -*- Mode: C; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
 + *
-+ * Copyright (C) 2015-2017 Gooroom <gooroom@gooroom.kr>.
++ * Copyright (C) 2015-2019 Gooroom <gooroom@gooroom.kr>.
 + *
 + * This program is free software; you can redistribute it and/or modify
 + * it under the terms of the GNU General Public License as published by
@@ -1467,7 +1367,7 @@ index 0000000..9ea3c69
 +	return acc_type;
 +}
 diff --git a/src/gs-lock-plug-common.h b/src/gs-lock-plug-common.h
-index ea17b40..d54da40 100644
+index 8636120..34be474 100644
 --- a/src/gs-lock-plug-common.h
 +++ b/src/gs-lock-plug-common.h
 @@ -43,6 +43,7 @@ enum {
@@ -1479,10 +1379,10 @@ index ea17b40..d54da40 100644
  G_END_DECLS
  
 diff --git a/src/gs-window-x11.c b/src/gs-window-x11.c
-index 223b8b5..b7da0b2 100644
+index be1c9f7..fab6b32 100644
 --- a/src/gs-window-x11.c
 +++ b/src/gs-window-x11.c
-@@ -39,6 +39,7 @@
+@@ -40,6 +40,7 @@
  
  #include "gs-window.h"
  #include "gs-lock-plug-common.h"
@@ -1490,13 +1390,11 @@ index 223b8b5..b7da0b2 100644
  #include "gs-lock-plug.h"
  #include "gs-marshal.h"
  #include "subprocs.h"
-@@ -867,8 +868,15 @@ popup_dialog (GSWindow *window)
- 
+@@ -869,7 +870,14 @@ popup_dialog (GSWindow *window)
          window->priv->lock_box = gtk_alignment_new (0.5, 0.5, 0, 0);
          gtk_box_pack_start (GTK_BOX (window->priv->vbox), window->priv->lock_box, TRUE, TRUE, 0);
--		gtk_widget_show (window->priv->lock_box);
+ 		gtk_widget_show (window->priv->lock_box);
 -        window->priv->lock_plug = gs_lock_plug_new ();
-+        gtk_widget_show (window->priv->lock_box);
 +        int account_type = get_account_type ();
 +        if (account_type == ACCOUNT_TYPE_GOOGLE ||
 +            account_type == ACCOUNT_TYPE_NAVER) {

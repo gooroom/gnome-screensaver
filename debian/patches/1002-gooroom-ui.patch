@@ -36,10 +36,10 @@ index 0000000..c0f0556
 +</svg>
 diff --git a/data/theme/theme.css b/data/theme/theme.css
 new file mode 100644
-index 0000000..4640adb
+index 0000000..2518e79
 --- /dev/null
 +++ b/data/theme/theme.css
-@@ -0,0 +1,93 @@
+@@ -0,0 +1,49 @@
 +* {
 +  outline-color: transparent;
 +  font-family: Sans Regular;
@@ -47,41 +47,6 @@ index 0000000..4640adb
 +  -gtk-icon-effect: none;
 +  -gtk-icon-shadow: none; }
 +
-+
-+/*
-+#panel_box {
-+  border: none;
-+  box-shadow: none;
-+  background-image: none;
-+  background-color: rgba(0, 0, 0, 0.8);
-+  min-height: 40px; }
-+  #panel_box #panel_button {
-+    color: #ffffff;
-+    border: none;
-+    border-radius: 0;
-+    box-shadow: none;
-+    background-image: none;
-+    background-color: transparent; }
-+    #panel_box #panel_button:hover {
-+      background: rgba(255, 255, 255, 0.4); }
-+    #panel_box #panel_button:active,
-+    #panel_box #panel_button:checked  {
-+      background: rgba(0, 255, 255, 0.6); }
-+    #panel_box #panel_button:disabled {
-+      color: @insensitive_fg_color; }
-+  #panel_box #indicator_button {
-+    color: #ffffff;
-+    padding: 0;
-+    border-radius: 0;
-+    border: none;
-+    background-color: transparent; }
-+    #panel_box #indicator_button:hover {
-+      border: none;
-+      background-color: rgba(255, 255, 255, 0.5); }
-+    #panel_box #indicator_button:active,
-+    #panel_box #indicator_button:checked {
-+      background-color: rgba(0, 255, 255, 0.6); }
-+*/
 +
 +#login_window {
 +  min-height: 400px;
@@ -124,15 +89,6 @@ index 0000000..4640adb
 +    #login_window #prompt_entry:hover {
 +      border-color: #4a90e2;
 +      background-color: #ffffff; }
-+
-+/*
-+#greeter_infobar {
-+  background-color: transparent;
-+  border-bottom-width: 0;
-+  font-weight: bold; }
-+  #greeter_infobar label {
-+    color: #ff0000; }
-+*/
 diff --git a/po/POTFILES.in b/po/POTFILES.in
 index 95dbcc4..fe19a05 100644
 --- a/po/POTFILES.in
@@ -143,14 +99,30 @@ index 95dbcc4..fe19a05 100644
  src/gs-window-x11.c
 +[type: gettext/glade]src/gs-lock-plug.ui
 +
+diff --git a/po/en_GB.po b/po/en_GB.po
+index 1d3ebc4..112b6a3 100644
+--- a/po/en_GB.po
++++ b/po/en_GB.po
+@@ -267,6 +267,10 @@ msgstr "%a %R"
+ msgid "%a %l:%M %p"
+ msgstr "%a %l:%M %p"
+ 
++#: ../src/gs-lock-plug.ui.h:1
++msgid "<span font='18px'><b>Screen Locked</b></span>"
++msgstr "<span font='18px'><b>Screen LOcked</b></span>"
++
+ #~ msgid "Set your screensaver preferences"
+ #~ msgstr "Set your screensaver preferences"
+ 
 diff --git a/po/ko.po b/po/ko.po
-index ff2c7b9..30b5eaf 100644
+index ff2c7b9..f402382 100644
 --- a/po/ko.po
 +++ b/po/ko.po
-@@ -265,6 +265,9 @@ msgstr "(%a) %R"
+@@ -265,6 +265,10 @@ msgstr "(%a) %R"
  msgid "%a %l:%M %p"
  msgstr "(%a) %p %l:%M"
  
++#: ../src/gs-lock-plug.ui.h:1
 +msgid "<span font='18px'><b>Screen Locked</b></span>"
 +msgstr "<span font='18px'><b>화면 잠김</b></span>"
 +
@@ -363,13 +335,13 @@ index 0000000..8a630a4
 +</gresources>
 diff --git a/src/gs-lock-plug-common.h b/src/gs-lock-plug-common.h
 new file mode 100644
-index 0000000..ea17b40
+index 0000000..8636120
 --- /dev/null
 +++ b/src/gs-lock-plug-common.h
 @@ -0,0 +1,49 @@
 +/* -*- Mode: C; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
 + *
-+ * Copyright (C) 2015-2017 Gooroom <gooroom@gooroom.kr>.
++ * Copyright (C) 2015-2019 Gooroom <gooroom@gooroom.kr>.
 + *
 + * This program is free software; you can redistribute it and/or modify
 + * it under the terms of the GNU General Public License as published by
@@ -417,16 +389,17 @@ index 0000000..ea17b40
 +
 +#endif /* __GS_LOCK_PLUG_COMMON_H__ */
 diff --git a/src/gs-lock-plug.c b/src/gs-lock-plug.c
-index 9cadedb..777a48f 100644
+index 9cadedb..757a26b 100644
 --- a/src/gs-lock-plug.c
 +++ b/src/gs-lock-plug.c
-@@ -1,5 +1,6 @@
- /* -*- Mode: C; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
+@@ -2,6 +2,7 @@
   *
-+ * Copyright (C) 2015-2017 Gooroom <gooroom@gooroom.kr>.
   * Copyright (C) 2004-2008 William Jon McCann <mccann@jhu.edu>
   * Copyright (C) 2008-2011 Red Hat, Inc.
++ * Copyright (C) 2015-2019 Gooroom <gooroom@gooroom.kr>.
   *
+  * This program is free software; you can redistribute it and/or modify
+  * it under the terms of the GNU General Public License as published by
 @@ -36,1247 +37,229 @@
  #include <gdk/gdkx.h>
  #include <gtk/gtk.h>
@@ -2341,16 +2314,17 @@ index 9cadedb..777a48f 100644
 +	return result;
  }
 diff --git a/src/gs-lock-plug.h b/src/gs-lock-plug.h
-index e48e3fe..384de5a 100644
+index e48e3fe..721501d 100644
 --- a/src/gs-lock-plug.h
 +++ b/src/gs-lock-plug.h
-@@ -1,5 +1,6 @@
+@@ -1,6 +1,7 @@
  /* -*- Mode: C; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
   *
-+ * Copyright (C) 2015-2017 Gooroom <gooroom@gooroom.kr>.
   * Copyright (C) 2004-2005 William Jon McCann <mccann@jhu.edu>
++ * Copyright (C) 2015-2019 Gooroom <gooroom@gooroom.kr>.
   *
   * This program is free software; you can redistribute it and/or modify
+  * it under the terms of the GNU General Public License as published by
 @@ -27,13 +28,6 @@
  
  G_BEGIN_DECLS
@@ -2635,10 +2609,18 @@ index 0000000..b2138bd
 +  </object>
 +</interface>
 diff --git a/src/gs-window-x11.c b/src/gs-window-x11.c
-index d267f59..223b8b5 100644
+index d267f59..be1c9f7 100644
 --- a/src/gs-window-x11.c
 +++ b/src/gs-window-x11.c
-@@ -38,6 +38,8 @@
+@@ -2,6 +2,7 @@
+  *
+  * Copyright (C) 2004-2008 William Jon McCann <mccann@jhu.edu>
+  * Copyright (C) 2008-2011 Red Hat, Inc.
++ * Copyright (C) 2015-2019 Gooroom <gooroom@gooroom.kr>.
+  *
+  * This program is free software; you can redistribute it and/or modify
+  * it under the terms of the GNU General Public License as published by
+@@ -38,6 +39,8 @@
  #include <libgnome-desktop/gnome-wall-clock.h>
  
  #include "gs-window.h"
@@ -2647,7 +2629,7 @@ index d267f59..223b8b5 100644
  #include "gs-marshal.h"
  #include "subprocs.h"
  #include "gs-debug.h"
-@@ -51,8 +53,6 @@ static void gs_window_init       (GSWindow      *window);
+@@ -51,8 +54,6 @@ static void gs_window_init       (GSWindow      *window);
  static void gs_window_finalize   (GObject       *object);
  
  static gboolean popup_dialog_idle (GSWindow *window);
@@ -2656,7 +2638,7 @@ index d267f59..223b8b5 100644
  
  enum {
          DIALOG_RESPONSE_CANCEL,
-@@ -88,8 +88,7 @@ struct GSWindowPrivate
+@@ -88,8 +89,7 @@ struct GSWindowPrivate
          GtkWidget *name_label;
          GtkWidget *drawing_area;
          GtkWidget *lock_box;
@@ -2666,7 +2648,7 @@ index d267f59..223b8b5 100644
          GtkWidget *info_bar;
          GtkWidget *info_content;
  
-@@ -97,29 +96,12 @@ struct GSWindowPrivate
+@@ -97,29 +97,12 @@ struct GSWindowPrivate
  
          guint      popup_dialog_idle_id;
  
@@ -2696,7 +2678,7 @@ index d267f59..223b8b5 100644
          GnomeWallClock *clock_tracker;
  
  #ifdef HAVE_SHAPE_EXT
-@@ -382,45 +364,6 @@ gs_window_real_unrealize (GtkWidget *widget)
+@@ -382,45 +365,6 @@ gs_window_real_unrealize (GtkWidget *widget)
          }
  }
  
@@ -2742,7 +2724,7 @@ index d267f59..223b8b5 100644
  static void
  gs_window_real_realize (GtkWidget *widget)
  {
-@@ -633,6 +576,19 @@ window_select_shape_events (GSWindow *window)
+@@ -633,6 +577,19 @@ window_select_shape_events (GSWindow *window)
  #endif
  }
  
@@ -2762,7 +2744,7 @@ index d267f59..223b8b5 100644
  static void
  gs_window_real_show (GtkWidget *widget)
  {
-@@ -647,10 +603,6 @@ gs_window_real_show (GtkWidget *widget)
+@@ -647,10 +604,6 @@ gs_window_real_show (GtkWidget *widget)
          set_invisible_cursor (gtk_widget_get_window (widget), TRUE);
  
          window = GS_WINDOW (widget);
@@ -2773,7 +2755,7 @@ index d267f59..223b8b5 100644
  
          remove_watchdog_timer (window);
          add_watchdog_timer (window, 30);
-@@ -658,6 +610,8 @@ gs_window_real_show (GtkWidget *widget)
+@@ -658,6 +611,8 @@ gs_window_real_show (GtkWidget *widget)
          select_popup_events ();
          window_select_shape_events (window);
          gdk_window_add_filter (NULL, (GdkFilterFunc)xevent_filter, window);
@@ -2782,7 +2764,7 @@ index d267f59..223b8b5 100644
  }
  
  static void
-@@ -800,453 +754,6 @@ gs_window_get_drawing_area (GSWindow *window)
+@@ -800,453 +755,6 @@ gs_window_get_drawing_area (GSWindow *window)
          return window->priv->drawing_area;
  }
  
@@ -3236,7 +3218,7 @@ index d267f59..223b8b5 100644
  
  /* very rudimentary animation for indicating an auth failure */
  static void
-@@ -1256,8 +763,6 @@ shake_dialog (GSWindow *window)
+@@ -1256,8 +764,6 @@ shake_dialog (GSWindow *window)
          guint left;
          guint right;
  
@@ -3245,7 +3227,7 @@ index d267f59..223b8b5 100644
          for (i = 0; i < 9; i++) {
                  if (i % 2 == 0) {
                          left = 30;
-@@ -1282,9 +787,6 @@ shake_dialog (GSWindow *window)
+@@ -1282,9 +788,6 @@ shake_dialog (GSWindow *window)
  
                  g_usleep (10000);
          }
@@ -3255,7 +3237,7 @@ index d267f59..223b8b5 100644
  }
  
  static void
-@@ -1302,8 +804,6 @@ window_set_dialog_up (GSWindow *window,
+@@ -1302,8 +805,6 @@ window_set_dialog_up (GSWindow *window,
  static void
  popdown_dialog (GSWindow *window)
  {
@@ -3264,7 +3246,7 @@ index d267f59..223b8b5 100644
          gtk_widget_show (window->priv->drawing_area);
  
          gs_window_clear (window);
-@@ -1321,170 +821,58 @@ popdown_dialog (GSWindow *window)
+@@ -1321,170 +822,58 @@ popdown_dialog (GSWindow *window)
          }
  
          remove_popup_dialog_idle (window);
@@ -3463,7 +3445,7 @@ index d267f59..223b8b5 100644
  }
  
  static gboolean
-@@ -1509,10 +897,6 @@ gs_window_request_unlock (GSWindow *window)
+@@ -1509,10 +898,6 @@ gs_window_request_unlock (GSWindow *window)
                  return;
          }
  
@@ -3474,7 +3456,7 @@ index d267f59..223b8b5 100644
          if (! window->priv->lock_enabled) {
                  add_emit_deactivated_idle (window);
  
-@@ -1764,131 +1148,6 @@ gs_window_get_property (GObject    *object,
+@@ -1764,131 +1149,6 @@ gs_window_get_property (GObject    *object,
          }
  }
  
@@ -3606,7 +3588,7 @@ index d267f59..223b8b5 100644
  static void
  gs_window_real_size_request (GtkWidget      *widget,
                               GtkRequisition *requisition)
-@@ -2034,10 +1293,6 @@ gs_window_class_init (GSWindowClass *klass)
+@@ -2034,10 +1294,6 @@ gs_window_class_init (GSWindowClass *klass)
          widget_class->hide                = gs_window_real_hide;
          widget_class->realize             = gs_window_real_realize;
          widget_class->unrealize           = gs_window_real_unrealize;
@@ -3617,7 +3599,7 @@ index d267f59..223b8b5 100644
          widget_class->get_preferred_width        = gs_window_real_get_preferred_width;
          widget_class->get_preferred_height       = gs_window_real_get_preferred_height;
          widget_class->grab_broken_event   = gs_window_real_grab_broken;
-@@ -2348,19 +1603,6 @@ gs_window_init (GSWindow *window)
+@@ -2348,19 +1604,6 @@ gs_window_init (GSWindow *window)
          update_clock (window);
  }
  
@@ -3637,7 +3619,7 @@ index d267f59..223b8b5 100644
  static void
  gs_window_finalize (GObject *object)
  {
-@@ -2375,6 +1617,7 @@ gs_window_finalize (GObject *object)
+@@ -2375,6 +1618,7 @@ gs_window_finalize (GObject *object)
  
          g_free (window->priv->logout_command);
          g_free (window->priv->keyboard_command);
@@ -3645,7 +3627,7 @@ index d267f59..223b8b5 100644
  
          if (window->priv->clock_tracker) {
                  g_object_unref (window->priv->clock_tracker);
-@@ -2387,16 +1630,6 @@ gs_window_finalize (GObject *object)
+@@ -2387,16 +1631,6 @@ gs_window_finalize (GObject *object)
          remove_watchdog_timer (window);
          remove_popup_dialog_idle (window);
  
