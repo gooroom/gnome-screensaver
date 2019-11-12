@@ -3,7 +3,7 @@
 14_no_fade_on_user_switch.patch
 31_lock_screen_on_suspend.patch
 libsystemd.patch
-gooroom-CWE-134.patch
+gooroom-CWE-134-362-367.patch
 0001-gs-lock-plug-Disconnect-signal-handler-from-right-ob.patch
 1001-gooroom-enable-screensaver-background.patch
 1002-gooroom-ui.patch

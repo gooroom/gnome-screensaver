@@ -1,0 +1,38 @@
+diff --git a/src/gs-listener-dbus.c b/src/gs-listener-dbus.c
+index 7c20513..cfd0da6 100644
+--- a/src/gs-listener-dbus.c
++++ b/src/gs-listener-dbus.c
+@@ -28,6 +28,7 @@
+ #include <unistd.h>
+ 
+ #include <glib/gi18n.h>
++#include <glib/gstdio.h>
+ 
+ #include <dbus/dbus.h>
+ #include <dbus/dbus-glib.h>
+@@ -352,14 +353,14 @@ static void
+ raise_error (DBusConnection *connection,
+              DBusMessage    *in_reply_to,
+              const char     *error_name,
+-             char           *format, ...)
++             const char     *format, ...)
+ {
+         char         buf[512];
+         DBusMessage *reply;
+ 
+         va_list args;
+         va_start (args, format);
+-        vsnprintf (buf, sizeof (buf), format, args);
++        g_vsnprintf (buf, 511, format, args);
+         va_end (args);
+ 
+         gs_debug (buf);
+@@ -1508,7 +1509,7 @@ gs_listener_init (GSListener *listener)
+ 
+ #ifdef WITH_SYSTEMD
+         /* check if logind is running */
+-        listener->priv->have_systemd = (access("/run/systemd/seats/", F_OK) >= 0);
++        listener->priv->have_systemd = (g_access ("/run/systemd/seats/", F_OK) >= 0);
+ #endif
+ 
+         gs_listener_dbus_init (listener);
