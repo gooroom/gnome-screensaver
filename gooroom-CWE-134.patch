@@ -1,0 +1,13 @@
+diff --git a/src/gs-listener-dbus.c b/src/gs-listener-dbus.c
+index 7c20513..b248ac0 100644
+--- a/src/gs-listener-dbus.c
++++ b/src/gs-listener-dbus.c
+@@ -354,7 +354,7 @@ raise_error (DBusConnection *connection,
+              const char     *error_name,
+              char           *format, ...)
+ {
+-        char         buf[512];
++        char         buf[512] = {0,};
+         DBusMessage *reply;
+ 
+         va_list args;
