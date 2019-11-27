@@ -10,6 +10,45 @@ Copyright: 1991-2004 Jamie Zawinski <jwz@jwz.org>
            2003 Bill Nottingham <notting@redhat.com>
            2010 Saleem Abdulrasool <compnerd@compnerd.org>
 License: GPL-2+
+
+Files:  src/gs-lock-plug.c
+        src/gs-lock-plug.h
+        src/gs-window-x11.c
+Copyright: 2004-2008 William Jon McCann <mccann@jhu.edu>
+           2008-2011 Red Hat, Inc.
+           2015-2019 Gooroom <gooroom@gooroom.kr>
+License: GPL-2+
+
+Files:  src/grmoawebview.c
+        src/grmoawebview.h
+Copyright: 2015 Damián Nohales
+           2012-2017 Red Hat, Inc.
+           2015-2019 Gooroom <gooroom@gooroom.kr>
+License: GPL-2+
+
+Files:  src/gs-lock-cloud-plug.c
+        src/gs-lock-cloud-plug.h
+Copyright: 2004-2008 William Jon McCann <mccann@jhu.edu>
+           2008-2011 Red Hat, Inc.
+           2015-2019 Gooroom <gooroom@gooroom.kr>
+License: GPL-2+
+
+Files:
+ src/s*
+Copyright:
+ © 1993-1998 Jamie Zawinski
+ © 2004 William Jon McCann
+License: xscreensaver-bsdish
+ Permission to use, copy, modify, distribute, and sell this software and its
+ documentation for any purpose is hereby granted without fee, provided that
+ the above copyright notice appear in all copies and that both that
+ copyright notice and this permission notice appear in supporting
+ documentation.  No representations are made about the suitability of this
+ software for any purpose.  It is provided "as is" without express or¯
+ implied warranty.
+
+
+License: GPL-2+
  This package is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
  the Free Software Foundation; either version 2 of the License, or
@@ -25,17 +64,3 @@ License: GPL-2+
  .
  On Debian systems, the complete text of the GNU General Public
  License version 2 can be found in "/usr/share/common-licenses/GPL-2".
-
-Files:
- src/s*
-Copyright:
- © 1993-1998 Jamie Zawinski
- © 2004 William Jon McCann
-License: xscreensaver-bsdish
- Permission to use, copy, modify, distribute, and sell this software and its
- documentation for any purpose is hereby granted without fee, provided that
- the above copyright notice appear in all copies and that both that
- copyright notice and this permission notice appear in supporting
- documentation.  No representations are made about the suitability of this
- software for any purpose.  It is provided "as is" without express or¯
- implied warranty.
