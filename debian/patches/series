@@ -8,3 +8,4 @@ libsystemd.patch
 # Gooroom Patchset
 gooroom-01-enable-screensaver-background.patch
 gooroom-02-gooroom-ui.patch
+gooroom-03-CWE-134-362-367.patch
