@@ -4,3 +4,6 @@
 31_lock_screen_on_suspend.patch
 libsystemd.patch
 0001-gs-lock-plug-Disconnect-signal-handler-from-right-ob.patch
+
+# Gooroom Patchset
+gooroom-01-enable-screensaver-background.patch
