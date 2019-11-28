@@ -458,7 +458,7 @@ index 9cadedb..757a26b 100644
 -#define DIALOG_TIMEOUT_MSEC 60000
 -
 -static void gs_lock_plug_finalize   (GObject         *object);
-+#define	LOGOUT_COMMAND	"systemd-run systemctl restart lightdm.service"
++#define	LOGOUT_COMMAND	"/usr/bin/gnome-session-quit --force"
  
 -#define GS_LOCK_PLUG_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GS_TYPE_LOCK_PLUG, GSLockPlugPrivate))
  
