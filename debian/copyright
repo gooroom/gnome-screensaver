@@ -1,6 +1,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: gnome-screensaver
-Source: https://download.gnome.org/sources/gnome-screensaver/
+Source: https://github.com/gooroom/gnome-screensaver/
 
 Files: *
 Copyright: 1991-2004 Jamie Zawinski <jwz@jwz.org>
@@ -16,21 +16,21 @@ Files:  src/gs-lock-plug.c
         src/gs-window-x11.c
 Copyright: 2004-2008 William Jon McCann <mccann@jhu.edu>
            2008-2011 Red Hat, Inc.
-           2015-2019 Gooroom <gooroom@gooroom.kr>
+           2019 Gooroom <gooroom@gooroom.kr>
 License: GPL-2+
 
 Files:  src/grmoawebview.c
         src/grmoawebview.h
 Copyright: 2015 Damián Nohales
            2012-2017 Red Hat, Inc.
-           2015-2019 Gooroom <gooroom@gooroom.kr>
+           2019 Gooroom <gooroom@gooroom.kr>
 License: GPL-2+
 
 Files:  src/gs-lock-cloud-plug.c
         src/gs-lock-cloud-plug.h
 Copyright: 2004-2008 William Jon McCann <mccann@jhu.edu>
            2008-2011 Red Hat, Inc.
-           2015-2019 Gooroom <gooroom@gooroom.kr>
+           2019 Gooroom <gooroom@gooroom.kr>
 License: GPL-2+
 
 Files:

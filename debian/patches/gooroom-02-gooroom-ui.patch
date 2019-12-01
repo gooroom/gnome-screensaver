@@ -369,7 +369,7 @@ index 0000000..ea17b40
 @@ -0,0 +1,49 @@
 +/* -*- Mode: C; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
 + *
-+ * Copyright (C) 2015-2019 Gooroom <gooroom@gooroom.kr>.
++ * Copyright (C) 2019 Gooroom <gooroom@gooroom.kr>.
 + *
 + * This program is free software; you can redistribute it and/or modify
 + * it under the terms of the GNU General Public License as published by
@@ -424,7 +424,7 @@ index 9cadedb..757a26b 100644
   *
   * Copyright (C) 2004-2008 William Jon McCann <mccann@jhu.edu>
   * Copyright (C) 2008-2011 Red Hat, Inc.
-+ * Copyright (C) 2015-2019 Gooroom <gooroom@gooroom.kr>.
++ * Copyright (C) 2019 Gooroom <gooroom@gooroom.kr>.
   *
   * This program is free software; you can redistribute it and/or modify
   * it under the terms of the GNU General Public License as published by
@@ -2349,7 +2349,7 @@ index e48e3fe..721501d 100644
  /* -*- Mode: C; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
   *
   * Copyright (C) 2004-2005 William Jon McCann <mccann@jhu.edu>
-+ * Copyright (C) 2015-2019 Gooroom <gooroom@gooroom.kr>.
++ * Copyright (C) 2019 Gooroom <gooroom@gooroom.kr>.
   *
   * This program is free software; you can redistribute it and/or modify
   * it under the terms of the GNU General Public License as published by
@@ -2644,7 +2644,7 @@ index d267f59..be1c9f7 100644
   *
   * Copyright (C) 2004-2008 William Jon McCann <mccann@jhu.edu>
   * Copyright (C) 2008-2011 Red Hat, Inc.
-+ * Copyright (C) 2015-2019 Gooroom <gooroom@gooroom.kr>.
++ * Copyright (C) 2019 Gooroom <gooroom@gooroom.kr>.
   *
   * This program is free software; you can redistribute it and/or modify
   * it under the terms of the GNU General Public License as published by
