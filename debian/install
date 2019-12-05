@@ -1,1 +1,3 @@
 debian/source_gnome-screensaver.py /usr/share/apport/package-hooks
+debian/gooroom/pam.d-update-gnome-screensaver.execute /etc/gooroom/adjustments
+debian/gooroom/gnome-screensaver /usr/share/debian-system-adjustments/pam.d

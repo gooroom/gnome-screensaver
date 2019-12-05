@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#
+## Gooroom /etc/pam.d/gnome-screensaver Default Settings
+#
+
+SRC_FILE=/usr/share/debian-system-adjustments/pam.d/gnome-screensaver
+TARGET_DIR=/etc/pam.d/
+
+if [ -e $SRC_FILE ]; then
+    # /etc/pam.d/gnome-screensaver
+    if [ $TARGET_DIR/gnome-screensaver ]; then
+        cp $SRC_FILE $TARGET_DIR/gnome-screensaver
+    fi
+
+    # /etc/pam.d/gnome-screensaver-cloud
+    if [ $TARGET_DIR/gnome-screensaver-cloud ]; then
+        cp $SRC_FILE $TARGET_DIR/gnome-screensaver-cloud
+    fi
+fi

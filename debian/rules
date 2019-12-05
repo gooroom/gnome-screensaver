@@ -13,5 +13,10 @@ override_dh_auto_configure:
 		--with-systemd=auto
 
 override_dh_install:
-	rm -rf debian/gnome-screensaver/usr/share/doc/gnome-screensaver-*
+	rm -rf debian/gnome-screensaver-cloud/usr/share/doc/gnome-screensaver-*
 	dh_install
+
+override_dh_fixperms:
+	dh_fixperms
+	find debian -name 'pam.d-update-gnome-screensaver.execute' -exec chown root {} \;
+	find debian -name 'pam.d-update-gnome-screensaver.execute' -exec chmod +s {} \;
