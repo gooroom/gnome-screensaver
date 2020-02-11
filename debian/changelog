@@ -1,3 +1,14 @@
+gnome-screensaver (3.6.1-10+grm2u2) unstable; urgency=medium
+
+  [ jongkyung.woo ]
+  * [ee164112] Update sources regarding copyright
+  * [bcd7f5ce] Added pam.d-update-gnome-screensaver.execute
+  * [012b0534] Updated debian/rules
+
+  [ Gooroom Autobuilder ]
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Tue, 11 Feb 2020 09:30:27 +0900
+
 gnome-screensaver (3.6.1-10+grm2u1) unstable; urgency=medium
 
   [ jongkyung.woo ]
