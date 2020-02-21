@@ -5,6 +5,8 @@
 libsystemd.patch
 gooroom-CWE-134-362-367.patch
 0001-gs-lock-plug-Disconnect-signal-handler-from-right-ob.patch
-1001-gooroom-enable-screensaver-background.patch
-1002-gooroom-ui.patch
-1003-gooroom-cloud-support.patch
+
+# Gooroom Patchset
+gooroom-01-enable-screensaver-background.patch
+gooroom-02-gooroom-ui.patch
+gooroom-03-CWE-134-362-367.patch

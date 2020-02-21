@@ -1,0 +1,3674 @@
+diff --git a/data/images/logo-image.svg b/data/images/logo-image.svg
+new file mode 100644
+index 0000000..fc04d0a
+--- /dev/null
++++ b/data/images/logo-image.svg
+@@ -0,0 +1,19 @@
++<svg xmlns="http://www.w3.org/2000/svg" width="120" height="185" viewBox="0 0 120 185">
++    <g fill="none" fill-rule="evenodd">
++        <path fill="#7D7D7D" fill-rule="nonzero" d="M117.45 75.622L2.55 142.039 0 143.54v6.622l3.255 1.877 2.55 1.502 6.465 3.709 2.55 1.502 6.465 3.724 2.55 1.501 6.465 3.724 2.565 1.502 6.465 3.709 2.55 1.502 6.465 3.724 2.55 1.501 6.465 3.56 2.55 1.5H60l60-34.537V74.15l-2.55 1.472zm0 72.828l-57.54 33.246-6.465-3.724 64.005-36.985v7.463zm0-10.406l-66.555 38.472-6.465-3.724 73.02-42.15v7.402zm0-10.406L41.88 171.32l-6.465-3.724 82.035-47.466v7.508zm0-10.406l-84.585 48.893-6.465-3.71 91.05-52.556v7.373zm0-10.391l-93.615 54.058-6.465-3.724 100.08-57.798v7.464zm0-10.407L14.82 155.748l-6.465-3.724L117.45 88.956v7.478zm0-10.406L5.805 150.598 2.55 148.66v-3.68l114.9-66.416v7.463z"/>
++        <path fill="#4912FF" d="M22.215 37.03L0 49.869v3.003l18.915-10.977c1.02-1.667 2.085-3.288 3.3-4.865z"/>
++        <path fill="#5B29FF" d="M13.89 52.256L0 60.276v3.002l12.675-7.328c.375-1.276.825-2.492 1.215-3.694z"/>
++        <path fill="#784FFF" d="M10.755 64.465L0 70.68v3.004l10.38-6.007c.12-1.111.225-2.162.375-3.213zM10.125 75.231L0 81.088v3.003l10.29-6.007a59.46 59.46 0 0 1-.165-2.853z"/>
++        <path fill="#9E81FF" d="M13.77 93.927L0 101.9v3.003l14.715-8.514c-.33-.856-.645-1.652-.945-2.462z"/>
++        <path fill="#00D8FF" d="M22.905 102.005l2.205-1.276c-.225-.36-.465-.706-.675-1.081l-.615-1.126A54.73 54.73 0 0 1 21 92.665a66.514 66.514 0 0 1-.9-2.417 54 54 0 0 1-1.74-6.457 52.372 52.372 0 0 1-.48-2.673A53.77 53.77 0 0 1 17.31 74v-3.003a53.693 53.693 0 0 1 1.08-7.929c.225-1.141.48-2.282.78-3.409a52.487 52.487 0 0 1 3.54-9.49c.705-1.501 1.5-2.913 2.34-4.31a52.317 52.317 0 0 1 18.675-18.304 52.337 52.337 0 0 1 25.05-7.013h1.215c1.245 0 2.475 0 3.705.135 3.38.243 6.73.806 10.005 1.682 1.125.3 2.235.646 3.345 1.021 2.562.84 5.055 1.88 7.455 3.109.89.46 1.76.96 2.61 1.501.57.346 1.14.676 1.695 1.036.855-.48 1.725-.93 2.61-1.336l-1.785-1.156a69.703 69.703 0 0 0-2.52-1.502A52.97 52.97 0 0 0 90 21.653c-1.05-.405-2.1-.78-3.165-1.126a54.594 54.594 0 0 0-9.315-2.072c-1.5-.195-2.895-.345-4.365-.42a54.822 54.822 0 0 0-30.615 7.282 54.934 54.934 0 0 0-21.78 22.96 58.006 58.006 0 0 0-4.05 10.662c-.225.81-.405 1.621-.585 2.432a49.307 49.307 0 0 0-.63 3.304 55.528 55.528 0 0 0-.69 7.853v3.004c.087 2.356.333 4.704.735 7.027.15.886.315 1.772.51 2.658A54.312 54.312 0 0 0 18 91.6a56.038 56.038 0 0 0 3.69 8.259l-4.17 2.252L0 112.291v3.004l18.795-10.872 4.11-2.418z"/>
++        <path fill="#9E81FF" d="M11.25 84.992L0 91.494v3.003l11.835-6.832a120.28 120.28 0 0 1-.585-2.673z"/>
++        <path fill="#5B29FF" d="M83.805 14.791L109.395 0h-5.1L80.04 14.025c1.26.21 2.46.48 3.765.766z"/>
++        <path fill="#4912FF" d="M68.55 13.2L91.395 0h-5.1L62.7 13.635c1.95-.24 3.9-.39 5.85-.436z"/>
++        <path fill="#00D8FF" d="M95.19 78.084l-4.215 2.448-46.35 26.774-4.125 2.388a10.139 10.139 0 0 0-6.195-3.875 10.264 10.264 0 0 0-5.415.376c-.587.21-1.154.472-1.695.78l-.615.361a10.102 10.102 0 0 0-3.225 3.544 10.266 10.266 0 0 0-.48 8.965l-4.11 2.372L0 133.104v3.003l20.04-11.577 4.11-2.373 2.235-1.291a7.328 7.328 0 0 1-.735-1.051 6.88 6.88 0 0 1-.54-1.172 7.768 7.768 0 0 1 3.12-9.22c.09 0 .15-.12.24-.165a7.495 7.495 0 0 1 2.235-.856 8.497 8.497 0 0 1 1.62-.285 7.737 7.737 0 0 1 6 2.808c.275.332.526.683.75 1.051.203.377.378.769.525 1.171l2.235-1.291 4.11-2.388 46.92-27.089 4.335-2.508 2.385-1.381L120 66.702V63.7L97.5 76.763l-2.31 1.321zM17.745 112.442L0 122.698v3.003l17.355-10.076c.016-1.072.147-2.14.39-3.183z"/>
++        <path fill="#00D8FF" d="M112.14 29.627h-.735a27.92 27.92 0 0 0-5.64 1.291c-.923.319-1.83.685-2.715 1.097-.795.375-1.5.765-2.325 1.2a27.76 27.76 0 0 0-8.82 8.05 28.456 28.456 0 0 0-4.5 10.076 29.822 29.822 0 0 0-.555 3.273 28.246 28.246 0 0 0 .15 7.433c.135.886.315 1.772.525 2.643a27.874 27.874 0 0 0 2.34 6.112l-4.095 2.357-49.125 28.366c1.045.298 2.051.716 3 1.246L87 75.381l4.095-2.372 2.205-1.276c-.24-.36-.48-.706-.69-1.067-.21-.36-.39-.765-.585-1.14a25.8 25.8 0 0 1-2.25-6.157 24.05 24.05 0 0 1-.435-2.703 25.886 25.886 0 0 1 .285-7.614c.223-1.184.524-2.353.9-3.498A25.687 25.687 0 0 1 102 35.484a27.797 27.797 0 0 1 3.225-1.577 25.915 25.915 0 0 1 2.775-.871 25.475 25.475 0 0 1 5.775-.901h1.065c1.728.002 3.452.178 5.145.525v-2.628a27.69 27.69 0 0 0-7.845-.405z"/>
++        <path fill="#784FFF" d="M92.16 17.419c.99.39 1.965.81 3 1.246L120 4.28V1.276L92.16 17.42zM104.19 23.816L120 14.67v-3.003l-18.21 10.511c.81.57 1.605 1.096 2.4 1.637z"/>
++        <path fill="#1E0080" d="M14.295 0L0 8.259v2.943L19.395 0z"/>
++        <path fill="#2900B0" d="M32.295 0L0 18.665v2.943L37.395 0zM50.295 0L0 29.071v2.944L55.395 0z"/>
++        <path fill="#3A00F9" d="M68.295 0L0 39.478v2.943L73.395 0z"/>
++    </g>
++</svg>
+diff --git a/data/images/logo-letter-white.svg b/data/images/logo-letter-white.svg
+new file mode 100644
+index 0000000..c0f0556
+--- /dev/null
++++ b/data/images/logo-letter-white.svg
+@@ -0,0 +1,5 @@
++<svg xmlns="http://www.w3.org/2000/svg" width="80" height="13" viewBox="0 0 80 13">
++    <g fill="#FFF" fill-rule="evenodd">
++        <path d="M10.057 5.162h1.917c.048.311.073.63.073.956 0 3.378-2.697 6.117-6.023 6.117C2.697 12.235 0 9.496 0 6.118 0 2.739 2.697 0 6.024 0c2.311 0 4.318 1.322 5.328 3.263l-1.643.934c-.687-1.357-2.08-2.285-3.685-2.285-2.288 0-4.142 1.883-4.142 4.206 0 2.322 1.854 4.206 4.142 4.206 1.963 0 3.607-1.388 4.033-3.25H6.024V5.162h4.033zM18.635 12.235c-2.39 0-4.33-1.968-4.33-4.397 0-2.428 1.94-4.397 4.33-4.397 2.391 0 4.33 1.969 4.33 4.397 0 2.429-1.939 4.397-4.33 4.397zm0-1.911c1.352 0 2.447-1.113 2.447-2.486 0-1.372-1.095-2.485-2.447-2.485-1.351 0-2.447 1.113-2.447 2.485 0 1.373 1.096 2.486 2.447 2.486zM29.553 12.235c-2.391 0-4.33-1.968-4.33-4.397 0-2.428 1.939-4.397 4.33-4.397s4.33 1.969 4.33 4.397c0 2.429-1.939 4.397-4.33 4.397zm0-1.911C30.904 10.324 32 9.21 32 7.838c0-1.372-1.096-2.485-2.447-2.485-1.352 0-2.447 1.113-2.447 2.485 0 1.373 1.095 2.486 2.447 2.486zM47.059 12.235c-2.391 0-4.33-1.968-4.33-4.397 0-2.428 1.939-4.397 4.33-4.397 2.39 0 4.33 1.969 4.33 4.397 0 2.429-1.94 4.397-4.33 4.397zm0-1.911c1.351 0 2.447-1.113 2.447-2.486 0-1.372-1.096-2.485-2.447-2.485-1.352 0-2.447 1.113-2.447 2.485 0 1.373 1.095 2.486 2.447 2.486zM57.976 12.235c-2.39 0-4.329-1.968-4.329-4.397 0-2.428 1.938-4.397 4.33-4.397 2.39 0 4.329 1.969 4.329 4.397 0 2.429-1.938 4.397-4.33 4.397zm0-1.911c1.352 0 2.448-1.113 2.448-2.486 0-1.372-1.096-2.485-2.448-2.485-1.351 0-2.447 1.113-2.447 2.485 0 1.373 1.096 2.486 2.447 2.486zM80 7.838v4.397h-1.882V7.838c0-1.372-1.096-2.485-2.447-2.485-1.352 0-2.447 1.113-2.447 2.485v4.397H71.34V7.838c0-1.372-1.095-2.485-2.447-2.485-1.351 0-2.447 1.113-2.447 2.485v4.397h-1.882V7.838c0-2.428 1.938-4.397 4.33-4.397 1.371 0 2.594.648 3.387 1.66a4.297 4.297 0 0 1 3.389-1.66C78.06 3.441 80 5.41 80 7.838zM36.141 7.838c0-2.428 1.939-4.397 4.33-4.397v1.912c-1.352 0-2.447 1.113-2.447 2.485v4.397H36.14V7.838zm8.659 0h-1.882H44.8z"/>
++    </g>
++</svg>
+diff --git a/data/theme/theme.css b/data/theme/theme.css
+new file mode 100644
+index 0000000..4640adb
+--- /dev/null
++++ b/data/theme/theme.css
+@@ -0,0 +1,93 @@
++* {
++  outline-color: transparent;
++  font-family: Sans Regular;
++  text-shadow: none;
++  -gtk-icon-effect: none;
++  -gtk-icon-shadow: none; }
++
++
++/*
++#panel_box {
++  border: none;
++  box-shadow: none;
++  background-image: none;
++  background-color: rgba(0, 0, 0, 0.8);
++  min-height: 40px; }
++  #panel_box #panel_button {
++    color: #ffffff;
++    border: none;
++    border-radius: 0;
++    box-shadow: none;
++    background-image: none;
++    background-color: transparent; }
++    #panel_box #panel_button:hover {
++      background: rgba(255, 255, 255, 0.4); }
++    #panel_box #panel_button:active,
++    #panel_box #panel_button:checked  {
++      background: rgba(0, 255, 255, 0.6); }
++    #panel_box #panel_button:disabled {
++      color: @insensitive_fg_color; }
++  #panel_box #indicator_button {
++    color: #ffffff;
++    padding: 0;
++    border-radius: 0;
++    border: none;
++    background-color: transparent; }
++    #panel_box #indicator_button:hover {
++      border: none;
++      background-color: rgba(255, 255, 255, 0.5); }
++    #panel_box #indicator_button:active,
++    #panel_box #indicator_button:checked {
++      background-color: rgba(0, 255, 255, 0.6); }
++*/
++
++#login_window {
++  min-height: 400px;
++  min-width: 560px;
++  border-radius: 16px;
++  background-color: #1c1c1c;
++  box-shadow: 0 2px 8px 3px rgba(0, 0, 0, 0.85); }
++  #login_window #cloud_auth_box {
++    padding: 20px;
++    color: #000000;;
++    border-radius: 0 16px 16px 0;
++    background-color: #ffffff; }
++  #login_window #local_auth_box {
++    padding: 40px;
++    color: #000000;;
++    border-radius: 0 16px 16px 0;
++    background-color: #ffffff; }
++  #login_window #unlock_button {
++    padding: 5px;
++    border: none;
++    border-radius: 5px;
++    color: #ffffff;
++    box-shadow: none;
++    background-image: none;
++    background-color: #3986e1;}
++    #login_window #unlock_button:hover {
++      background-color: #69d3ff; }
++    #login_window #unlock_button:active, #login_window #unlock_button:checked {
++      background-color: #00b3fe; }
++  #login_window #prompt_entry {
++    min-height: 34px;
++    padding: 0 34px 0 6px;
++    color: #000000;
++    border: 1px solid rgba(201, 201, 201, 0.6);
++    border-radius: 5px;
++    background-image: none;
++    background-color: rgba(201, 201, 201, 0.6);
++    box-shadow: none; }
++    #login_window #prompt_entry:focus,
++    #login_window #prompt_entry:hover {
++      border-color: #4a90e2;
++      background-color: #ffffff; }
++
++/*
++#greeter_infobar {
++  background-color: transparent;
++  border-bottom-width: 0;
++  font-weight: bold; }
++  #greeter_infobar label {
++    color: #ff0000; }
++*/
+diff --git a/po/POTFILES.in b/po/POTFILES.in
+index 95dbcc4..fe19a05 100644
+--- a/po/POTFILES.in
++++ b/po/POTFILES.in
+@@ -8,3 +8,5 @@ src/gs-auth-pam.c
+ src/gs-listener-dbus.c
+ src/gs-lock-plug.c
+ src/gs-window-x11.c
++[type: gettext/glade]src/gs-lock-plug.ui
++
+diff --git a/po/ko.po b/po/ko.po
+index ff2c7b9..30b5eaf 100644
+--- a/po/ko.po
++++ b/po/ko.po
+@@ -265,6 +265,9 @@ msgstr "(%a) %R"
+ msgid "%a %l:%M %p"
+ msgstr "(%a) %p %l:%M"
+ 
++msgid "<span font='18px'><b>Screen Locked</b></span>"
++msgstr "<span font='18px'><b>화면 잠김</b></span>"
++
+ #~ msgid "Screensaver themes"
+ #~ msgstr "화면 보호기 테마"
+ 
+diff --git a/src/Makefile.am b/src/Makefile.am
+index 1dd5d46..8aabeca 100644
+--- a/src/Makefile.am
++++ b/src/Makefile.am
+@@ -26,7 +26,6 @@ INCLUDES =							\
+ 	$(AUTH_CFLAGS)						\
+ 	$(DEBUG_CFLAGS)						\
+ 	$(DBUS_CFLAGS)						\
+-	$(LIBGNOMEKBDUI_CFLAGS)					\
+ 	$(LIBNOTIFY_CFLAGS)					\
+ 	$(SYSTEMD_CFLAGS)					\
+ 	$(NULL)
+@@ -36,22 +35,31 @@ bin_PROGRAMS = \
+ 	gnome-screensaver-command	\
+ 	$(NULL)
+ 
+-libexec_PROGRAMS = \
+-	gnome-screensaver-dialog	\
+-	$(NULL)
+-
+-noinst_PROGRAMS = 	\
+-	test-fade	\
+-	test-passwd	\
+-	test-watcher	\
+-	test-window	\
+-	$(NULL)
+-
+ desktopdir = $(sysconfdir)/xdg/autostart
+ desktop_in_files = gnome-screensaver.desktop.in
+ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
+ @INTLTOOL_DESKTOP_RULE@
+ 
++BUILT_SOURCES = 		\
++	gs-marshal.c 		\
++	gs-marshal.h		\
++	gsd-resources.c		\
++	gsd-resources.h		\
++	$(NULL)
++
++gs-marshal.c: gs-marshal.list
++	echo "#include \"gs-marshal.h\"" > $@ && \
++	@GLIB_GENMARSHAL@ $< --prefix=gs_marshal --body >> $@
++
++gs-marshal.h: gs-marshal.list
++	@GLIB_GENMARSHAL@ $< --prefix=gs_marshal --header > $@
++
++resource_files = $(shell glib-compile-resources --sourcedir=$(srcdir) --generate-dependencies $(srcdir)/gresource.xml)
++gsd-resources.c: gresource.xml $(resource_files)
++	$(AM_V_GEN) glib-compile-resources --target=$@ --sourcedir=$(srcdir) --generate-source --c-name gsd $<
++gsd-resources.h: gresource.xml $(resource_files)
++	$(AM_V_GEN) glib-compile-resources --target=$@ --sourcedir=$(srcdir) --generate-header --c-name gsd $<
++
+ gnome_screensaver_command_SOURCES = 	\
+ 	bus.h				\
+ 	gnome-screensaver-command.c	\
+@@ -65,103 +73,6 @@ AUTH_SOURCES =				\
+ 	gs-auth-@AUTH_SCHEME@.c		\
+ 	$(NULL)
+ 
+-test_fade_SOURCES = 			\
+-	test-fade.c 			\
+-	gs-fade.c	 		\
+-	gs-fade.h	 		\
+-	gs-debug.c			\
+-	gs-debug.h			\
+-	$(NULL)
+-
+-test_fade_LDADD =			\
+-	$(GNOME_SCREENSAVER_LIBS)	\
+-	$(SAVER_LIBS)			\
+-	$(NULL)
+-
+-test_passwd_SOURCES = 			\
+-	test-passwd.c 			\
+-	gs-auth.h			\
+-	$(AUTH_SOURCES)			\
+-	setuid.c			\
+-	setuid.h			\
+-	subprocs.c			\
+-	subprocs.h			\
+-	$(NULL)
+-
+-test_passwd_LDADD =			\
+-	$(GNOME_SCREENSAVER_DIALOG_LIBS)\
+-	$(AUTH_LIBS)			\
+-	$(NULL)
+-
+-test_watcher_SOURCES =			\
+-	bus.h				\
+-	test-watcher.c			\
+-	gs-watcher.h			\
+-	gs-watcher-x11.c		\
+-	gs-marshal.c 			\
+-	gs-marshal.h			\
+-	gs-debug.c			\
+-	gs-debug.h			\
+-	$(NULL)
+-
+-test_watcher_LDADD =			\
+-	$(GNOME_SCREENSAVER_LIBS)	\
+-	$(SAVER_LIBS)			\
+-	$(NULL)
+-
+-test_window_SOURCES =			\
+-	test-window.c			\
+-	gs-window.h			\
+-	gs-window-x11.c			\
+-	gs-grab-x11.c			\
+-	gs-grab.h			\
+-	gs-marshal.c 			\
+-	gs-marshal.h			\
+-	gs-debug.c			\
+-	gs-debug.h			\
+-	subprocs.c			\
+-	subprocs.h			\
+-	$(NULL)
+-
+-test_window_LDADD =			\
+-	$(GNOME_SCREENSAVER_LIBS)	\
+-	$(SAVER_LIBS)			\
+-	$(NULL)
+-
+-gnome_screensaver_dialog_SOURCES = 	\
+-	gnome-screensaver-dialog.c	\
+-	gs-lock-plug.c			\
+-	gs-lock-plug.h			\
+-	gs-debug.c			\
+-	gs-debug.h			\
+-	setuid.c			\
+-	setuid.h			\
+-	subprocs.c			\
+-	subprocs.h			\
+-	gs-auth.h			\
+-	$(AUTH_SOURCES)			\
+-	$(NULL)
+-
+-gnome_screensaver_dialog_LDADD =	\
+-	$(GNOME_SCREENSAVER_DIALOG_LIBS)\
+-	$(SAVER_LIBS)			\
+-	$(AUTH_LIBS)			\
+-	$(LIBGNOMEKBDUI_LIBS)		\
+-	$(LIBNOTIFY_LIBS)		\
+-	$(NULL)
+-
+-BUILT_SOURCES = 		\
+-	gs-marshal.c 		\
+-	gs-marshal.h		\
+-	$(NULL)
+-
+-gs-marshal.c: gs-marshal.list
+-	echo "#include \"gs-marshal.h\"" > $@ && \
+-	@GLIB_GENMARSHAL@ $< --prefix=gs_marshal --body >> $@
+-
+-gs-marshal.h: gs-marshal.list
+-	@GLIB_GENMARSHAL@ $< --prefix=gs_marshal --header > $@
+-
+ gnome_screensaver_SOURCES =	\
+ 	bus.h			\
+ 	gnome-screensaver.c	\
+@@ -175,6 +86,9 @@ gnome_screensaver_SOURCES =	\
+ 	gs-manager.c		\
+ 	gs-manager.h		\
+ 	gs-window-x11.c		\
++	gs-lock-plug-common.h   \
++	gs-lock-plug.h	\
++	gs-lock-plug.c	\
+ 	gs-window.h		\
+ 	gs-prefs.c		\
+ 	gs-prefs.h		\
+@@ -187,12 +101,14 @@ gnome_screensaver_SOURCES =	\
+ 	gs-fade.c		\
+ 	gs-fade.h		\
+ 	$(BUILT_SOURCES)	\
++	$(AUTH_SOURCES)	\
+ 	$(NULL)
+ 
+ gnome_screensaver_LDADD =		\
+ 	$(GNOME_SCREENSAVER_LIBS)	\
+ 	$(SAVER_LIBS)			\
+ 	$(SYSTEMD_LIBS)                 \
++	$(AUTH_LIBS)                 \
+ 	$(NULL)
+ 
+ gnome_screensaver_LDFLAGS = -export-dynamic
+diff --git a/src/gresource.xml b/src/gresource.xml
+new file mode 100644
+index 0000000..8a630a4
+--- /dev/null
++++ b/src/gresource.xml
+@@ -0,0 +1,14 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<gresources>
++	<gresource prefix="/org/gnome/screensaver">
++		<file preprocess="xml-stripblanks">gs-lock-plug.ui</file>
++	</gresource>
++
++    <gresource prefix="/org/gnome/screensaver">
++        <file compressed="true" alias="theme.css">../data/theme/theme.css</file>
++    </gresource>
++
++	<gresource prefix="/org/gnome/screensaver">
++		<file alias="logo-letter-white.svg">../data/images/logo-letter-white.svg</file>
++	</gresource>
++</gresources>
+diff --git a/src/gs-lock-plug-common.h b/src/gs-lock-plug-common.h
+new file mode 100644
+index 0000000..ea17b40
+--- /dev/null
++++ b/src/gs-lock-plug-common.h
+@@ -0,0 +1,49 @@
++/* -*- Mode: C; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
++ *
++ * Copyright (C) 2019 Gooroom <gooroom@gooroom.kr>.
++ *
++ * This program is free software; you can redistribute it and/or modify
++ * it under the terms of the GNU General Public License as published by
++ * the Free Software Foundation; either version 2 of the License, or
++ * (at your option) any later version.
++ *
++ * This program is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ * GNU General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this program; if not, write to the Free Software
++ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
++ *
++ * Authors: William Jon McCann <mccann@jhu.edu>
++ *
++ */
++
++#ifndef __GS_LOCK_PLUG_COMMON_H__
++#define __GS_LOCK_PLUG_COMMON_H__
++
++
++#include <gtk/gtk.h>
++
++G_BEGIN_DECLS
++
++typedef enum
++{
++	GS_LOCK_PLUG_RESPONSE_NONE        = -1,
++	GS_LOCK_PLUG_RESPONSE_AUTH_OK     = -2,
++	GS_LOCK_PLUG_RESPONSE_AUTH_FAILED = -3
++} GSPlugResponseType;
++
++enum {
++	ACCOUNT_TYPE_LOCAL = 0,
++	ACCOUNT_TYPE_GOOROOM,
++	ACCOUNT_TYPE_GOOGLE,
++	ACCOUNT_TYPE_NAVER,
++	ACCOUNT_TYPE_UNKNOWN
++};
++
++
++G_END_DECLS
++
++#endif /* __GS_LOCK_PLUG_COMMON_H__ */
+diff --git a/src/gs-lock-plug.c b/src/gs-lock-plug.c
+index 9cadedb..757a26b 100644
+--- a/src/gs-lock-plug.c
++++ b/src/gs-lock-plug.c
+@@ -2,6 +2,7 @@
+  *
+  * Copyright (C) 2004-2008 William Jon McCann <mccann@jhu.edu>
+  * Copyright (C) 2008-2011 Red Hat, Inc.
++ * Copyright (C) 2019 Gooroom <gooroom@gooroom.kr>.
+  *
+  * This program is free software; you can redistribute it and/or modify
+  * it under the terms of the GNU General Public License as published by
+@@ -36,1247 +37,229 @@
+ #include <gdk/gdkx.h>
+ #include <gtk/gtk.h>
+ 
+-#ifdef WITH_KBD_LAYOUT_INDICATOR
+-#include <libgnomekbd/gkbd-indicator.h>
+-#endif
+-
++#include "gs-auth.h"
+ #include "gs-lock-plug.h"
++#include "gs-lock-plug-common.h"
+ 
+ #include "gs-debug.h"
+ 
+-#define GDM_FLEXISERVER_COMMAND "gdmflexiserver"
+-#define GDM_FLEXISERVER_ARGS    "--startnew Standard"
+-
+-enum {
+-        AUTH_PAGE = 0,
+-};
+-
+-enum {
+-        LOCK_NONE = 0,
+-        LOCK_CAPS = 1 << 0,
+-};
+-
+-#define FACE_ICON_SIZE 48
+-#define DIALOG_TIMEOUT_MSEC 60000
+-
+-static void gs_lock_plug_finalize   (GObject         *object);
++#define	LOGOUT_COMMAND	"/usr/bin/gnome-session-quit --force"
+ 
+-#define GS_LOCK_PLUG_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GS_TYPE_LOCK_PLUG, GSLockPlugPrivate))
+ 
+-struct GSLockPlugPrivate
++struct _GSLockPlugPrivate
+ {
+-        GtkWidget   *frame;
+-        GtkWidget   *vbox;
+-        GtkWidget   *auth_action_area;
+-
+-        GtkWidget   *notebook;
+-        GtkWidget   *auth_face_image;
+-        GtkWidget   *auth_prompt_label;
+-        GtkWidget   *auth_prompt_entry;
+-        GtkWidget   *auth_prompt_box;
+-        GtkWidget   *auth_capslock_label;
+-        GtkWidget   *auth_message_label;
+-        GtkWidget   *status_message_label;
+-
+-        GtkWidget   *auth_unlock_button;
+-        GtkWidget   *auth_switch_button;
+-        GtkWidget   *auth_logout_button;
+-
+-        GtkWidget   *auth_prompt_kbd_layout_indicator;
+-
+-        int          kbd_lock_mode;
+-        gboolean     switch_enabled;
+-        gboolean     logout_enabled;
+-        char        *logout_command;
+-        char        *status_message;
+-
+-        guint        timeout;
+-
+-        guint        cancel_timeout_id;
+-        guint        auth_check_idle_id;
+-        guint        response_idle_id;
+-
+-        GList       *key_events;
+-};
+-
+-typedef struct _ResponseData ResponseData;
++	GtkWidget *auth_prompt_entry;
++	GtkWidget *auth_message_label;
++	GtkWidget *auth_unlock_button;
++	GtkWidget *auth_logout_button;
++	GtkWidget *auth_logo_image;
++	GtkWidget *auth_user_entry;
+ 
+-struct _ResponseData
+-{
+-        gint response_id;
++	guint      reset_idle_id;
+ };
+ 
+-
+ enum {
+-        RESPONSE,
+-        CLOSE,
+-        LAST_SIGNAL
++	RESPONSE,
++	CLOSE,
++	LAST_SIGNAL
+ };
+ 
+-enum {
+-        PROP_0,
+-        PROP_LOGOUT_ENABLED,
+-        PROP_LOGOUT_COMMAND,
+-        PROP_SWITCH_ENABLED,
+-        PROP_STATUS_MESSAGE
+-};
+-
+-static guint lock_plug_signals [LAST_SIGNAL];
+-
+-G_DEFINE_TYPE (GSLockPlug, gs_lock_plug, GTK_TYPE_PLUG)
+-
+-static void
+-gs_lock_plug_style_set (GtkWidget *widget,
+-                        GtkStyle  *previous_style)
+-{
+-        GSLockPlug *plug;
+-
+-        if (GTK_WIDGET_CLASS (gs_lock_plug_parent_class)->style_set) {
+-                GTK_WIDGET_CLASS (gs_lock_plug_parent_class)->style_set (widget, previous_style);
+-        }
++static guint lock_plug_signals [LAST_SIGNAL] = { 0 };
+ 
+-        plug = GS_LOCK_PLUG (widget);
++G_DEFINE_TYPE_WITH_PRIVATE (GSLockPlug, gs_lock_plug, GTK_TYPE_BOX)
+ 
+-        gtk_container_set_border_width (GTK_CONTAINER (plug->priv->vbox), 24);
+-        gtk_box_set_spacing (GTK_BOX (plug->priv->vbox), 12);
+-
+-        gtk_container_set_border_width (GTK_CONTAINER (plug->priv->auth_action_area), 0);
+-        gtk_box_set_spacing (GTK_BOX (plug->priv->auth_action_area), 5);
+-}
+-
+-static void
+-do_user_switch (GSLockPlug *plug)
+-{
+-        GAppInfo *app;
+-        GAppLaunchContext *context;
+-        GError  *error;
+-        char    *command;
+-
+-        command = g_strdup_printf ("%s %s",
+-                                   GDM_FLEXISERVER_COMMAND,
+-                                   GDM_FLEXISERVER_ARGS);
+-
+-        error = NULL;
+-        context = (GAppLaunchContext*)gdk_app_launch_context_new ();
+-        app = g_app_info_create_from_commandline (command, "gdmflexiserver", 0, &error);
+-        if (app)
+-                g_app_info_launch (app, NULL, context, &error);
+-
+-        g_free (command);
+-        g_object_unref (context);
+-        g_object_unref (app);
+-
+-        if (error != NULL) {
+-                gs_debug ("Unable to start GDM greeter: %s", error->message);
+-                g_error_free (error);
+-        }
+-}
+ 
+ static void
+ set_status_text (GSLockPlug *plug,
+                  const char *text)
+ {
+-        if (plug->priv->auth_message_label != NULL) {
+-                gtk_label_set_text (GTK_LABEL (plug->priv->auth_message_label), text);
+-        }
+-}
+-
+-void
+-gs_lock_plug_set_sensitive (GSLockPlug *plug,
+-                            gboolean    sensitive)
+-{
+-        g_return_if_fail (GS_IS_LOCK_PLUG (plug));
+-
+-        gtk_widget_set_sensitive (plug->priv->auth_prompt_entry, sensitive);
+-        gtk_widget_set_sensitive (plug->priv->auth_action_area, sensitive);
++	if (plug->priv->auth_message_label != NULL) {
++		gtk_label_set_text (GTK_LABEL (plug->priv->auth_message_label), text);
++	}
+ }
+ 
+ static void
+-remove_cancel_timeout (GSLockPlug *plug)
+-{
+-        if (plug->priv->cancel_timeout_id > 0) {
+-                g_source_remove (plug->priv->cancel_timeout_id);
+-                plug->priv->cancel_timeout_id = 0;
+-        }
+-}
+-
+-static void
+-remove_response_idle (GSLockPlug *plug)
+-{
+-        if (plug->priv->response_idle_id > 0) {
+-                g_source_remove (plug->priv->response_idle_id);
+-                plug->priv->response_idle_id = 0;
+-        }
+-}
+-
+-static void
+-gs_lock_plug_response (GSLockPlug *plug,
+-                       gint        response_id)
+-{
+-        int new_response;
+-
+-        new_response = response_id;
+-
+-        g_return_if_fail (GS_IS_LOCK_PLUG (plug));
+-
+-        /* Act only on response IDs we recognize */
+-        if (!(response_id == GS_LOCK_PLUG_RESPONSE_OK
+-              || response_id == GS_LOCK_PLUG_RESPONSE_CANCEL)) {
+-                return;
+-        }
+-
+-        remove_cancel_timeout (plug);
+-        remove_response_idle (plug);
+-
+-        if (response_id == GS_LOCK_PLUG_RESPONSE_CANCEL) {
+-                gtk_entry_set_text (GTK_ENTRY (plug->priv->auth_prompt_entry), "");
+-        }
+-
+-        g_signal_emit (plug,
+-                       lock_plug_signals [RESPONSE],
+-                       0,
+-                       new_response);
+-}
+-
+-static gboolean
+-response_cancel_idle_cb (GSLockPlug *plug)
+-{
+-        plug->priv->response_idle_id = 0;
+-
+-        gs_lock_plug_response (plug, GS_LOCK_PLUG_RESPONSE_CANCEL);
+-
+-        return FALSE;
+-}
+-
+-static gboolean
+-dialog_timed_out (GSLockPlug *plug)
+-{
+-        gs_lock_plug_set_sensitive (plug, FALSE);
+-        set_status_text (plug, _("Time has expired."));
+-
+-        if (plug->priv->response_idle_id != 0) {
+-                g_warning ("Response idle ID already set but shouldn't be");
+-        }
+-
+-        remove_response_idle (plug);
+-
+-        plug->priv->response_idle_id = g_timeout_add (2000,
+-                                                      (GSourceFunc)response_cancel_idle_cb,
+-                                                      plug);
+-        return FALSE;
+-}
+-
+-
+-static void
+-kbd_lock_mode_update (GSLockPlug *plug,
+-                      int         mode)
+-{
+-        if (plug->priv->kbd_lock_mode == mode) {
+-                return;
+-        }
+-
+-        plug->priv->kbd_lock_mode = mode;
+-
+-        if (plug->priv->auth_capslock_label == NULL) {
+-                return;
+-        }
+-
+-        if ((mode & LOCK_CAPS) != 0) {
+-                gtk_label_set_text (GTK_LABEL (plug->priv->auth_capslock_label),
+-                                    _("You have the Caps Lock key on."));
+-        } else {
+-                gtk_label_set_text (GTK_LABEL (plug->priv->auth_capslock_label),
+-                                    "");
+-        }
+-}
+-
+-static int
+-get_kbd_lock_mode (void)
+-{
+-        GdkKeymap *keymap;
+-        int        mode;
+-
+-        mode = LOCK_NONE;
+-
+-        keymap = gdk_keymap_get_default ();
+-        if (keymap != NULL) {
+-                gboolean res;
+-
+-                res = gdk_keymap_get_caps_lock_state (keymap);
+-                if (res) {
+-                        mode |= LOCK_CAPS;
+-                }
+-        }
+-
+-        return mode;
+-}
+-
+-static void
+-restart_cancel_timeout (GSLockPlug *plug)
+-{
+-        remove_cancel_timeout (plug);
+-
+-        plug->priv->cancel_timeout_id = g_timeout_add (plug->priv->timeout,
+-                                                       (GSourceFunc)dialog_timed_out,
+-                                                       plug);
+-}
+-
+-void
+ gs_lock_plug_get_text (GSLockPlug *plug,
+                        char      **text)
+ {
+-        const char *typed_text;
+-        char       *null_text;
+-        char       *local_text;
+-
+-        typed_text = gtk_entry_get_text (GTK_ENTRY (plug->priv->auth_prompt_entry));
+-        local_text = g_locale_from_utf8 (typed_text, strlen (typed_text), NULL, NULL, NULL);
+-
+-        null_text = g_strnfill (strlen (typed_text) + 1, '\b');
+-        gtk_entry_set_text (GTK_ENTRY (plug->priv->auth_prompt_entry), null_text);
+-        gtk_entry_set_text (GTK_ENTRY (plug->priv->auth_prompt_entry), "");
+-        g_free (null_text);
+-
+-        if (text != NULL) {
+-                *text = local_text;
+-        }
+-}
+-
+-typedef struct
+-{
+-        GSLockPlug *plug;
+-        gint response_id;
+-        GMainLoop *loop;
+-        gboolean destroyed;
+-} RunInfo;
+-
+-static void
+-shutdown_loop (RunInfo *ri)
+-{
+-        if (g_main_loop_is_running (ri->loop))
+-                g_main_loop_quit (ri->loop);
+-}
+-
+-static void
+-run_unmap_handler (GSLockPlug *plug,
+-                   gpointer data)
+-{
+-        RunInfo *ri = data;
+-
+-        shutdown_loop (ri);
+-}
+-
+-static void
+-run_response_handler (GSLockPlug *plug,
+-                      gint response_id,
+-                      gpointer data)
+-{
+-        RunInfo *ri;
+-
+-        ri = data;
+-
+-        ri->response_id = response_id;
+-
+-        shutdown_loop (ri);
+-}
+-
+-static gint
+-run_delete_handler (GSLockPlug *plug,
+-                    GdkEventAny *event,
+-                    gpointer data)
+-{
+-        RunInfo *ri = data;
+-
+-        shutdown_loop (ri);
+-
+-        return TRUE; /* Do not destroy */
+-}
+-
+-static void
+-run_destroy_handler (GSLockPlug *plug,
+-                     gpointer data)
+-{
+-        RunInfo *ri = data;
+-
+-        /* shutdown_loop will be called by run_unmap_handler */
+-        ri->destroyed = TRUE;
+-}
+-
+-static void
+-run_keymap_handler (GdkKeymap *keymap,
+-                    GSLockPlug *plug)
+-{
+-        kbd_lock_mode_update (plug, get_kbd_lock_mode ());
+-}
++	const char *typed_text;
++	char       *null_text;
++	char       *local_text;
+ 
+-/* adapted from GTK+ gtkdialog.c */
+-int
+-gs_lock_plug_run (GSLockPlug *plug)
+-{
+-        RunInfo ri = { NULL, GTK_RESPONSE_NONE, NULL, FALSE };
+-        gboolean was_modal;
+-        gulong response_handler;
+-        gulong unmap_handler;
+-        gulong destroy_handler;
+-        gulong delete_handler;
+-        gulong keymap_handler;
+-        GdkKeymap *keymap;
+-
+-        g_return_val_if_fail (GS_IS_LOCK_PLUG (plug), -1);
+-
+-        g_object_ref (plug);
+-
+-        was_modal = gtk_window_get_modal (GTK_WINDOW (plug));
+-        if (!was_modal) {
+-                gtk_window_set_modal (GTK_WINDOW (plug), TRUE);
+-        }
+-
+-        if (!gtk_widget_get_visible (GTK_WIDGET (plug))) {
+-                gtk_widget_show (GTK_WIDGET (plug));
+-        }
+-
+-        keymap = gdk_keymap_get_for_display (gtk_widget_get_display (GTK_WIDGET (plug)));
+-
+-        keymap_handler =
+-                g_signal_connect (keymap,
+-                                  "state-changed",
+-                                  G_CALLBACK (run_keymap_handler),
+-                                  plug);
+-
+-        response_handler =
+-                g_signal_connect (plug,
+-                                  "response",
+-                                  G_CALLBACK (run_response_handler),
+-                                  &ri);
+-
+-        unmap_handler =
+-                g_signal_connect (plug,
+-                                  "unmap",
+-                                  G_CALLBACK (run_unmap_handler),
+-                                  &ri);
+-
+-        delete_handler =
+-                g_signal_connect (plug,
+-                                  "delete_event",
+-                                  G_CALLBACK (run_delete_handler),
+-                                  &ri);
+-
+-        destroy_handler =
+-                g_signal_connect (plug,
+-                                  "destroy",
+-                                  G_CALLBACK (run_destroy_handler),
+-                                  &ri);
+-
+-        ri.loop = g_main_loop_new (NULL, FALSE);
+-
+-        g_main_loop_run (ri.loop);
+-        g_main_loop_unref (ri.loop);
+-
+-        ri.loop = NULL;
+-
+-        if (!ri.destroyed) {
+-                if (! was_modal) {
+-                        gtk_window_set_modal (GTK_WINDOW (plug), FALSE);
+-                }
+-
+-                g_signal_handler_disconnect (plug, response_handler);
+-                g_signal_handler_disconnect (plug, unmap_handler);
+-                g_signal_handler_disconnect (plug, delete_handler);
+-                g_signal_handler_disconnect (plug, destroy_handler);
+-                g_signal_handler_disconnect (keymap, keymap_handler);
+-        }
+-
+-        g_object_unref (plug);
+-
+-        return ri.response_id;
+-}
++	typed_text = gtk_entry_get_text (GTK_ENTRY (plug->priv->auth_prompt_entry));
++	local_text = g_locale_from_utf8 (typed_text, strlen (typed_text), NULL, NULL, NULL);
+ 
++	null_text = g_strnfill (strlen (typed_text) + 1, '\b');
++	gtk_entry_set_text (GTK_ENTRY (plug->priv->auth_prompt_entry), null_text);
++	gtk_entry_set_text (GTK_ENTRY (plug->priv->auth_prompt_entry), "");
++	g_free (null_text);
+ 
+-static cairo_surface_t *
+-surface_from_pixbuf (GdkPixbuf *pixbuf)
+-{
+-        cairo_surface_t *surface;
+-        cairo_t         *cr;
+-
+-        surface = cairo_image_surface_create (gdk_pixbuf_get_has_alpha (pixbuf) ?
+-                                              CAIRO_FORMAT_ARGB32 : CAIRO_FORMAT_RGB24,
+-                                              gdk_pixbuf_get_width (pixbuf),
+-                                              gdk_pixbuf_get_height (pixbuf));
+-        cr = cairo_create (surface);
+-        gdk_cairo_set_source_pixbuf (cr, pixbuf, 0, 0);
+-        cairo_paint (cr);
+-        cairo_destroy (cr);
+-
+-        return surface;
++	if (text != NULL) {
++		*text = local_text;
++	}
+ }
+ 
+ static void
+-rounded_rectangle (cairo_t *cr,
+-                   gdouble  aspect,
+-                   gdouble  x,
+-                   gdouble  y,
+-                   gdouble  corner_radius,
+-                   gdouble  width,
+-                   gdouble  height)
+-{
+-        gdouble radius;
+-        gdouble degrees;
+-
+-        radius = corner_radius / aspect;
+-        degrees = G_PI / 180.0;
+-
+-        cairo_new_sub_path (cr);
+-        cairo_arc (cr,
+-                   x + width - radius,
+-                   y + radius,
+-                   radius,
+-                   -90 * degrees,
+-                   0 * degrees);
+-        cairo_arc (cr,
+-                   x + width - radius,
+-                   y + height - radius,
+-                   radius,
+-                   0 * degrees,
+-                   90 * degrees);
+-        cairo_arc (cr,
+-                   x + radius,
+-                   y + height - radius,
+-                   radius,
+-                   90 * degrees,
+-                   180 * degrees);
+-        cairo_arc (cr,
+-                   x + radius,
+-                   y + radius,
+-                   radius,
+-                   180 * degrees,
+-                   270 * degrees);
+-        cairo_close_path (cr);
+-}
+-
+-/* copied from gdm-user.c */
+-
+-/**
+- * go_cairo_convert_data_to_pixbuf:
+- * @src: a pointer to pixel data in cairo format
+- * @dst: a pointer to pixel data in pixbuf format
+- * @width: image width
+- * @height: image height
+- * @rowstride: data rowstride
+- *
+- * Converts the pixel data stored in @src in CAIRO_FORMAT_ARGB32 cairo format
+- * to GDK_COLORSPACE_RGB pixbuf format and move them
+- * to @dst. If @src == @dst, pixel are converted in place.
+- **/
+-
+-static void
+-go_cairo_convert_data_to_pixbuf (unsigned char *dst,
+-                                 unsigned char const *src,
+-                                 int width,
+-                                 int height,
+-                                 int rowstride)
+-{
+-        int i,j;
+-        unsigned int t;
+-        unsigned char a, b, c;
+-
+-        g_return_if_fail (dst != NULL);
+-
+-#define MULT(d,c,a,t) G_STMT_START { t = (a)? c * 255 / a: 0; d = t;} G_STMT_END
+-
+-        if (src == dst || src == NULL) {
+-                for (i = 0; i < height; i++) {
+-                        for (j = 0; j < width; j++) {
+-#if G_BYTE_ORDER == G_LITTLE_ENDIAN
+-                                MULT(a, dst[2], dst[3], t);
+-                                MULT(b, dst[1], dst[3], t);
+-                                MULT(c, dst[0], dst[3], t);
+-                                dst[0] = a;
+-                                dst[1] = b;
+-                                dst[2] = c;
+-#else
+-                                MULT(a, dst[1], dst[0], t);
+-                                MULT(b, dst[2], dst[0], t);
+-                                MULT(c, dst[3], dst[0], t);
+-                                dst[3] = dst[0];
+-                                dst[0] = a;
+-                                dst[1] = b;
+-                                dst[2] = c;
+-#endif
+-                                dst += 4;
+-                        }
+-                        dst += rowstride - width * 4;
+-                }
+-        } else {
+-                for (i = 0; i < height; i++) {
+-                        for (j = 0; j < width; j++) {
+-#if G_BYTE_ORDER == G_LITTLE_ENDIAN
+-                                MULT(dst[0], src[2], src[3], t);
+-                                MULT(dst[1], src[1], src[3], t);
+-                                MULT(dst[2], src[0], src[3], t);
+-                                dst[3] = src[3];
+-#else
+-                                MULT(dst[0], src[1], src[0], t);
+-                                MULT(dst[1], src[2], src[0], t);
+-                                MULT(dst[2], src[3], src[0], t);
+-                                dst[3] = src[0];
+-#endif
+-                                src += 4;
+-                                dst += 4;
+-                        }
+-                        src += rowstride - width * 4;
+-                        dst += rowstride - width * 4;
+-                }
+-        }
+-#undef MULT
+-}
+-
+-static void
+-cairo_to_pixbuf (guint8    *src_data,
+-                 GdkPixbuf *dst_pixbuf)
++gs_lock_plug_show (GtkWidget *widget)
+ {
+-        unsigned char *src;
+-        unsigned char *dst;
+-        guint          w;
+-        guint          h;
+-        guint          rowstride;
+-
+-        w = gdk_pixbuf_get_width (dst_pixbuf);
+-        h = gdk_pixbuf_get_height (dst_pixbuf);
+-        rowstride = gdk_pixbuf_get_rowstride (dst_pixbuf);
++	gs_profile_start (NULL);
+ 
+-        dst = gdk_pixbuf_get_pixels (dst_pixbuf);
+-        src = src_data;
++	gs_profile_start ("parent");
++	if (GTK_WIDGET_CLASS (gs_lock_plug_parent_class)->show) {
++		GTK_WIDGET_CLASS (gs_lock_plug_parent_class)->show (widget);
++	}
+ 
+-        go_cairo_convert_data_to_pixbuf (dst, src, w, h, rowstride);
+-}
++	gs_profile_end ("parent");
+ 
+-static GdkPixbuf *
+-frame_pixbuf (GdkPixbuf *source)
+-{
+-        GdkPixbuf       *dest;
+-        cairo_t         *cr;
+-        cairo_surface_t *surface;
+-        guint            w;
+-        guint            h;
+-        guint            rowstride;
+-        int              frame_width;
+-        double           radius;
+-        guint8          *data;
+-
+-        frame_width = 5;
+-
+-        w = gdk_pixbuf_get_width (source) + frame_width * 2;
+-        h = gdk_pixbuf_get_height (source) + frame_width * 2;
+-        radius = w / 10;
+-
+-        dest = gdk_pixbuf_new (GDK_COLORSPACE_RGB,
+-                               TRUE,
+-                               8,
+-                               w,
+-                               h);
+-        rowstride = gdk_pixbuf_get_rowstride (dest);
+-
+-
+-        data = g_new0 (guint8, h * rowstride);
+-
+-        surface = cairo_image_surface_create_for_data (data,
+-                                                       CAIRO_FORMAT_ARGB32,
+-                                                       w,
+-                                                       h,
+-                                                       rowstride);
+-        cr = cairo_create (surface);
+-        cairo_surface_destroy (surface);
+-
+-        /* set up image */
+-        cairo_rectangle (cr, 0, 0, w, h);
+-        cairo_set_source_rgba (cr, 1.0, 1.0, 1.0, 0.0);
+-        cairo_fill (cr);
+-
+-        rounded_rectangle (cr,
+-                           1.0,
+-                           frame_width + 0.5,
+-                           frame_width + 0.5,
+-                           radius,
+-                           w - frame_width * 2 - 1,
+-                           h - frame_width * 2 - 1);
+-        cairo_set_source_rgba (cr, 0.5, 0.5, 0.5, 0.3);
+-        cairo_fill_preserve (cr);
+-
+-        surface = surface_from_pixbuf (source);
+-        cairo_set_source_surface (cr, surface, frame_width, frame_width);
+-        cairo_fill (cr);
+-        cairo_surface_destroy (surface);
+-
+-        cairo_to_pixbuf (data, dest);
+-
+-        cairo_destroy (cr);
+-        g_free (data);
+-
+-        return dest;
++	gs_profile_end (NULL);
+ }
+ 
+-/* end copied from gdm-user.c */
+-
+ static void
+-image_set_from_pixbuf (GtkImage  *image,
+-                       GdkPixbuf *source)
+-{
+-        GdkPixbuf *pixbuf;
+-
+-        pixbuf = frame_pixbuf (source);
+-        gtk_image_set_from_pixbuf (image, pixbuf);
+-        g_object_unref (pixbuf);
+-}
+-
+-static GdkPixbuf *
+-get_pixbuf_of_user_icon (GSLockPlug *plug)
+-{
+-        GError          *error;
+-        GDBusConnection *system_bus;
+-        GVariant        *find_user_by_name_reply;
+-        const char      *user;
+-        GVariant        *get_icon_file_reply;
+-        GVariant        *icon_file_variant;
+-        const char      *icon_file;
+-        GdkPixbuf       *pixbuf;
+-
+-        error = NULL;
+-        system_bus = g_bus_get_sync (G_BUS_TYPE_SYSTEM, NULL, &error);
+-
+-        if (error != NULL) {
+-                g_warning ("Unable to get system bus: %s", error->message);
+-                g_error_free (error);
+-                return NULL;
+-        }
+-
+-        find_user_by_name_reply = g_dbus_connection_call_sync (system_bus,
+-                                                               "org.freedesktop.Accounts",
+-                                                               "/org/freedesktop/Accounts",
+-                                                               "org.freedesktop.Accounts",
+-                                                               "FindUserByName",
+-                                                               g_variant_new ("(s)",
+-                                                                              g_get_user_name ()),
+-                                                               G_VARIANT_TYPE ("(o)"),
+-                                                               G_DBUS_CALL_FLAGS_NONE,
+-                                                               -1,
+-                                                               NULL,
+-                                                               &error);
+-        if (error != NULL) {
+-                g_warning ("Couldn't find user in accounts service: %s", error->message);
+-                g_error_free (error);
+-                return NULL;
+-        }
+-
+-        user = g_variant_get_string (g_variant_get_child_value (find_user_by_name_reply,
+-                                                                0),
+-                                     NULL);
+-
+-        get_icon_file_reply = g_dbus_connection_call_sync (system_bus,
+-                                                           "org.freedesktop.Accounts",
+-                                                           user,
+-                                                           "org.freedesktop.DBus.Properties",
+-                                                           "Get",
+-                                                           g_variant_new ("(ss)",
+-                                                                          "org.freedesktop.Accounts.User",
+-                                                                          "IconFile"),
+-                                                           G_VARIANT_TYPE ("(v)"),
+-                                                           G_DBUS_CALL_FLAGS_NONE,
+-                                                           -1,
+-                                                           NULL,
+-                                                           &error);
+-        g_variant_unref (find_user_by_name_reply);
+-
+-        if (error != NULL) {
+-                g_warning ("Couldn't find user icon in accounts service: %s", error->message);
+-                g_error_free (error);
+-                return NULL;
+-        }
+-
+-        g_variant_get_child (get_icon_file_reply, 0, "v", &icon_file_variant);
+-
+-        icon_file = g_variant_get_string (icon_file_variant, NULL);
+-
+-        if (icon_file == NULL) {
+-                char *string;
+-
+-                string = g_variant_print (get_icon_file_reply, TRUE);
+-                g_warning ("reply for user icon path returned invalid response '%s'", string);
+-                g_free (string);
+-
+-                pixbuf = NULL;
+-        } else {
+-                pixbuf = gdk_pixbuf_new_from_file_at_size (icon_file,
+-                                                           64,
+-                                                           64,
+-                                                           &error);
+-        }
+-        g_variant_unref (icon_file_variant);
+-        g_variant_unref (get_icon_file_reply);
+-
+-        if (error != NULL) {
+-                g_warning ("Couldn't load user icon: %s", error->message);
+-                g_error_free (error);
+-                return NULL;
+-        }
+-
+-        return pixbuf;
+-}
+-
+-static gboolean
+-set_face_image (GSLockPlug *plug)
++gs_lock_plug_finalize (GObject *object)
+ {
+-        GdkPixbuf    *pixbuf;
++	GSLockPlug *plug;
+ 
+-        pixbuf = get_pixbuf_of_user_icon (plug);
++	g_return_if_fail (object != NULL);
++	g_return_if_fail (GS_IS_LOCK_PLUG (object));
+ 
+-        if (pixbuf == NULL) {
+-                return FALSE;
+-        }
++	plug = GS_LOCK_PLUG (object);
+ 
+-        image_set_from_pixbuf (GTK_IMAGE (plug->priv->auth_face_image), pixbuf);
++	g_return_if_fail (plug->priv != NULL);
+ 
+-        g_object_unref (pixbuf);
++	if (plug->priv->reset_idle_id > 0) {
++		g_source_remove (plug->priv->reset_idle_id);
++		plug->priv->reset_idle_id = 0;
++	}
+ 
+-        return TRUE;
++	G_OBJECT_CLASS (gs_lock_plug_parent_class)->finalize (object);
+ }
+ 
+ static void
+-gs_lock_plug_show (GtkWidget *widget)
++gs_lock_plug_class_init (GSLockPlugClass *klass)
+ {
+-        GSLockPlug *plug = GS_LOCK_PLUG (widget);
+-
+-        gs_profile_start (NULL);
++	GObjectClass *object_class = G_OBJECT_CLASS (klass);
++	GtkWidgetClass *widget_class = GTK_WIDGET_CLASS (klass);
+ 
+-        gs_profile_start ("parent");
+-        if (GTK_WIDGET_CLASS (gs_lock_plug_parent_class)->show) {
+-                GTK_WIDGET_CLASS (gs_lock_plug_parent_class)->show (widget);
+-        }
++	object_class->finalize = gs_lock_plug_finalize;
+ 
+-        gs_profile_end ("parent");
++	widget_class->show     = gs_lock_plug_show;
+ 
++	lock_plug_signals [RESPONSE] = g_signal_new ("response",
++                                                 G_OBJECT_CLASS_TYPE (klass),
++                                                 G_SIGNAL_RUN_LAST,
++                                                 G_STRUCT_OFFSET (GSLockPlugClass, response),
++                                                 NULL, NULL,
++                                                 g_cclosure_marshal_VOID__INT,
++                                                 G_TYPE_NONE, 1,
++                                                 G_TYPE_INT);
++	lock_plug_signals [CLOSE] = g_signal_new ("close",
++                                              G_OBJECT_CLASS_TYPE (klass),
++                                              G_SIGNAL_RUN_LAST | G_SIGNAL_ACTION,
++                                              G_STRUCT_OFFSET (GSLockPlugClass, close),
++                                              NULL, NULL,
++                                              g_cclosure_marshal_VOID__VOID,
++                                              G_TYPE_NONE, 0);
+ 
+-        if (plug->priv->auth_face_image) {
+-                set_face_image (plug);
+-        }
+-
+-        kbd_lock_mode_update (plug, get_kbd_lock_mode ());
+-
+-        restart_cancel_timeout (plug);
+-
+-        gs_profile_end (NULL);
+-}
++	gtk_widget_class_set_template_from_resource (GTK_WIDGET_CLASS (klass),
++                                                 "/org/gnome/screensaver/gs-lock-plug.ui");
+ 
+-static void
+-gs_lock_plug_hide (GtkWidget *widget)
+-{
+-        if (GTK_WIDGET_CLASS (gs_lock_plug_parent_class)->hide) {
+-                GTK_WIDGET_CLASS (gs_lock_plug_parent_class)->hide (widget);
+-        }
++	gtk_widget_class_bind_template_child_private (GTK_WIDGET_CLASS (klass), GSLockPlug, auth_message_label);
++	gtk_widget_class_bind_template_child_private (GTK_WIDGET_CLASS (klass), GSLockPlug, auth_prompt_entry);
++	gtk_widget_class_bind_template_child_private (GTK_WIDGET_CLASS (klass), GSLockPlug, auth_unlock_button);
++	gtk_widget_class_bind_template_child_private (GTK_WIDGET_CLASS (klass), GSLockPlug, auth_logout_button);
++	gtk_widget_class_bind_template_child_private (GTK_WIDGET_CLASS (klass), GSLockPlug, auth_logo_image);
++	gtk_widget_class_bind_template_child_private (GTK_WIDGET_CLASS (klass), GSLockPlug, auth_user_entry);
+ }
+ 
+ static void
+-queue_key_event (GSLockPlug  *plug,
+-                 GdkEventKey *event)
++logout_button_clicked (GtkButton  *button,
++                       GSLockPlug *plug)
+ {
+-        GdkEvent *saved_event;
++	char   **argv  = NULL;
++	GError  *error = NULL;
++	gboolean res;
+ 
+-        saved_event = gdk_event_copy ((GdkEvent *)event);
+-        plug->priv->key_events = g_list_prepend (plug->priv->key_events,
+-                                                 saved_event);
+-}
++	res = g_shell_parse_argv (LOGOUT_COMMAND, NULL, &argv, &error);
+ 
+-static void
+-forward_key_events (GSLockPlug *plug)
+-{
+-        plug->priv->key_events = g_list_reverse (plug->priv->key_events);
+-        while (plug->priv->key_events != NULL) {
+-                GdkEventKey *event = plug->priv->key_events->data;
++	if (!res) {
++		g_warning ("Could not parse logout command: %s", error->message);
++		g_error_free (error);
++		return;
++	}
+ 
+-                gtk_window_propagate_key_event (GTK_WINDOW (plug), event);
++	g_spawn_async (g_get_home_dir (),
++                   argv,
++                   NULL,
++                   G_SPAWN_SEARCH_PATH,
++                   NULL,
++                   NULL,
++                   NULL,
++                   &error);
+ 
+-                gdk_event_free ((GdkEvent *)event);
++	g_strfreev (argv);
+ 
+-                plug->priv->key_events = g_list_delete_link (plug->priv->key_events,
+-                                                             plug->priv->key_events);
+-        }
++	if (error) {
++		g_warning ("Could not run logout command: %s", error->message);
++		g_error_free (error);
++	}
+ }
+ 
+ static void
+-gs_lock_plug_set_logout_enabled (GSLockPlug *plug,
+-                                 gboolean    logout_enabled)
++gs_lock_plug_set_busy (GSLockPlug *plug)
+ {
+-        g_return_if_fail (GS_LOCK_PLUG (plug));
+-
+-        if (plug->priv->logout_enabled == logout_enabled) {
+-                return;
+-        }
++	GdkCursor *cursor;
++	GtkWidget *top_level;
+ 
+-        plug->priv->logout_enabled = logout_enabled;
+-        g_object_notify (G_OBJECT (plug), "logout-enabled");
++	top_level = gtk_widget_get_toplevel (GTK_WIDGET (plug));
+ 
+-        if (plug->priv->auth_logout_button == NULL) {
+-                return;
+-        }
+-
+-        if (logout_enabled) {
+-                gtk_widget_show (plug->priv->auth_logout_button);
+-        } else {
+-                gtk_widget_hide (plug->priv->auth_logout_button);
+-        }
++	cursor = gdk_cursor_new_for_display (gdk_display_get_default (), GDK_WATCH);
++	gdk_window_set_cursor (gtk_widget_get_window (top_level), cursor);
++	g_object_unref (cursor);
+ }
+ 
+ static void
+-gs_lock_plug_set_logout_command (GSLockPlug *plug,
+-                                 const char *command)
++gs_lock_plug_set_ready (GSLockPlug *plug)
+ {
+-        g_return_if_fail (GS_LOCK_PLUG (plug));
++	GdkCursor *cursor;
++	GtkWidget *top_level;
+ 
+-        g_free (plug->priv->logout_command);
++	top_level = gtk_widget_get_toplevel (GTK_WIDGET (plug));
+ 
+-        if (command) {
+-                plug->priv->logout_command = g_strdup (command);
+-        } else {
+-                plug->priv->logout_command = NULL;
+-        }
+-}
+-
+-static gboolean
+-is_program_in_path (const char *program)
+-{
+-        char *tmp = g_find_program_in_path (program);
+-        if (tmp != NULL) {
+-                g_free (tmp);
+-                return TRUE;
+-        } else {
+-                return FALSE;
+-        }
++	cursor = gdk_cursor_new_for_display (gdk_display_get_default (), GDK_LEFT_PTR);
++	gdk_window_set_cursor (gtk_widget_get_window (top_level), cursor);
++	g_object_unref (cursor);
+ }
+ 
+ static void
+-gs_lock_plug_set_status_message (GSLockPlug *plug,
+-                                 const char *status_message)
+-{
+-        g_return_if_fail (GS_LOCK_PLUG (plug));
+-
+-        g_free (plug->priv->status_message);
+-        plug->priv->status_message = g_strdup (status_message);
+-
+-        if (plug->priv->status_message_label) {
+-                if (plug->priv->status_message) {
+-                        gtk_label_set_text (GTK_LABEL (plug->priv->status_message_label),
+-                                            plug->priv->status_message);
+-                        gtk_widget_show (plug->priv->status_message_label);
+-                }
+-                else {
+-                        gtk_widget_hide (plug->priv->status_message_label);
+-                }
+-        }
+-}
+-
+-static void
+-gs_lock_plug_get_property (GObject    *object,
+-                           guint       prop_id,
+-                           GValue     *value,
+-                           GParamSpec *pspec)
+-{
+-        GSLockPlug *self;
+-
+-        self = GS_LOCK_PLUG (object);
+-
+-        switch (prop_id) {
+-        case PROP_LOGOUT_ENABLED:
+-                g_value_set_boolean (value, self->priv->logout_enabled);
+-                break;
+-        case PROP_LOGOUT_COMMAND:
+-                g_value_set_string (value, self->priv->logout_command);
+-                break;
+-        case PROP_SWITCH_ENABLED:
+-                g_value_set_boolean (value, self->priv->switch_enabled);
+-                break;
+-        case PROP_STATUS_MESSAGE:
+-                g_value_set_string (value, self->priv->status_message);
+-                break;
+-        default:
+-                G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+-                break;
+-        }
+-}
+-
+-static void
+-gs_lock_plug_set_switch_enabled (GSLockPlug *plug,
+-                                 gboolean    switch_enabled)
++gs_lock_plug_disable_prompt (GSLockPlug *plug)
+ {
+-        g_return_if_fail (GS_LOCK_PLUG (plug));
+-
+-        if (plug->priv->switch_enabled == switch_enabled) {
+-                return;
+-        }
+-
+-        plug->priv->switch_enabled = switch_enabled;
+-        g_object_notify (G_OBJECT (plug), "switch-enabled");
+-
+-        if (plug->priv->auth_switch_button == NULL) {
+-                return;
+-        }
+-
+-        if (switch_enabled) {
+-                gboolean found;
+-                found = is_program_in_path (GDM_FLEXISERVER_COMMAND);
+-                if (found) {
+-                        gtk_widget_show (plug->priv->auth_switch_button);
+-                } else {
+-                        gs_debug ("Waring: GDM flexiserver command not found: %s", GDM_FLEXISERVER_COMMAND);
+-                        gtk_widget_hide (plug->priv->auth_switch_button);
+-                }
+-        } else {
+-                gtk_widget_hide (plug->priv->auth_switch_button);
+-        }
+-}
++	g_return_if_fail (GS_IS_LOCK_PLUG (plug));
+ 
+-static void
+-gs_lock_plug_set_property (GObject            *object,
+-                           guint               prop_id,
+-                           const GValue       *value,
+-                           GParamSpec         *pspec)
+-{
+-        GSLockPlug *self;
+-
+-        self = GS_LOCK_PLUG (object);
+-
+-        switch (prop_id) {
+-        case PROP_LOGOUT_ENABLED:
+-                gs_lock_plug_set_logout_enabled (self, g_value_get_boolean (value));
+-                break;
+-        case PROP_LOGOUT_COMMAND:
+-                gs_lock_plug_set_logout_command (self, g_value_get_string (value));
+-                break;
+-        case PROP_STATUS_MESSAGE:
+-                gs_lock_plug_set_status_message (self, g_value_get_string (value));
+-                break;
+-        case PROP_SWITCH_ENABLED:
+-                gs_lock_plug_set_switch_enabled (self, g_value_get_boolean (value));
+-                break;
+-        default:
+-                G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+-                break;
+-        }
++	gtk_widget_set_sensitive (plug->priv->auth_unlock_button, FALSE);
++	gtk_widget_set_sensitive (plug->priv->auth_prompt_entry, FALSE);
+ }
+ 
+ static void
+-gs_lock_plug_close (GSLockPlug *plug)
++gs_lock_plug_enable_prompt (GSLockPlug *plug)
+ {
+-        /* Synthesize delete_event to close dialog. */
+-
+-        GtkWidget *widget = GTK_WIDGET (plug);
+-        GdkEvent  *event;
+-
+-        event = gdk_event_new (GDK_DELETE);
+-        event->any.window = g_object_ref (gtk_widget_get_window (widget));
+-        event->any.send_event = TRUE;
+-
+-        gtk_main_do_event (event);
+-        gdk_event_free (event);
+-}
++	g_return_if_fail (GS_IS_LOCK_PLUG (plug));
+ 
+-static void
+-gs_lock_plug_class_init (GSLockPlugClass *klass)
+-{
+-        GObjectClass   *object_class = G_OBJECT_CLASS (klass);
+-        GtkWidgetClass *widget_class = GTK_WIDGET_CLASS (klass);
+-        GtkBindingSet  *binding_set;
+-
+-        object_class->finalize     = gs_lock_plug_finalize;
+-        object_class->get_property = gs_lock_plug_get_property;
+-        object_class->set_property = gs_lock_plug_set_property;
+-
+-        widget_class->style_set    = gs_lock_plug_style_set;
+-        widget_class->show         = gs_lock_plug_show;
+-        widget_class->hide         = gs_lock_plug_hide;
+-
+-        klass->close = gs_lock_plug_close;
+-
+-        g_type_class_add_private (klass, sizeof (GSLockPlugPrivate));
+-
+-        lock_plug_signals [RESPONSE] = g_signal_new ("response",
+-                                                     G_OBJECT_CLASS_TYPE (klass),
+-                                                     G_SIGNAL_RUN_LAST,
+-                                                     G_STRUCT_OFFSET (GSLockPlugClass, response),
+-                                                     NULL, NULL,
+-                                                     g_cclosure_marshal_VOID__INT,
+-                                                     G_TYPE_NONE, 1,
+-                                                     G_TYPE_INT);
+-        lock_plug_signals [CLOSE] = g_signal_new ("close",
+-                                                  G_OBJECT_CLASS_TYPE (klass),
+-                                                  G_SIGNAL_RUN_LAST | G_SIGNAL_ACTION,
+-                                                  G_STRUCT_OFFSET (GSLockPlugClass, close),
+-                                                  NULL, NULL,
+-                                                  g_cclosure_marshal_VOID__VOID,
+-                                                  G_TYPE_NONE, 0);
+-
+-        g_object_class_install_property (object_class,
+-                                         PROP_LOGOUT_ENABLED,
+-                                         g_param_spec_boolean ("logout-enabled",
+-                                                               NULL,
+-                                                               NULL,
+-                                                               FALSE,
+-                                                               G_PARAM_READWRITE));
+-        g_object_class_install_property (object_class,
+-                                         PROP_LOGOUT_COMMAND,
+-                                         g_param_spec_string ("logout-command",
+-                                                              NULL,
+-                                                              NULL,
+-                                                              NULL,
+-                                                              G_PARAM_READWRITE));
+-        g_object_class_install_property (object_class,
+-                                         PROP_STATUS_MESSAGE,
+-                                         g_param_spec_string ("status-message",
+-                                                              NULL,
+-                                                              NULL,
+-                                                              NULL,
+-                                                              G_PARAM_READWRITE));
+-        g_object_class_install_property (object_class,
+-                                         PROP_SWITCH_ENABLED,
+-                                         g_param_spec_boolean ("switch-enabled",
+-                                                               NULL,
+-                                                               NULL,
+-                                                               FALSE,
+-                                                               G_PARAM_READWRITE));
+-
+-        binding_set = gtk_binding_set_by_class (klass);
+-
+-        gtk_binding_entry_add_signal (binding_set, GDK_KEY_Escape, 0,
+-                                      "close", 0);
+-}
++	gtk_widget_set_sensitive (plug->priv->auth_unlock_button, TRUE);
++	gtk_widget_grab_default (plug->priv->auth_unlock_button);
++	gtk_widget_set_sensitive (plug->priv->auth_prompt_entry, TRUE);
+ 
+-static void
+-clear_clipboards (GSLockPlug *plug)
+-{
+-        GtkClipboard *clipboard;
+-
+-        clipboard = gtk_widget_get_clipboard (GTK_WIDGET (plug), GDK_SELECTION_PRIMARY);
+-        gtk_clipboard_clear (clipboard);
+-        gtk_clipboard_set_text (clipboard, "", -1);
+-        clipboard = gtk_widget_get_clipboard (GTK_WIDGET (plug), GDK_SELECTION_CLIPBOARD);
+-        gtk_clipboard_clear (clipboard);
+-        gtk_clipboard_set_text (clipboard, "", -1);
++	if (!gtk_widget_has_focus (plug->priv->auth_prompt_entry)) {
++		gtk_widget_grab_focus (plug->priv->auth_prompt_entry);
++	}
+ }
+ 
+ static void
+-logout_button_clicked (GtkButton  *button,
+-                       GSLockPlug *plug)
+-{
+-        char   **argv  = NULL;
+-        GError  *error = NULL;
+-        gboolean res;
+-
+-        if (! plug->priv->logout_command) {
+-                return;
+-        }
+-
+-        res = g_shell_parse_argv (plug->priv->logout_command, NULL, &argv, &error);
+-
+-        if (! res) {
+-                g_warning ("Could not parse logout command: %s", error->message);
+-                g_error_free (error);
+-                return;
+-        }
+-
+-        g_spawn_async (g_get_home_dir (),
+-                       argv,
+-                       NULL,
+-                       G_SPAWN_SEARCH_PATH,
+-                       NULL,
+-                       NULL,
+-                       NULL,
+-                       &error);
+-
+-        g_strfreev (argv);
+-
+-        if (error) {
+-                g_warning ("Could not run logout command: %s", error->message);
+-                g_error_free (error);
+-        }
+-}
+-
+-void
+-gs_lock_plug_set_busy (GSLockPlug *plug)
+-{
+-        GdkCursor *cursor;
+-        GtkWidget *top_level;
+-
+-        top_level = gtk_widget_get_toplevel (GTK_WIDGET (plug));
+-
+-        cursor = gdk_cursor_new (GDK_WATCH);
+-        gdk_window_set_cursor (gtk_widget_get_window (top_level), cursor);
+-        gdk_cursor_unref (cursor);
+-}
+-
+-void
+-gs_lock_plug_set_ready (GSLockPlug *plug)
+-{
+-        GdkCursor *cursor;
+-        GtkWidget *top_level;
+-
+-        top_level = gtk_widget_get_toplevel (GTK_WIDGET (plug));
+-
+-        cursor = gdk_cursor_new (GDK_LEFT_PTR);
+-        gdk_window_set_cursor (gtk_widget_get_window (top_level), cursor);
+-        gdk_cursor_unref (cursor);
+-}
+-
+-void
+-gs_lock_plug_enable_prompt (GSLockPlug *plug,
+-                            const char *message,
+-                            gboolean    visible)
+-{
+-        char *markup;
+-
+-        g_return_if_fail (GS_IS_LOCK_PLUG (plug));
+-
+-        gs_debug ("Setting prompt to: %s", message);
+-
+-        gtk_widget_set_sensitive (plug->priv->auth_unlock_button, TRUE);
+-        gtk_widget_show (plug->priv->auth_unlock_button);
+-        gtk_widget_grab_default (plug->priv->auth_unlock_button);
+-        markup = g_strdup_printf ("<b><big>%s</big></b>", message);
+-        gtk_label_set_markup (GTK_LABEL (plug->priv->auth_prompt_label), markup);
+-        g_free (markup);
+-        gtk_widget_show (plug->priv->auth_prompt_label);
+-        gtk_entry_set_visibility (GTK_ENTRY (plug->priv->auth_prompt_entry), visible);
+-        gtk_widget_set_sensitive (plug->priv->auth_prompt_entry, TRUE);
+-        gtk_widget_show (plug->priv->auth_prompt_entry);
+-
+-        if (!gtk_widget_has_focus (plug->priv->auth_prompt_entry)) {
+-                gtk_widget_grab_focus (plug->priv->auth_prompt_entry);
+-        }
+-
+-        /* were there any key events sent to the plug while the
+-         * entry wasnt ready? If so, forward them along
+-         */
+-        forward_key_events (plug);
+-
+-        restart_cancel_timeout (plug);
+-}
+-
+-void
+-gs_lock_plug_disable_prompt (GSLockPlug *plug)
+-{
+-        g_return_if_fail (GS_IS_LOCK_PLUG (plug));
+-
+-        /* gtk_widget_hide (plug->priv->auth_prompt_entry); */
+-        /* gtk_widget_hide (plug->priv->auth_prompt_label); */
+-        gtk_widget_set_sensitive (plug->priv->auth_unlock_button, FALSE);
+-        gtk_widget_set_sensitive (plug->priv->auth_prompt_entry, FALSE);
+-        /* gtk_widget_hide (plug->priv->auth_unlock_button); */
+-}
+-
+-void
+ gs_lock_plug_show_message (GSLockPlug *plug,
+                            const char *message)
+ {
+-        g_return_if_fail (GS_IS_LOCK_PLUG (plug));
++	g_return_if_fail (GS_IS_LOCK_PLUG (plug));
+ 
+-        set_status_text (plug, message ? message : "");
++	set_status_text (plug, message ? message : "");
+ }
+ 
+ /* button press handler used to inhibit popup menu */
+@@ -1284,334 +267,264 @@ static gint
+ entry_button_press (GtkWidget      *widget,
+                     GdkEventButton *event)
+ {
+-        if (event->button == 3 && event->type == GDK_BUTTON_PRESS) {
+-                return TRUE;
+-        }
++	if (event->button == 3 && event->type == GDK_BUTTON_PRESS) {
++		return TRUE;
++	}
+ 
+-        return FALSE;
++	return FALSE;
+ }
+ 
+ static gint
+-entry_key_press (GtkWidget   *widget,
+-                 GdkEventKey *event,
+-                 GSLockPlug  *plug)
++key_press_event_cb (GtkWidget   *widget,
++                    GdkEventKey *event,
++                    gpointer    *data)
+ {
+-        restart_cancel_timeout (plug);
+-
+-        /* if the input widget is visible and ready for input
+-         * then just carry on as usual
+-         */
+-        if (gtk_widget_get_visible (plug->priv->auth_prompt_entry) &&
+-            gtk_widget_get_sensitive (plug->priv->auth_prompt_entry)) {
+-                return FALSE;
+-        }
+-
+-        if (strcmp (event->string, "") == 0) {
+-                return FALSE;
+-        }
+ 
+-        queue_key_event (plug, event);
++	if ((event->keyval == GDK_KEY_Up || event->keyval == GDK_KEY_Down))
++		return TRUE;
+ 
+-        return TRUE;
++	return FALSE;
+ }
+ 
+-/* adapted from gtk_dialog_add_button */
+-static GtkWidget *
+-gs_lock_plug_add_button (GSLockPlug  *plug,
+-                         GtkWidget   *action_area,
+-                         const gchar *button_text)
++static gboolean
++quit_response_ok (gpointer data)
+ {
+-        GtkWidget *button;
+-
+-        g_return_val_if_fail (GS_IS_LOCK_PLUG (plug), NULL);
+-        g_return_val_if_fail (button_text != NULL, NULL);
+-
+-        button = gtk_button_new_from_stock (button_text);
++	g_signal_emit (G_OBJECT (data), lock_plug_signals [RESPONSE], 0, GS_LOCK_PLUG_RESPONSE_AUTH_OK);
+ 
+-        gtk_widget_set_can_default (button, TRUE);
+-
+-        gtk_widget_show (button);
++	return FALSE;
++}
+ 
+-        gtk_box_pack_end (GTK_BOX (action_area),
+-                          button,
+-                          FALSE, TRUE, 0);
++static gboolean
++reset_idle_cb (GSLockPlug *plug)
++{
++	gs_lock_plug_show_message (plug, NULL);
++
++	return FALSE;
++}
++
++/* Adapted from GDM2 daemon/verify-pam.c on 2006-06-13 */
++static const char *
++maybe_translate_message (const char *msg)
++{
++	char              *s;
++	const char        *ret;
++	static GHashTable *hash = NULL;
++
++	if (hash == NULL) {
++		/* Here we come with some fairly standard messages so that
++		   we have as much as possible translated.  Should really be
++		   translated in pam I suppose.  This way we can "change"
++		   some of these messages to be more sane. */
++		hash = g_hash_table_new (g_str_hash, g_str_equal);
++		/* login: is whacked always translate to Username: */
++		g_hash_table_insert (hash, "login:", _("Username:"));
++		g_hash_table_insert (hash, "Username:", _("Username:"));
++		g_hash_table_insert (hash, "username:", _("Username:"));
++		g_hash_table_insert (hash, "Password:", _("Password:"));
++		g_hash_table_insert (hash, "password:", _("Password:"));
++		g_hash_table_insert (hash, "You are required to change your password immediately (password aged)", _("You are required to change your password immediately (password aged)"));
++		g_hash_table_insert (hash, "You are required to change your password immediately (root enforced)", _("You are required to change your password immediately (root enforced)"));
++		g_hash_table_insert (hash, "Your account has expired; please contact your system administrator", _("Your account has expired; please contact your system administrator"));
++		g_hash_table_insert (hash, "No password supplied", _("No password supplied"));
++		g_hash_table_insert (hash, "Password unchanged", _("Password unchanged"));
++		g_hash_table_insert (hash, "Can not get username", _("Cannot get username"));
++		g_hash_table_insert (hash, "Retype new UNIX password:", _("Retype new Unix password:"));
++		g_hash_table_insert (hash, "Enter new UNIX password:", _("Enter new Unix password:"));
++		g_hash_table_insert (hash, "(current) UNIX password:", _("(current) Unix password:"));
++		g_hash_table_insert (hash, "Error while changing NIS password.", _("Error while changing NIS password."));
++		g_hash_table_insert (hash, "You must choose a longer password", _("You must choose a longer password"));
++		g_hash_table_insert (hash, "Password has been already used. Choose another.", _("Password has been already used. Choose another."));
++		g_hash_table_insert (hash, "You must wait longer to change your password", _("You must wait longer to change your password"));
++		g_hash_table_insert (hash, "Sorry, passwords do not match", _("Sorry, passwords do not match"));
++		/* FIXME: what about messages which have some variables in them, perhaps try to do those as well */
++	}
++
++	s = g_strstrip (g_strdup (msg));
++	ret = g_hash_table_lookup (hash, s);
++	g_free (s);
++
++	if (ret != NULL) {
++		return ret;
++	} else {
++		return msg;
++	}
++}
+ 
+-        return button;
++static gboolean
++auth_message_handler (GSAuthMessageStyle style,
++                      const char        *msg,
++                      char             **response,
++                      gpointer           data)
++{
++	gboolean    ret;
++	GSLockPlug *plug;
++	const char *message;
++
++	plug = GS_LOCK_PLUG (data);
++
++	gs_profile_start (NULL);
++	gs_debug ("Got message style %d: '%s'", style, msg);
++
++	ret = TRUE;
++	*response = NULL;
++	message = maybe_translate_message (msg);
++
++	switch (style) {
++		case GS_AUTH_MESSAGE_PROMPT_ECHO_ON:
++			if (msg != NULL) {
++				char *resp;
++				gs_lock_plug_get_text (plug, &resp);
++				*response = resp;
++			}
++			break;
++		case GS_AUTH_MESSAGE_PROMPT_ECHO_OFF:
++			if (msg != NULL) {
++				char *resp;
++				gs_lock_plug_get_text (plug, &resp);
++				*response = resp;
++			}
++			break;
++		case GS_AUTH_MESSAGE_ERROR_MSG:
++			gs_lock_plug_show_message (plug, message);
++			break;
++		case GS_AUTH_MESSAGE_TEXT_INFO:
++			gs_lock_plug_show_message (plug, message);
++			break;
++		default:
++			g_assert_not_reached ();
++	}
++
++	if (*response == NULL) {
++		gs_debug ("Got no response");
++		ret = FALSE;
++	} else {
++		gs_lock_plug_show_message (plug, _("Checking…"));
++	}
++
++	/* we may have pending events that should be processed before continuing back into PAM */
++	while (gtk_events_pending ()) {
++		gtk_main_iteration ();
++	}
++
++	gs_profile_end (NULL);
++
++	return ret;
+ }
+ 
+-static void
+-create_page_one_buttons (GSLockPlug *plug)
++static gboolean
++do_auth_check (GSLockPlug *plug)
+ {
++	GError *error = NULL;
++	gboolean res = FALSE;
+ 
+-        gs_profile_start ("page one buttons");
++	gs_lock_plug_disable_prompt (plug);
++	gs_lock_plug_set_busy (plug);
+ 
+-        plug->priv->auth_switch_button =  gs_lock_plug_add_button (GS_LOCK_PLUG (plug),
+-                                                                   plug->priv->auth_action_area,
+-                                                                   _("S_witch User…"));
+-        gtk_button_box_set_child_secondary (GTK_BUTTON_BOX (plug->priv->auth_action_area),
+-                                            plug->priv->auth_switch_button,
+-                                            TRUE);
+-        gtk_button_set_focus_on_click (GTK_BUTTON (plug->priv->auth_switch_button), FALSE);
+-        gtk_widget_set_no_show_all (plug->priv->auth_switch_button, TRUE);
++	res = gs_auth_verify_user (g_get_user_name (), g_getenv ("DISPLAY"), auth_message_handler, plug, &error);
+ 
+-        plug->priv->auth_logout_button =  gs_lock_plug_add_button (GS_LOCK_PLUG (plug),
+-                                                                   plug->priv->auth_action_area,
+-                                                                   _("Log _Out"));
+-        gtk_button_set_focus_on_click (GTK_BUTTON (plug->priv->auth_logout_button), FALSE);
+-        gtk_widget_set_no_show_all (plug->priv->auth_logout_button, TRUE);
++	gs_debug ("Verify user returned: %s", res ? "TRUE" : "FALSE");
++	if (! res) {
++		if (error != NULL) {
++			gs_debug ("Verify user returned error: %s", error->message);
++			gs_lock_plug_show_message (plug, error->message);
++		} else {
++			gs_lock_plug_show_message (plug, _("Authentication failed."));
++		}
+ 
++		g_signal_emit (plug, lock_plug_signals [RESPONSE], 0, GS_LOCK_PLUG_RESPONSE_AUTH_FAILED);
+ 
+-        plug->priv->auth_unlock_button =  gs_lock_plug_add_button (GS_LOCK_PLUG (plug),
+-                                                                   plug->priv->auth_action_area,
+-                                                                   _("_Unlock"));
+-        gtk_button_set_focus_on_click (GTK_BUTTON (plug->priv->auth_unlock_button), FALSE);
++		if (error != NULL) {
++			g_error_free (error);
++		}
++	}
+ 
+-        gtk_window_set_default (GTK_WINDOW (plug), plug->priv->auth_unlock_button);
++	gs_lock_plug_enable_prompt (plug);
++	gs_lock_plug_set_ready (plug);
+ 
+-        gs_profile_end ("page one buttons");
++	return res;
+ }
+ 
+-static void
+-create_page_one (GSLockPlug *plug)
++static gboolean
++auth_check_idle (GSLockPlug *plug)
+ {
+-        GtkWidget            *align;
+-        GtkWidget            *vbox;
+-        GtkWidget            *vbox2;
+-        GtkWidget            *hbox;
+-
+-        gs_profile_start ("page one");
+-
+-        align = gtk_alignment_new (0.5, 0.5, 1, 1);
+-        gtk_notebook_append_page (GTK_NOTEBOOK (plug->priv->notebook), align, NULL);
+-
+-        vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 12);
+-        gtk_container_add (GTK_CONTAINER (align), vbox);
+-
+-        hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
+-        gtk_box_pack_start (GTK_BOX (vbox), hbox, FALSE, FALSE, 0);
+-
+-        plug->priv->auth_face_image = gtk_image_new ();
+-        gtk_box_pack_start (GTK_BOX (hbox), plug->priv->auth_face_image, FALSE, FALSE, 0);
+-        gtk_misc_set_alignment (GTK_MISC (plug->priv->auth_face_image), 0, 0);
+-
+-        vbox2 = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
+-        gtk_box_pack_start (GTK_BOX (hbox), vbox2, TRUE, TRUE, 0);
+-        gtk_container_set_border_width (GTK_CONTAINER (vbox2), 10);
+-
+-#ifdef WITH_KBD_LAYOUT_INDICATOR
+-        gtk_box_pack_start (GTK_BOX (hbox), plug->priv->auth_prompt_kbd_layout_indicator, FALSE, FALSE, 0);
+-#endif
+-
+-        plug->priv->auth_prompt_label = gtk_label_new_with_mnemonic (_("_Password:"));
+-        gtk_misc_set_alignment (GTK_MISC (plug->priv->auth_prompt_label), 0, 0.5);
+-        gtk_box_pack_start (GTK_BOX (vbox2), plug->priv->auth_prompt_label, FALSE, FALSE, 0);
+-
+-        plug->priv->auth_prompt_entry = gtk_entry_new ();
+-        gtk_box_pack_start (GTK_BOX (vbox2), plug->priv->auth_prompt_entry, TRUE, TRUE, 0);
+-
+-        gtk_label_set_mnemonic_widget (GTK_LABEL (plug->priv->auth_prompt_label),
+-                                       plug->priv->auth_prompt_entry);
+-
+-        plug->priv->auth_capslock_label = gtk_label_new ("");
+-        gtk_misc_set_alignment (GTK_MISC (plug->priv->auth_capslock_label), 0.5, 0.5);
+-        gtk_box_pack_start (GTK_BOX (vbox2), plug->priv->auth_capslock_label, FALSE, FALSE, 0);
+-
+-        /* Status text */
+-
+-        plug->priv->auth_message_label = gtk_label_new (NULL);
+-        gtk_box_pack_start (GTK_BOX (vbox), plug->priv->auth_message_label,
+-                            FALSE, FALSE, 0);
+-        /* Buttons */
+-        plug->priv->auth_action_area = gtk_button_box_new (GTK_ORIENTATION_HORIZONTAL);
+-
+-        gtk_button_box_set_layout (GTK_BUTTON_BOX (plug->priv->auth_action_area),
+-                                   GTK_BUTTONBOX_END);
++	if (do_auth_check (plug)) {
++		g_idle_add ((GSourceFunc)quit_response_ok, plug);
++	} else {
++		plug->priv->reset_idle_id = g_timeout_add (3000, (GSourceFunc)reset_idle_cb, plug);
++	}
+ 
+-        gtk_box_pack_end (GTK_BOX (vbox), plug->priv->auth_action_area,
+-                          FALSE, TRUE, 0);
+-        gtk_widget_show (plug->priv->auth_action_area);
+-
+-        create_page_one_buttons (plug);
+-
+-        gs_profile_end ("page one");
++	return FALSE;
+ }
+ 
+ static void
+ unlock_button_clicked (GtkButton  *button,
+                        GSLockPlug *plug)
+ {
+-        gs_lock_plug_response (plug, GS_LOCK_PLUG_RESPONSE_OK);
++	g_idle_add ((GSourceFunc)auth_check_idle, plug);
+ }
+ 
+-static void
+-switch_user_button_clicked (GtkButton  *button,
+-                            GSLockPlug *plug)
++static gboolean
++grab_focus_idle (gpointer data)
+ {
++	GSLockPlug *plug;
+ 
+-        remove_response_idle (plug);
+-
+-        gs_lock_plug_set_sensitive (plug, FALSE);
++	plug = GS_LOCK_PLUG (data);
+ 
+-        plug->priv->response_idle_id = g_timeout_add (2000,
+-                                                      (GSourceFunc)response_cancel_idle_cb,
+-                                                      plug);
+-
+-        gs_lock_plug_set_busy (plug);
+-        do_user_switch (plug);
+-}
+-
+-static int
+-delete_handler (GSLockPlug  *plug,
+-                GdkEventAny *event,
+-                gpointer     data)
+-{
+-        gs_lock_plug_response (plug, GS_LOCK_PLUG_RESPONSE_CANCEL);
++	gtk_widget_grab_default (plug->priv->auth_unlock_button);
++	gtk_widget_grab_focus (plug->priv->auth_prompt_entry);
+ 
+-        return TRUE; /* Do not destroy */
++	return FALSE;
+ }
+ 
+ static void
+ gs_lock_plug_init (GSLockPlug *plug)
+ {
+-        gs_profile_start (NULL);
+-
+-        plug->priv = GS_LOCK_PLUG_GET_PRIVATE (plug);
+-
+-        clear_clipboards (plug);
+-
+-        plug->priv->frame = gtk_frame_new (NULL);
+-        gtk_frame_set_shadow_type (GTK_FRAME (plug->priv->frame), GTK_SHADOW_OUT);
+-        gtk_container_add (GTK_CONTAINER (plug), plug->priv->frame);
+-
+-        plug->priv->vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+-        gtk_container_add (GTK_CONTAINER (plug->priv->frame), plug->priv->vbox);
+-
+-        plug->priv->auth_prompt_kbd_layout_indicator = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+-
+-        /* Notebook */
+-        plug->priv->notebook = gtk_notebook_new ();
+-        gtk_notebook_set_show_tabs (GTK_NOTEBOOK (plug->priv->notebook), FALSE);
+-        gtk_notebook_set_show_border (GTK_NOTEBOOK (plug->priv->notebook), FALSE);
+-        gtk_box_pack_start (GTK_BOX (plug->priv->vbox), plug->priv->notebook, TRUE, TRUE, 0);
+-
+-        /* Page 1 */
+-
+-        create_page_one (plug);
+-
+-        gtk_widget_show_all (plug->priv->frame);
+-
+-        /* Layout indicator */
+-#ifdef WITH_KBD_LAYOUT_INDICATOR
+-        if (plug->priv->auth_prompt_kbd_layout_indicator != NULL) {
+-                XklEngine *engine;
+-
+-                engine = xkl_engine_get_instance (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()));
+-                if (xkl_engine_get_num_groups (engine) > 1) {
+-                        GtkWidget *layout_indicator;
++	GtkCssProvider *provider;
++	GSLockPlugPrivate *priv;
++	GdkPixbuf *pixbuf = NULL;
+ 
+-                        layout_indicator = gkbd_indicator_new ();
+-                        gkbd_indicator_set_parent_tooltips (GKBD_INDICATOR (layout_indicator), TRUE);
+-                        gtk_box_pack_start (GTK_BOX (plug->priv->auth_prompt_kbd_layout_indicator),
+-                                            layout_indicator,
+-                                            FALSE,
+-                                            FALSE,
+-                                            6);
++	gs_profile_start (NULL);
+ 
+-                        gtk_widget_show_all (layout_indicator);
+-                        gtk_widget_show (plug->priv->auth_prompt_kbd_layout_indicator);
+-                } else {
+-                        gtk_widget_hide (plug->priv->auth_prompt_kbd_layout_indicator);
+-                }
++	priv = plug->priv = gs_lock_plug_get_instance_private (plug);
+ 
+-                g_object_unref (engine);
+-        }
+-#endif
++	gtk_widget_init_template (GTK_WIDGET (plug));
+ 
+-        if (plug->priv->auth_switch_button != NULL) {
+-                if (plug->priv->switch_enabled) {
+-                        gtk_widget_show_all (plug->priv->auth_switch_button);
+-                } else {
+-                        gtk_widget_hide (plug->priv->auth_switch_button);
+-                }
+-        }
++	provider = gtk_css_provider_new ();
++	gtk_css_provider_load_from_resource (provider, "/org/gnome/screensaver/theme.css");
++	gtk_style_context_add_provider_for_screen (gdk_screen_get_default (),
++			GTK_STYLE_PROVIDER (provider),
++			GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
++	g_object_unref (provider);
+ 
+-        gtk_widget_grab_default (plug->priv->auth_unlock_button);
++	pixbuf = gdk_pixbuf_new_from_resource_at_scale ("/org/gnome/screensaver/logo-letter-white.svg", -1, 15, TRUE, NULL);
++	if (pixbuf) {
++		gtk_image_set_from_pixbuf (GTK_IMAGE (priv->auth_logo_image), pixbuf);
++		g_object_unref (pixbuf);
++	}
+ 
+-        if (! plug->priv->logout_enabled || ! plug->priv->logout_command) {
+-                if (plug->priv->auth_logout_button != NULL) {
+-                        gtk_widget_hide (plug->priv->auth_logout_button);
+-                }
+-        }
++	/* button press handler used to inhibit popup menu */
++	g_signal_connect (priv->auth_prompt_entry, "button_press_event",
++                      G_CALLBACK (entry_button_press), NULL);
++	g_signal_connect (priv->auth_unlock_button, "clicked",
++                      G_CALLBACK (unlock_button_clicked), plug);
++	g_signal_connect (priv->auth_logout_button, "clicked",
++                      G_CALLBACK (logout_button_clicked), plug);
++	g_signal_connect (plug, "key_press_event",
++                      G_CALLBACK (key_press_event_cb), plug);
+ 
+-        plug->priv->timeout = DIALOG_TIMEOUT_MSEC;
++	gtk_entry_set_text (GTK_ENTRY (priv->auth_user_entry), g_get_user_name ());
+ 
+-        g_signal_connect (plug, "key_press_event",
+-                          G_CALLBACK (entry_key_press), plug);
++	g_timeout_add (100, (GSourceFunc)grab_focus_idle, plug);
+ 
+-        /* button press handler used to inhibit popup menu */
+-        g_signal_connect (plug->priv->auth_prompt_entry, "button_press_event",
+-                          G_CALLBACK (entry_button_press), NULL);
+-        gtk_entry_set_activates_default (GTK_ENTRY (plug->priv->auth_prompt_entry), TRUE);
+-        gtk_entry_set_visibility (GTK_ENTRY (plug->priv->auth_prompt_entry), FALSE);
+-
+-        g_signal_connect (plug->priv->auth_unlock_button, "clicked",
+-                          G_CALLBACK (unlock_button_clicked), plug);
+-
+-        if (plug->priv->status_message_label) {
+-                if (plug->priv->status_message) {
+-                        gtk_label_set_text (GTK_LABEL (plug->priv->status_message_label),
+-                                            plug->priv->status_message);
+-                }
+-                else {
+-                        gtk_widget_hide (plug->priv->status_message_label);
+-                }
+-        }
+-
+-        if (plug->priv->auth_switch_button != NULL) {
+-                g_signal_connect (plug->priv->auth_switch_button, "clicked",
+-                                  G_CALLBACK (switch_user_button_clicked), plug);
+-        }
+-
+-        if (plug->priv->auth_logout_button != NULL) {
+-                g_signal_connect (plug->priv->auth_logout_button, "clicked",
+-                                  G_CALLBACK (logout_button_clicked), plug);
+-        }
+-
+-        g_signal_connect (plug, "delete_event", G_CALLBACK (delete_handler), NULL);
+-
+-        gtk_widget_set_size_request (GTK_WIDGET (plug), 450, -1);
+-
+-        gs_profile_end (NULL);
+-}
+-
+-static void
+-gs_lock_plug_finalize (GObject *object)
+-{
+-        GSLockPlug *plug;
+-
+-        g_return_if_fail (object != NULL);
+-        g_return_if_fail (GS_IS_LOCK_PLUG (object));
+-
+-        plug = GS_LOCK_PLUG (object);
+-
+-        g_return_if_fail (plug->priv != NULL);
+-
+-        g_free (plug->priv->logout_command);
+-
+-        remove_response_idle (plug);
+-        remove_cancel_timeout (plug);
+-
+-        G_OBJECT_CLASS (gs_lock_plug_parent_class)->finalize (object);
++	gs_profile_end (NULL);
+ }
+ 
+ GtkWidget *
+ gs_lock_plug_new (void)
+ {
+-        GtkWidget *result;
+-
+-        result = g_object_new (GS_TYPE_LOCK_PLUG, NULL);
++	GtkWidget *result;
+ 
+-        gtk_window_set_focus_on_map (GTK_WINDOW (result), TRUE);
++	result = g_object_new (GS_TYPE_LOCK_PLUG, NULL);
+ 
+-        return result;
++	return result;
+ }
+diff --git a/src/gs-lock-plug.h b/src/gs-lock-plug.h
+index e48e3fe..721501d 100644
+--- a/src/gs-lock-plug.h
++++ b/src/gs-lock-plug.h
+@@ -1,6 +1,7 @@
+ /* -*- Mode: C; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
+  *
+  * Copyright (C) 2004-2005 William Jon McCann <mccann@jhu.edu>
++ * Copyright (C) 2019 Gooroom <gooroom@gooroom.kr>.
+  *
+  * This program is free software; you can redistribute it and/or modify
+  * it under the terms of the GNU General Public License as published by
+@@ -27,13 +28,6 @@
+ 
+ G_BEGIN_DECLS
+ 
+-typedef enum
+-{
+-        GS_LOCK_PLUG_RESPONSE_NONE   = -1,
+-        GS_LOCK_PLUG_RESPONSE_OK     = -2,
+-        GS_LOCK_PLUG_RESPONSE_CANCEL = -3
+-} GSPlugResponseType;
+-
+ #define GS_TYPE_LOCK_PLUG         (gs_lock_plug_get_type ())
+ #define GS_LOCK_PLUG(o)           (G_TYPE_CHECK_INSTANCE_CAST ((o), GS_TYPE_LOCK_PLUG, GSLockPlug))
+ #define GS_LOCK_PLUG_CLASS(k)     (G_TYPE_CHECK_CLASS_CAST((k), GS_TYPE_LOCK_PLUG, GSLockPlugClass))
+@@ -41,43 +35,31 @@ typedef enum
+ #define GS_IS_LOCK_PLUG_CLASS(k)  (G_TYPE_CHECK_CLASS_TYPE ((k), GS_TYPE_LOCK_PLUG))
+ #define GS_LOCK_PLUG_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), GS_TYPE_LOCK_PLUG, GSLockPlugClass))
+ 
+-typedef struct GSLockPlugPrivate GSLockPlugPrivate;
+-
+-typedef struct
+-{
+-        GtkPlug            parent;
++typedef struct _GSLockPlugPrivate GSLockPlugPrivate;
++typedef struct _GSLockPlugClass   GSLockPlugClass;
++typedef struct _GSLockPlug        GSLockPlug;
+ 
+-        GSLockPlugPrivate *priv;
+-} GSLockPlug;
+ 
+-typedef struct
++struct _GSLockPlugClass
+ {
+-        GtkPlugClass         parent_class;
++	GtkBoxClass __parent__;
+ 
+-        void (* response) (GSLockPlug *plug, gint response_id);
++	void (* response) (GSLockPlug *plug, gint response_id);
+ 
+-        /* Keybinding signals */
+-        void (* close)    (GSLockPlug *plug);
++	/* Keybinding signals */
++	void (* close)    (GSLockPlug *plug);
++};
+ 
+-} GSLockPlugClass;
++struct _GSLockPlug
++{
++	GtkBox __parent__;
+ 
+-GType       gs_lock_plug_get_type       (void);
+-GtkWidget * gs_lock_plug_new            (void);
++	GSLockPlugPrivate *priv;
++};
+ 
+-int         gs_lock_plug_run            (GSLockPlug *plug);
+-void        gs_lock_plug_set_sensitive  (GSLockPlug *plug,
+-                                         gboolean    sensitive);
+-void        gs_lock_plug_enable_prompt  (GSLockPlug *plug,
+-                                         const char *message,
+-                                         gboolean    visible);
+-void        gs_lock_plug_disable_prompt (GSLockPlug *plug);
+-void        gs_lock_plug_set_busy       (GSLockPlug *plug);
+-void        gs_lock_plug_set_ready      (GSLockPlug *plug);
++GType       gs_lock_plug_get_type       (void) G_GNUC_CONST;
+ 
+-void        gs_lock_plug_get_text       (GSLockPlug *plug,
+-                                         char      **text);
+-void        gs_lock_plug_show_message   (GSLockPlug *plug,
+-                                         const char *message);
++GtkWidget * gs_lock_plug_new            (void);
+ 
+ G_END_DECLS
+ 
+diff --git a/src/gs-lock-plug.ui b/src/gs-lock-plug.ui
+new file mode 100644
+index 0000000..b2138bd
+--- /dev/null
++++ b/src/gs-lock-plug.ui
+@@ -0,0 +1,203 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<!-- Generated with glade 3.22.1 -->
++<interface>
++  <requires lib="gtk+" version="3.20"/>
++  <template class="GSLockPlug" parent="GtkBox">
++    <property name="name">login_window</property>
++    <property name="can_focus">False</property>
++    <child>
++      <object class="GtkAlignment">
++        <property name="visible">True</property>
++        <property name="can_focus">False</property>
++        <property name="top_padding">40</property>
++        <property name="bottom_padding">40</property>
++        <property name="left_padding">35</property>
++        <property name="right_padding">35</property>
++        <child>
++          <object class="GtkImage" id="auth_logo_image">
++            <property name="visible">True</property>
++            <property name="can_focus">False</property>
++            <property name="halign">center</property>
++            <property name="valign">start</property>
++            <property name="pixel_size">16</property>
++            <property name="icon_name">gtk-missing-image</property>
++          </object>
++        </child>
++      </object>
++      <packing>
++        <property name="expand">False</property>
++        <property name="fill">True</property>
++        <property name="position">0</property>
++      </packing>
++    </child>
++    <child>
++      <object class="GtkBox">
++        <property name="name">local_auth_box</property>
++        <property name="visible">True</property>
++        <property name="can_focus">False</property>
++        <property name="orientation">vertical</property>
++        <property name="spacing">30</property>
++        <child>
++          <object class="GtkLabel" id="auth_title_label">
++            <property name="visible">True</property>
++            <property name="can_focus">False</property>
++            <property name="halign">start</property>
++            <property name="label" translatable="yes">&lt;span font='18px'&gt;&lt;b&gt;Screen Locked&lt;/b&gt;&lt;/span&gt;</property>
++            <property name="use_markup">True</property>
++          </object>
++          <packing>
++            <property name="expand">False</property>
++            <property name="fill">True</property>
++            <property name="position">0</property>
++          </packing>
++        </child>
++        <child>
++          <object class="GtkBox" id="box4">
++            <property name="visible">True</property>
++            <property name="can_focus">False</property>
++            <property name="orientation">vertical</property>
++            <property name="spacing">18</property>
++            <child>
++              <object class="GtkBox" id="box8">
++                <property name="visible">True</property>
++                <property name="can_focus">False</property>
++                <property name="orientation">vertical</property>
++                <property name="spacing">10</property>
++                <child>
++                  <object class="GtkEntry" id="auth_user_entry">
++                    <property name="name">prompt_entry</property>
++                    <property name="height_request">32</property>
++                    <property name="visible">True</property>
++                    <property name="sensitive">False</property>
++                    <property name="can_focus">True</property>
++                    <property name="editable">False</property>
++                    <property name="max_length">256</property>
++                    <property name="invisible_char">●</property>
++                    <property name="width_chars">32</property>
++                    <property name="caps_lock_warning">False</property>
++                    <property name="primary_icon_activatable">False</property>
++                    <property name="secondary_icon_activatable">False</property>
++                  </object>
++                  <packing>
++                    <property name="expand">False</property>
++                    <property name="fill">True</property>
++                    <property name="position">0</property>
++                  </packing>
++                </child>
++                <child>
++                  <object class="GtkOverlay">
++                    <property name="visible">True</property>
++                    <property name="can_focus">True</property>
++                    <child>
++                      <object class="GtkEntry" id="auth_prompt_entry">
++                        <property name="name">prompt_entry</property>
++                        <property name="height_request">32</property>
++                        <property name="visible">True</property>
++                        <property name="can_focus">True</property>
++                        <property name="has_focus">True</property>
++                        <property name="max_length">256</property>
++                        <property name="visibility">False</property>
++                        <property name="invisible_char">●</property>
++                        <property name="activates_default">True</property>
++                        <property name="width_chars">32</property>
++                        <property name="primary_icon_activatable">False</property>
++                        <property name="placeholder_text" translatable="yes">Enter your password</property>
++                      </object>
++                      <packing>
++                        <property name="index">-1</property>
++                      </packing>
++                    </child>
++                    <child type="overlay">
++                      <object class="GtkAlignment">
++                        <property name="name">prompt_entry</property>
++                        <property name="visible">True</property>
++                        <property name="can_focus">False</property>
++                        <child>
++                          <object class="GtkButton" id="auth_unlock_button">
++                            <property name="name">unlock_button</property>
++                            <property name="visible">True</property>
++                            <property name="can_focus">True</property>
++                            <property name="can_default">True</property>
++                            <property name="receives_default">True</property>
++                            <property name="halign">end</property>
++                            <child>
++                              <object class="GtkImage">
++                                <property name="visible">True</property>
++                                <property name="can_focus">False</property>
++                                <property name="icon_name">go-next-symbolic</property>
++                              </object>
++                            </child>
++                          </object>
++                        </child>
++                      </object>
++                      <packing>
++                        <property name="pass_through">True</property>
++                      </packing>
++                    </child>
++                  </object>
++                  <packing>
++                    <property name="expand">False</property>
++                    <property name="fill">True</property>
++                    <property name="position">1</property>
++                  </packing>
++                </child>
++              </object>
++              <packing>
++                <property name="expand">False</property>
++                <property name="fill">True</property>
++                <property name="position">0</property>
++              </packing>
++            </child>
++            <child>
++              <object class="GtkLabel" id="auth_message_label">
++                <property name="visible">True</property>
++                <property name="can_focus">False</property>
++                <property name="valign">start</property>
++                <property name="wrap">True</property>
++                <property name="wrap_mode">char</property>
++                <property name="max_width_chars">1</property>
++                <property name="xalign">0</property>
++              </object>
++              <packing>
++                <property name="expand">True</property>
++                <property name="fill">True</property>
++                <property name="position">1</property>
++              </packing>
++            </child>
++          </object>
++          <packing>
++            <property name="expand">True</property>
++            <property name="fill">True</property>
++            <property name="position">1</property>
++          </packing>
++        </child>
++        <child>
++          <object class="GtkButton" id="auth_logout_button">
++            <property name="label" translatable="yes">Log _Out</property>
++            <property name="visible">True</property>
++            <property name="can_focus">True</property>
++            <property name="receives_default">True</property>
++            <property name="use_underline">True</property>
++          </object>
++          <packing>
++            <property name="expand">False</property>
++            <property name="fill">True</property>
++            <property name="position">2</property>
++          </packing>
++        </child>
++      </object>
++      <packing>
++        <property name="expand">True</property>
++        <property name="fill">True</property>
++        <property name="position">1</property>
++      </packing>
++    </child>
++  </template>
++  <object class="GtkSizeGroup">
++    <property name="mode">vertical</property>
++    <widgets>
++      <widget name="auth_logo_image"/>
++      <widget name="auth_title_label"/>
++    </widgets>
++  </object>
++</interface>
+diff --git a/src/gs-window-x11.c b/src/gs-window-x11.c
+index d267f59..be1c9f7 100644
+--- a/src/gs-window-x11.c
++++ b/src/gs-window-x11.c
+@@ -2,6 +2,7 @@
+  *
+  * Copyright (C) 2004-2008 William Jon McCann <mccann@jhu.edu>
+  * Copyright (C) 2008-2011 Red Hat, Inc.
++ * Copyright (C) 2019 Gooroom <gooroom@gooroom.kr>.
+  *
+  * This program is free software; you can redistribute it and/or modify
+  * it under the terms of the GNU General Public License as published by
+@@ -38,6 +39,8 @@
+ #include <libgnome-desktop/gnome-wall-clock.h>
+ 
+ #include "gs-window.h"
++#include "gs-lock-plug-common.h"
++#include "gs-lock-plug.h"
+ #include "gs-marshal.h"
+ #include "subprocs.h"
+ #include "gs-debug.h"
+@@ -51,8 +54,6 @@ static void gs_window_init       (GSWindow      *window);
+ static void gs_window_finalize   (GObject       *object);
+ 
+ static gboolean popup_dialog_idle (GSWindow *window);
+-static void gs_window_dialog_finish (GSWindow *window);
+-static void remove_command_watches (GSWindow *window);
+ 
+ enum {
+         DIALOG_RESPONSE_CANCEL,
+@@ -88,8 +89,7 @@ struct GSWindowPrivate
+         GtkWidget *name_label;
+         GtkWidget *drawing_area;
+         GtkWidget *lock_box;
+-        GtkWidget *lock_socket;
+-        GtkWidget *keyboard_socket;
++        GtkWidget *lock_plug;
+         GtkWidget *info_bar;
+         GtkWidget *info_content;
+ 
+@@ -97,29 +97,12 @@ struct GSWindowPrivate
+ 
+         guint      popup_dialog_idle_id;
+ 
+-        guint      dialog_map_signal_id;
+-        guint      dialog_unmap_signal_id;
+-        guint      dialog_response_signal_id;
+-
+         guint      watchdog_timer_id;
+         guint      info_bar_timer_id;
+ 
+-        gint       lock_pid;
+-        gint       lock_watch_id;
+-        gint       dialog_response;
+-        gboolean   dialog_quit_requested;
+-        gboolean   dialog_shake_in_progress;
+-
+-        gint       keyboard_pid;
+-        gint       keyboard_watch_id;
+-
+-        GList     *key_events;
+-
+         gdouble    last_x;
+         gdouble    last_y;
+ 
+-        GTimer    *timer;
+-
+         GnomeWallClock *clock_tracker;
+ 
+ #ifdef HAVE_SHAPE_EXT
+@@ -382,45 +365,6 @@ gs_window_real_unrealize (GtkWidget *widget)
+         }
+ }
+ 
+-/* copied from gdk */
+-extern char **environ;
+-
+-static gchar **
+-spawn_make_environment_for_screen (GdkScreen  *screen,
+-                                   gchar     **envp)
+-{
+-        gchar **retval = NULL;
+-        gchar  *display_name;
+-        gint    display_index = -1;
+-        gint    i, env_len;
+-
+-        g_return_val_if_fail (GDK_IS_SCREEN (screen), NULL);
+-
+-        if (envp == NULL)
+-                envp = environ;
+-
+-        for (env_len = 0; envp[env_len]; env_len++)
+-                if (strncmp (envp[env_len], "DISPLAY", strlen ("DISPLAY")) == 0)
+-                        display_index = env_len;
+-
+-        retval = g_new (char *, env_len + 1);
+-        retval[env_len] = NULL;
+-
+-        display_name = gdk_screen_make_display_name (screen);
+-
+-        for (i = 0; i < env_len; i++)
+-                if (i == display_index)
+-                        retval[i] = g_strconcat ("DISPLAY=", display_name, NULL);
+-                else
+-                        retval[i] = g_strdup (envp[i]);
+-
+-        g_assert (i == env_len);
+-
+-        g_free (display_name);
+-
+-        return retval;
+-}
+-
+ static void
+ gs_window_real_realize (GtkWidget *widget)
+ {
+@@ -633,6 +577,19 @@ window_select_shape_events (GSWindow *window)
+ #endif
+ }
+ 
++static gboolean
++maybe_handle_activity (GSWindow *window)
++{
++        gboolean handled;
++
++        handled = FALSE;
++
++        /* if we already have a socket then don't bother */
++        g_signal_emit (window, signals [ACTIVITY], 0, &handled);
++
++        return handled;
++}
++
+ static void
+ gs_window_real_show (GtkWidget *widget)
+ {
+@@ -647,10 +604,6 @@ gs_window_real_show (GtkWidget *widget)
+         set_invisible_cursor (gtk_widget_get_window (widget), TRUE);
+ 
+         window = GS_WINDOW (widget);
+-        if (window->priv->timer) {
+-                g_timer_destroy (window->priv->timer);
+-        }
+-        window->priv->timer = g_timer_new ();
+ 
+         remove_watchdog_timer (window);
+         add_watchdog_timer (window, 30);
+@@ -658,6 +611,8 @@ gs_window_real_show (GtkWidget *widget)
+         select_popup_events ();
+         window_select_shape_events (window);
+         gdk_window_add_filter (NULL, (GdkFilterFunc)xevent_filter, window);
++
++        g_idle_add ((GSourceFunc)maybe_handle_activity, window);
+ }
+ 
+ static void
+@@ -800,453 +755,6 @@ gs_window_get_drawing_area (GSWindow *window)
+         return window->priv->drawing_area;
+ }
+ 
+-/* just for debugging */
+-static gboolean
+-error_watch (GIOChannel   *source,
+-             GIOCondition  condition,
+-             gpointer      data)
+-{
+-        gboolean finished = FALSE;
+-
+-        if (condition & G_IO_IN) {
+-                GIOStatus status;
+-                GError   *error = NULL;
+-                char     *line;
+-
+-                line = NULL;
+-                status = g_io_channel_read_line (source, &line, NULL, NULL, &error);
+-
+-                switch (status) {
+-                case G_IO_STATUS_NORMAL:
+-                        gs_debug ("command error output: %s", line);
+-                        break;
+-                case G_IO_STATUS_EOF:
+-                        finished = TRUE;
+-                        break;
+-                case G_IO_STATUS_ERROR:
+-                        finished = TRUE;
+-                        gs_debug ("Error reading from child: %s\n", error->message);
+-                        g_error_free (error);
+-                        return FALSE;
+-                case G_IO_STATUS_AGAIN:
+-                default:
+-                        break;
+-                }
+-                g_free (line);
+-        } else if (condition & G_IO_HUP) {
+-                finished = TRUE;
+-        }
+-
+-        if (finished) {
+-                return FALSE;
+-        }
+-
+-        return TRUE;
+-}
+-
+-static gboolean
+-spawn_on_window (GSWindow *window,
+-                 char     *command,
+-                 int      *pid,
+-                 GIOFunc   watch_func,
+-                 gpointer  user_data,
+-                 gint     *watch_id)
+-{
+-        int         argc;
+-        char      **argv;
+-        char      **envp;
+-        GError     *error;
+-        gboolean    result;
+-        GIOChannel *channel;
+-        int         standard_output;
+-        int         standard_error;
+-        int         child_pid;
+-        int         id;
+-
+-        error = NULL;
+-        if (! g_shell_parse_argv (command, &argc, &argv, &error)) {
+-                gs_debug ("Could not parse command: %s", error->message);
+-                g_error_free (error);
+-                return FALSE;
+-        }
+-
+-        envp = spawn_make_environment_for_screen (gtk_window_get_screen (GTK_WINDOW (window)), NULL);
+-
+-        error = NULL;
+-        result = g_spawn_async_with_pipes (NULL,
+-                                           argv,
+-                                           envp,
+-                                           G_SPAWN_DO_NOT_REAP_CHILD | G_SPAWN_SEARCH_PATH,
+-                                           NULL,
+-                                           NULL,
+-                                           &child_pid,
+-                                           NULL,
+-                                           &standard_output,
+-                                           &standard_error,
+-                                           &error);
+-
+-        if (! result) {
+-                gs_debug ("Could not start command '%s': %s", command, error->message);
+-                g_error_free (error);
+-                g_strfreev (argv);
+-                return FALSE;
+-        }
+-
+-        if (pid != NULL) {
+-                *pid = child_pid;
+-        } else {
+-                g_spawn_close_pid (child_pid);
+-        }
+-
+-        /* output channel */
+-        channel = g_io_channel_unix_new (standard_output);
+-        g_io_channel_set_close_on_unref (channel, TRUE);
+-        g_io_channel_set_flags (channel,
+-                                g_io_channel_get_flags (channel) | G_IO_FLAG_NONBLOCK,
+-                                NULL);
+-        id = g_io_add_watch (channel,
+-                             G_IO_IN | G_IO_HUP | G_IO_ERR | G_IO_NVAL,
+-                             watch_func,
+-                             user_data);
+-        if (watch_id != NULL) {
+-                *watch_id = id;
+-        }
+-        g_io_channel_unref (channel);
+-
+-        /* error channel */
+-        channel = g_io_channel_unix_new (standard_error);
+-        g_io_channel_set_close_on_unref (channel, TRUE);
+-        g_io_channel_set_flags (channel,
+-                                g_io_channel_get_flags (channel) | G_IO_FLAG_NONBLOCK,
+-                                NULL);
+-        id = g_io_add_watch (channel,
+-                             G_IO_IN | G_IO_HUP | G_IO_ERR | G_IO_NVAL,
+-                             error_watch,
+-                             NULL);
+-        g_io_channel_unref (channel);
+-
+-        g_strfreev (argv);
+-        g_strfreev (envp);
+-
+-        return result;
+-}
+-
+-static void
+-lock_plug_added (GtkWidget *widget,
+-                 GSWindow  *window)
+-{
+-        gtk_widget_show (widget);
+-}
+-
+-static gboolean
+-lock_plug_removed (GtkWidget *widget,
+-                   GSWindow  *window)
+-{
+-        gtk_widget_hide (widget);
+-        gtk_container_remove (GTK_CONTAINER (window->priv->vbox), GTK_WIDGET (window->priv->lock_box));
+-        window->priv->lock_box = NULL;
+-
+-        return TRUE;
+-}
+-
+-static void
+-keyboard_plug_added (GtkWidget *widget,
+-                     GSWindow  *window)
+-{
+-        gtk_widget_show (widget);
+-}
+-
+-static gboolean
+-keyboard_plug_removed (GtkWidget *widget,
+-                       GSWindow  *window)
+-{
+-        gtk_widget_hide (widget);
+-        gtk_container_remove (GTK_CONTAINER (window->priv->vbox), GTK_WIDGET (window->priv->keyboard_socket));
+-
+-        return TRUE;
+-}
+-
+-static void
+-keyboard_socket_destroyed (GtkWidget *widget,
+-                           GSWindow  *window)
+-{
+-        g_signal_handlers_disconnect_by_func (widget, keyboard_socket_destroyed, window);
+-        g_signal_handlers_disconnect_by_func (widget, keyboard_plug_added, window);
+-        g_signal_handlers_disconnect_by_func (widget, keyboard_plug_removed, window);
+-
+-        window->priv->keyboard_socket = NULL;
+-}
+-
+-static void
+-forward_key_events (GSWindow *window)
+-{
+-        window->priv->key_events = g_list_reverse (window->priv->key_events);
+-
+-        while (window->priv->key_events != NULL) {
+-                GdkEventKey *event = window->priv->key_events->data;
+-
+-                gtk_window_propagate_key_event (GTK_WINDOW (window), event);
+-
+-                gdk_event_free ((GdkEvent *)event);
+-                window->priv->key_events = g_list_delete_link (window->priv->key_events,
+-                                                               window->priv->key_events);
+-        }
+-}
+-
+-static void
+-remove_key_events (GSWindow *window)
+-{
+-        window->priv->key_events = g_list_reverse (window->priv->key_events);
+-
+-        while (window->priv->key_events) {
+-                GdkEventKey *event = window->priv->key_events->data;
+-
+-                gdk_event_free ((GdkEvent *)event);
+-                window->priv->key_events = g_list_delete_link (window->priv->key_events,
+-                                                               window->priv->key_events);
+-        }
+-}
+-
+-static void
+-lock_socket_show (GtkWidget *widget,
+-                  GSWindow  *window)
+-{
+-        gtk_widget_child_focus (window->priv->lock_socket, GTK_DIR_TAB_FORWARD);
+-
+-        /* send queued events to the dialog */
+-        forward_key_events (window);
+-}
+-
+-static void
+-lock_socket_destroyed (GtkWidget *widget,
+-                       GSWindow  *window)
+-{
+-        g_signal_handlers_disconnect_by_func (widget, lock_socket_show, window);
+-        g_signal_handlers_disconnect_by_func (widget, lock_socket_destroyed, window);
+-        g_signal_handlers_disconnect_by_func (widget, lock_plug_added, window);
+-        g_signal_handlers_disconnect_by_func (widget, lock_plug_removed, window);
+-
+-        window->priv->lock_socket = NULL;
+-}
+-
+-static void
+-create_keyboard_socket (GSWindow *window,
+-                        guint32   id)
+-{
+-        int height;
+-
+-        height = (gdk_screen_get_height (gtk_widget_get_screen (GTK_WIDGET (window)))) / 4;
+-
+-        window->priv->keyboard_socket = gtk_socket_new ();
+-        gtk_widget_set_size_request (window->priv->keyboard_socket, -1, height);
+-
+-        g_signal_connect (window->priv->keyboard_socket, "destroy",
+-                          G_CALLBACK (keyboard_socket_destroyed), window);
+-        g_signal_connect (window->priv->keyboard_socket, "plug_added",
+-                          G_CALLBACK (keyboard_plug_added), window);
+-        g_signal_connect (window->priv->keyboard_socket, "plug_removed",
+-                          G_CALLBACK (keyboard_plug_removed), window);
+-        gtk_box_pack_start (GTK_BOX (window->priv->vbox), window->priv->keyboard_socket, FALSE, FALSE, 0);
+-        gtk_socket_add_id (GTK_SOCKET (window->priv->keyboard_socket), id);
+-}
+-
+-/* adapted from gspawn.c */
+-static int
+-wait_on_child (int pid)
+-{
+-        int status;
+-
+- wait_again:
+-        if (waitpid (pid, &status, 0) < 0) {
+-                if (errno == EINTR) {
+-                        goto wait_again;
+-                } else if (errno == ECHILD) {
+-                        ; /* do nothing, child already reaped */
+-                } else {
+-                        gs_debug ("waitpid () should not fail in 'GSWindow'");
+-                }
+-        }
+-
+-        return status;
+-}
+-
+-static void
+-kill_keyboard_command (GSWindow *window)
+-{
+-        if (window->priv->keyboard_pid > 0) {
+-                signal_pid (window->priv->keyboard_pid, SIGTERM);
+-        }
+-}
+-
+-static void
+-kill_dialog_command (GSWindow *window)
+-{
+-        /* If a dialog is up we need to signal it
+-           and wait on it */
+-        if (window->priv->lock_pid > 0) {
+-                signal_pid (window->priv->lock_pid, SIGTERM);
+-        }
+-}
+-
+-static void
+-keyboard_command_finish (GSWindow *window)
+-{
+-        g_return_if_fail (GS_IS_WINDOW (window));
+-
+-        /* send a signal just in case */
+-        kill_keyboard_command (window);
+-
+-        gs_debug ("Keyboard finished");
+-
+-        if (window->priv->keyboard_pid > 0) {
+-                wait_on_child (window->priv->keyboard_pid);
+-
+-                g_spawn_close_pid (window->priv->keyboard_pid);
+-                window->priv->keyboard_pid = 0;
+-        }
+-}
+-
+-static gboolean
+-keyboard_command_watch (GIOChannel   *source,
+-                        GIOCondition  condition,
+-                        GSWindow     *window)
+-{
+-        gboolean finished = FALSE;
+-
+-        g_return_val_if_fail (GS_IS_WINDOW (window), FALSE);
+-
+-        if (condition & G_IO_IN) {
+-                GIOStatus status;
+-                GError   *error = NULL;
+-                char     *line;
+-
+-                line = NULL;
+-                status = g_io_channel_read_line (source, &line, NULL, NULL, &error);
+-
+-                switch (status) {
+-                case G_IO_STATUS_NORMAL:
+-                        {
+-                                guint32 id;
+-                                char    c;
+-                                gs_debug ("keyboard command output: %s", line);
+-                                if (1 == sscanf (line, " %" G_GUINT32_FORMAT " %c", &id, &c)) {
+-                                        create_keyboard_socket (window, id);
+-                                }
+-                        }
+-                        break;
+-                case G_IO_STATUS_EOF:
+-                        finished = TRUE;
+-                        break;
+-                case G_IO_STATUS_ERROR:
+-                        finished = TRUE;
+-                        gs_debug ("Error reading from child: %s\n", error->message);
+-                        g_error_free (error);
+-                        return FALSE;
+-                case G_IO_STATUS_AGAIN:
+-                default:
+-                        break;
+-                }
+-
+-                g_free (line);
+-        } else if (condition & G_IO_HUP) {
+-                finished = TRUE;
+-        }
+-
+-        if (finished) {
+-                window->priv->keyboard_watch_id = 0;
+-                keyboard_command_finish (window);
+-                return FALSE;
+-        }
+-
+-        return TRUE;
+-}
+-
+-static void
+-embed_keyboard (GSWindow *window)
+-{
+-        gboolean res;
+-
+-        if (! window->priv->keyboard_enabled
+-            || window->priv->keyboard_command == NULL)
+-                return;
+-
+-        gs_debug ("Adding embedded keyboard widget");
+-
+-        /* FIXME: verify command is safe */
+-
+-        gs_debug ("Running command: %s", window->priv->keyboard_command);
+-
+-        res = spawn_on_window (window,
+-                               window->priv->keyboard_command,
+-                               &window->priv->keyboard_pid,
+-                               (GIOFunc)keyboard_command_watch,
+-                               window,
+-                               &window->priv->keyboard_watch_id);
+-        if (! res) {
+-                gs_debug ("Could not start command: %s", window->priv->keyboard_command);
+-        }
+-}
+-
+-static void
+-create_lock_socket (GSWindow *window,
+-                    guint32   id)
+-{
+-        window->priv->lock_socket = gtk_socket_new ();
+-        window->priv->lock_box = gtk_alignment_new (0.5, 0.5, 0, 0);
+-        gtk_widget_show (window->priv->lock_box);
+-        gtk_box_pack_start (GTK_BOX (window->priv->vbox), window->priv->lock_box, TRUE, TRUE, 0);
+-
+-        gtk_container_add (GTK_CONTAINER (window->priv->lock_box), window->priv->lock_socket);
+-
+-        g_signal_connect (window->priv->lock_socket, "show",
+-                          G_CALLBACK (lock_socket_show), window);
+-        g_signal_connect (window->priv->lock_socket, "destroy",
+-                          G_CALLBACK (lock_socket_destroyed), window);
+-        g_signal_connect (window->priv->lock_socket, "plug_added",
+-                          G_CALLBACK (lock_plug_added), window);
+-        g_signal_connect (window->priv->lock_socket, "plug_removed",
+-                          G_CALLBACK (lock_plug_removed), window);
+-
+-        gtk_socket_add_id (GTK_SOCKET (window->priv->lock_socket), id);
+-
+-        if (window->priv->keyboard_enabled) {
+-                embed_keyboard (window);
+-        }
+-}
+-
+-static void
+-gs_window_dialog_finish (GSWindow *window)
+-{
+-        g_return_if_fail (GS_IS_WINDOW (window));
+-
+-        gs_debug ("Dialog finished");
+-
+-        /* make sure we finish the keyboard thing too */
+-        keyboard_command_finish (window);
+-
+-        /* send a signal just in case */
+-        kill_dialog_command (window);
+-
+-        if (window->priv->lock_pid > 0) {
+-                wait_on_child (window->priv->lock_pid);
+-
+-                g_spawn_close_pid (window->priv->lock_pid);
+-                window->priv->lock_pid = 0;
+-        }
+-
+-        /* remove events for the case were we failed to show socket */
+-        remove_key_events (window);
+-}
+-
+-static void
+-maybe_kill_dialog (GSWindow *window)
+-{
+-        if (!window->priv->dialog_shake_in_progress
+-            && window->priv->dialog_quit_requested
+-            && window->priv->lock_pid > 0) {
+-                kill (window->priv->lock_pid, SIGTERM);
+-        }
+-}
+ 
+ /* very rudimentary animation for indicating an auth failure */
+ static void
+@@ -1256,8 +764,6 @@ shake_dialog (GSWindow *window)
+         guint left;
+         guint right;
+ 
+-        window->priv->dialog_shake_in_progress = TRUE;
+-
+         for (i = 0; i < 9; i++) {
+                 if (i % 2 == 0) {
+                         left = 30;
+@@ -1282,9 +788,6 @@ shake_dialog (GSWindow *window)
+ 
+                 g_usleep (10000);
+         }
+-
+-        window->priv->dialog_shake_in_progress = FALSE;
+-        maybe_kill_dialog (window);
+ }
+ 
+ static void
+@@ -1302,8 +805,6 @@ window_set_dialog_up (GSWindow *window,
+ static void
+ popdown_dialog (GSWindow *window)
+ {
+-        gs_window_dialog_finish (window);
+-
+         gtk_widget_show (window->priv->drawing_area);
+ 
+         gs_window_clear (window);
+@@ -1321,170 +822,58 @@ popdown_dialog (GSWindow *window)
+         }
+ 
+         remove_popup_dialog_idle (window);
+-        remove_command_watches (window);
+-}
+-
+-static gboolean
+-lock_command_watch (GIOChannel   *source,
+-                    GIOCondition  condition,
+-                    GSWindow     *window)
+-{
+-        gboolean finished = FALSE;
+-
+-        g_return_val_if_fail (GS_IS_WINDOW (window), FALSE);
+-
+-        if (condition & G_IO_IN) {
+-                GIOStatus status;
+-                GError   *error = NULL;
+-                char     *line;
+-
+-                line = NULL;
+-                status = g_io_channel_read_line (source, &line, NULL, NULL, &error);
+-
+-                switch (status) {
+-                case G_IO_STATUS_NORMAL:
+-                        gs_debug ("command output: %s", line);
+-
+-                        if (strstr (line, "WINDOW ID=") != NULL) {
+-                                guint32 id;
+-                                char    c;
+-                                if (1 == sscanf (line, " WINDOW ID= %" G_GUINT32_FORMAT " %c", &id, &c)) {
+-                                        create_lock_socket (window, id);
+-                                }
+-                        } else if (strstr (line, "NOTICE=") != NULL) {
+-                                if (strstr (line, "NOTICE=AUTH FAILED") != NULL) {
+-                                        shake_dialog (window);
+-                                }
+-                        } else if (strstr (line, "RESPONSE=") != NULL) {
+-                                if (strstr (line, "RESPONSE=OK") != NULL) {
+-                                        gs_debug ("Got OK response");
+-                                        window->priv->dialog_response = DIALOG_RESPONSE_OK;
+-                                } else {
+-                                        gs_debug ("Got CANCEL response");
+-                                        window->priv->dialog_response = DIALOG_RESPONSE_CANCEL;
+-                                }
+-                                finished = TRUE;
+-                        } else if (strstr (line, "REQUEST QUIT") != NULL) {
+-                                gs_debug ("Got request for quit");
+-                                window->priv->dialog_quit_requested = TRUE;
+-                                maybe_kill_dialog (window);
+-                        }
+-                        break;
+-                case G_IO_STATUS_EOF:
+-                        finished = TRUE;
+-                        break;
+-                case G_IO_STATUS_ERROR:
+-                        finished = TRUE;
+-                        gs_debug ("Error reading from child: %s\n", error->message);
+-                        g_error_free (error);
+-                        return FALSE;
+-                case G_IO_STATUS_AGAIN:
+-                default:
+-                        break;
+-                }
+-
+-                g_free (line);
+-        } else if (condition & G_IO_HUP) {
+-                finished = TRUE;
+-        }
+-
+-        if (finished) {
+-                popdown_dialog (window);
+-
+-                if (window->priv->dialog_response == DIALOG_RESPONSE_OK) {
+-                        add_emit_deactivated_idle (window);
+-                }
+-
+-                window->priv->lock_watch_id = 0;
+-
+-                return FALSE;
+-        }
+-
+-        return TRUE;
+ }
+ 
+-static gboolean
+-is_logout_enabled (GSWindow *window)
++static void
++lock_plug_response_cb (GSLockPlug *plug, gint response_id, gpointer data)
+ {
+-        double elapsed;
++	gboolean finished = FALSE;
++	GSWindow *window = GS_WINDOW (data);
+ 
+-        if (! window->priv->logout_enabled) {
+-                return FALSE;
+-        }
++	switch (response_id) {
++		case GS_LOCK_PLUG_RESPONSE_AUTH_FAILED:
++			shake_dialog (window);
++		break;
+ 
+-        if (! window->priv->logout_command) {
+-                return FALSE;
+-        }
++		case GS_LOCK_PLUG_RESPONSE_AUTH_OK:
++			gs_debug ("Got OK response");
++			finished = TRUE;
++		break;
+ 
+-        elapsed = g_timer_elapsed (window->priv->timer, NULL);
++		default:
++		break;
++	}
+ 
+-        if (window->priv->logout_timeout < (elapsed * 1000)) {
+-                return TRUE;
+-        }
++	if (finished) {
++		popdown_dialog (window);
+ 
+-        return FALSE;
+-}
+-
+-static gboolean
+-is_user_switch_enabled (GSWindow *window)
+-{
+-        return window->priv->user_switch_enabled;
++		if (response_id == GS_LOCK_PLUG_RESPONSE_AUTH_OK) {
++			add_emit_deactivated_idle (window);
++		}
++	}
+ }
+ 
+ static void
+ popup_dialog (GSWindow *window)
+ {
+         gboolean  result;
+-        char     *tmp;
+-        GString  *command;
+ 
+         gs_debug ("Popping up dialog");
+ 
+-        tmp = g_build_filename (LIBEXECDIR, "gnome-screensaver-dialog", NULL);
+-        command = g_string_new (tmp);
+-        g_free (tmp);
+-
+-        if (is_logout_enabled (window)) {
+-                command = g_string_append (command, " --enable-logout");
+-                g_string_append_printf (command, " --logout-command='%s'", window->priv->logout_command);
+-        }
+-
+-        if (window->priv->status_message) {
+-                char *quoted;
+-
+-                quoted = g_shell_quote (window->priv->status_message);
+-                g_string_append_printf (command, " --status-message=%s", quoted);
+-                g_free (quoted);
+-        }
+-
+-        if (is_user_switch_enabled (window)) {
+-                command = g_string_append (command, " --enable-switch");
+-        }
+-
+-        if (gs_debug_enabled ()) {
+-                command = g_string_append (command, " --verbose");
+-        }
+-
+         gtk_widget_hide (window->priv->drawing_area);
+ 
+         gs_window_clear_to_background_surface (window);
+ 
+         set_invisible_cursor (gtk_widget_get_window (GTK_WIDGET (window)), FALSE);
+ 
+-        window->priv->dialog_quit_requested = FALSE;
+-        window->priv->dialog_shake_in_progress = FALSE;
+-
+-        result = spawn_on_window (window,
+-                                  command->str,
+-                                  &window->priv->lock_pid,
+-                                  (GIOFunc)lock_command_watch,
+-                                  window,
+-                                  &window->priv->lock_watch_id);
+-        if (! result) {
+-                gs_debug ("Could not start command: %s", command->str);
+-        }
++        window->priv->lock_box = gtk_alignment_new (0.5, 0.5, 0, 0);
++        gtk_box_pack_start (GTK_BOX (window->priv->vbox), window->priv->lock_box, TRUE, TRUE, 0);
++		gtk_widget_show (window->priv->lock_box);
++        window->priv->lock_plug = gs_lock_plug_new ();
++        gtk_container_add (GTK_CONTAINER (window->priv->lock_box), window->priv->lock_plug);
++        gtk_widget_show (window->priv->lock_plug);
+ 
+-        g_string_free (command, TRUE);
++		g_signal_connect (G_OBJECT (window->priv->lock_plug), "response", G_CALLBACK (lock_plug_response_cb), window);
+ }
+ 
+ static gboolean
+@@ -1509,10 +898,6 @@ gs_window_request_unlock (GSWindow *window)
+                 return;
+         }
+ 
+-        if (window->priv->lock_watch_id > 0) {
+-                return;
+-        }
+-
+         if (! window->priv->lock_enabled) {
+                 add_emit_deactivated_idle (window);
+ 
+@@ -1764,131 +1149,6 @@ gs_window_get_property (GObject    *object,
+         }
+ }
+ 
+-static void
+-queue_key_event (GSWindow    *window,
+-                 GdkEventKey *event)
+-{
+-        /* Eat the first return, enter, escape, or space */
+-        if (window->priv->key_events == NULL
+-            && (event->keyval == GDK_KEY_Return
+-                || event->keyval == GDK_KEY_KP_Enter
+-                || event->keyval == GDK_KEY_Escape
+-                || event->keyval == GDK_KEY_space)) {
+-                return;
+-        }
+-
+-        /* Only cache MAX_QUEUED_EVENTS key events.  If there are any more than this then
+-           something is wrong */
+-        /* Don't queue keys that may cause focus navigation in the dialog */
+-        if (g_list_length (window->priv->key_events) < MAX_QUEUED_EVENTS
+-            && event->keyval != GDK_KEY_Tab
+-            && event->keyval != GDK_KEY_Up
+-            && event->keyval != GDK_KEY_Down) {
+-                window->priv->key_events = g_list_prepend (window->priv->key_events,
+-                                                           gdk_event_copy ((GdkEvent *)event));
+-        }
+-}
+-
+-static gboolean
+-maybe_handle_activity (GSWindow *window)
+-{
+-        gboolean handled;
+-
+-        handled = FALSE;
+-
+-        /* if we already have a socket then don't bother */
+-        if (! window->priv->lock_socket
+-            && gtk_widget_get_sensitive (GTK_WIDGET (window))) {
+-                g_signal_emit (window, signals [ACTIVITY], 0, &handled);
+-        }
+-
+-        return handled;
+-}
+-
+-static gboolean
+-gs_window_real_key_press_event (GtkWidget   *widget,
+-                                GdkEventKey *event)
+-{
+-        /*g_message ("KEY PRESS state: %u keyval %u", event->state, event->keyval);*/
+-
+-        /* Ignore brightness keys */
+-        if (event->hardware_keycode == 101 || event->hardware_keycode == 212) {
+-                gs_debug ("Ignoring brightness keys");
+-                return TRUE;
+-        }
+-
+-        maybe_handle_activity (GS_WINDOW (widget));
+-
+-        queue_key_event (GS_WINDOW (widget), event);
+-
+-        if (GTK_WIDGET_CLASS (gs_window_parent_class)->key_press_event) {
+-                GTK_WIDGET_CLASS (gs_window_parent_class)->key_press_event (widget, event);
+-        }
+-
+-        return TRUE;
+-}
+-
+-static gboolean
+-gs_window_real_motion_notify_event (GtkWidget      *widget,
+-                                    GdkEventMotion *event)
+-{
+-        GSWindow  *window;
+-        gdouble    distance;
+-        gdouble    min_distance;
+-        gdouble    min_percentage = 0.1;
+-        GdkScreen *screen;
+-
+-        window = GS_WINDOW (widget);
+-
+-        screen = gs_window_get_screen (window);
+-        min_distance = gdk_screen_get_width (screen) * min_percentage;
+-
+-        /* if the last position was not set then don't detect motion */
+-        if (window->priv->last_x < 0 || window->priv->last_y < 0) {
+-                window->priv->last_x = event->x;
+-                window->priv->last_y = event->y;
+-
+-                return FALSE;
+-        }
+-
+-        /* just an approximate distance */
+-        distance = MAX (ABS (window->priv->last_x - event->x),
+-                        ABS (window->priv->last_y - event->y));
+-
+-        if (distance > min_distance) {
+-                maybe_handle_activity (window);
+-
+-                window->priv->last_x = -1;
+-                window->priv->last_y = -1;
+-        }
+-
+-        return FALSE;
+-}
+-
+-static gboolean
+-gs_window_real_button_press_event (GtkWidget      *widget,
+-                                   GdkEventButton *event)
+-{
+-        GSWindow *window;
+-
+-        window = GS_WINDOW (widget);
+-        maybe_handle_activity (window);
+-
+-        return FALSE;
+-}
+-
+-static gboolean
+-gs_window_real_scroll_event (GtkWidget      *widget,
+-                             GdkEventScroll *event)
+-{
+-        GSWindow *window;
+-
+-        window = GS_WINDOW (widget);
+-        maybe_handle_activity (window);
+-
+-        return FALSE;
+-}
+-
+ static void
+ gs_window_real_size_request (GtkWidget      *widget,
+                              GtkRequisition *requisition)
+@@ -2034,10 +1294,6 @@ gs_window_class_init (GSWindowClass *klass)
+         widget_class->hide                = gs_window_real_hide;
+         widget_class->realize             = gs_window_real_realize;
+         widget_class->unrealize           = gs_window_real_unrealize;
+-        widget_class->key_press_event     = gs_window_real_key_press_event;
+-        widget_class->motion_notify_event = gs_window_real_motion_notify_event;
+-        widget_class->button_press_event  = gs_window_real_button_press_event;
+-        widget_class->scroll_event        = gs_window_real_scroll_event;
+         widget_class->get_preferred_width        = gs_window_real_get_preferred_width;
+         widget_class->get_preferred_height       = gs_window_real_get_preferred_height;
+         widget_class->grab_broken_event   = gs_window_real_grab_broken;
+@@ -2348,19 +1604,6 @@ gs_window_init (GSWindow *window)
+         update_clock (window);
+ }
+ 
+-static void
+-remove_command_watches (GSWindow *window)
+-{
+-        if (window->priv->lock_watch_id != 0) {
+-                g_source_remove (window->priv->lock_watch_id);
+-                window->priv->lock_watch_id = 0;
+-        }
+-        if (window->priv->keyboard_watch_id != 0) {
+-                g_source_remove (window->priv->keyboard_watch_id);
+-                window->priv->keyboard_watch_id = 0;
+-        }
+-}
+-
+ static void
+ gs_window_finalize (GObject *object)
+ {
+@@ -2375,6 +1618,7 @@ gs_window_finalize (GObject *object)
+ 
+         g_free (window->priv->logout_command);
+         g_free (window->priv->keyboard_command);
++        g_free (window->priv->status_message);
+ 
+         if (window->priv->clock_tracker) {
+                 g_object_unref (window->priv->clock_tracker);
+@@ -2387,16 +1631,6 @@ gs_window_finalize (GObject *object)
+         remove_watchdog_timer (window);
+         remove_popup_dialog_idle (window);
+ 
+-        if (window->priv->timer) {
+-                g_timer_destroy (window->priv->timer);
+-        }
+-
+-        remove_key_events (window);
+-
+-        remove_command_watches (window);
+-
+-        gs_window_dialog_finish (window);
+-
+         if (window->priv->background_surface) {
+                cairo_surface_destroy (window->priv->background_surface);
+         }

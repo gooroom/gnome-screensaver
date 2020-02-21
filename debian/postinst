@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Update PAM related gnome-screensaver file
+if [ -e /etc/gooroom/adjustments/pam.d-update-gnome-screensaver.execute ]; then
+    /etc/gooroom/adjustments/pam.d-update-gnome-screensaver.execute
+fi

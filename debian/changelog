@@ -1,3 +1,29 @@
+gnome-screensaver (3.6.1-10+grm2u2) unstable; urgency=medium
+
+  [ jongkyung.woo ]
+  * [ee164112] Update sources regarding copyright
+  * [bcd7f5ce] Added pam.d-update-gnome-screensaver.execute
+  * [012b0534] Updated debian/rules
+
+  [ Gooroom Autobuilder ]
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Tue, 11 Feb 2020 09:30:27 +0900
+
+gnome-screensaver (3.6.1-10+grm2u1) unstable; urgency=medium
+
+  [ jongkyung.woo ]
+  * [b4c09133] Added patch to allow user to change settings for screensaver
+  * [9e2651f1] Add patch for Gooroom UI
+  * [9ea1498b] Added patch that fixes CWE-134,362,367
+
+  [ cjheo ]
+  * [3cd2275e] Update gooroom patches regarding copyright
+  * [b3ee8e06] Change logout command
+
+  [ Gooroom Autobuilder ]
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Sun, 01 Dec 2019 16:11:10 +0900
+
 gnome-screensaver (3.6.1-10) unstable; urgency=medium
 
   * Update package description to mention that this is no longer
