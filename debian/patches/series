@@ -1,0 +1,8 @@
+00git_logind_check.patch
+01_no_autostart.patch
+14_no_fade_on_user_switch.patch
+31_lock_screen_on_suspend.patch
+libsystemd.patch
+0001-gs-lock-plug-Disconnect-signal-handler-from-right-ob.patch
+cross.patch
+manager-adapt-to-gnome-desktop-API-changes.patch

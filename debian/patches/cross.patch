@@ -1,0 +1,21 @@
+From: Helmut Grohne <helmut@subdivi.de>
+Date: Tue, 1 Nov 2016 06:15:23 +0100
+Subject: Use triplet-prefixed pkg-config
+
+---
+ configure.ac | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/configure.ac b/configure.ac
+index 93e31e0..6742dff 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -102,7 +102,7 @@ AC_SUBST(GNOME_SCREENSAVER_SAVER_LIBS)
+ 
+ # Find out the version of DBUS we're using
+ 
+-dbus_version=`pkg-config --modversion dbus-1`
++dbus_version=`$PKG_CONFIG --modversion dbus-1`
+ DBUS_VERSION_MAJOR=`echo $dbus_version | awk -F. '{print $1}'`
+ DBUS_VERSION_MINOR=`echo $dbus_version | awk -F. '{print $2}'`
+ DBUS_VERSION_MICRO=`echo $dbus_version | awk -F. '{print $3}'`

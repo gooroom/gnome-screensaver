@@ -1,0 +1,24 @@
+From: =?utf-8?q?Alberts_Muktup=C4=81vels?= <alberts.muktupavels@gmail.com>
+Date: Tue, 21 Jan 2020 23:29:57 +0200
+Subject: manager: adapt to gnome-desktop API changes
+
+Bug-Upstream: https://gitlab.gnome.org/Archive/gnome-screensaver/issues/3
+Origin: https://gitlab.gnome.org/Archive/gnome-screensaver/-/merge_requests/1
+---
+ src/gs-manager.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+diff --git a/src/gs-manager.c b/src/gs-manager.c
+index 32c2305..b24d628 100644
+--- a/src/gs-manager.c
++++ b/src/gs-manager.c
+@@ -820,8 +820,7 @@ apply_background_to_window (GSManager *manager,
+         surface = gnome_bg_create_surface (manager->priv->bg,
+                                            gdk_window,
+                                            width,
+-                                           height,
+-                                           FALSE);
++                                           height);
+         gs_window_set_background_surface (window, surface);
+         cairo_surface_destroy (surface);
+ }
