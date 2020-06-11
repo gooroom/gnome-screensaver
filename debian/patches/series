@@ -9,3 +9,6 @@ libsystemd.patch
 gooroom-01-enable-screensaver-background.patch
 gooroom-02-gooroom-ui.patch
 gooroom-03-CWE-134-362-367.patch
+
+# Hancom-Gooroom Patchset
+hancom-01-BI-image-added.patch
