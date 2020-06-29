@@ -1,0 +1,162 @@
+diff --git a/src/gs-window-x11.c b/src/gs-window-x11.c
+index 7e4f22a..978810a 100644
+--- a/src/gs-window-x11.c
++++ b/src/gs-window-x11.c
+@@ -585,11 +585,93 @@ maybe_handle_activity (GSWindow *window)
+         handled = FALSE;
+ 
+         /* if we already have a socket then don't bother */
+-        g_signal_emit (window, signals [ACTIVITY], 0, &handled);
++        if (! window->priv->lock_box && gtk_widget_get_sensitive (GTK_WIDGET (window))) {
++                g_signal_emit (window, signals [ACTIVITY], 0, &handled);
++        }
+ 
+         return handled;
+ }
+ 
++static gboolean
++gs_window_real_key_press_event (GtkWidget   *widget,
++                                GdkEventKey *event)
++{
++        /* Ignore brightness keys */
++        if (event->hardware_keycode == 101 || event->hardware_keycode == 212) {
++                gs_debug ("Ignoring brightness keys");
++                return TRUE;
++        }
++
++        maybe_handle_activity (GS_WINDOW (widget));
++
++        if (GTK_WIDGET_CLASS (gs_window_parent_class)->key_press_event) {
++                GTK_WIDGET_CLASS (gs_window_parent_class)->key_press_event (widget, event);
++        }
++
++        return TRUE;
++}
++
++static gboolean
++gs_window_real_motion_notify_event (GtkWidget      *widget,
++                                    GdkEventMotion *event)
++{
++        GSWindow  *window;
++        gdouble    distance;
++        gdouble    min_distance;
++        gdouble    min_percentage = 0.1;
++        GdkScreen *screen;
++
++        window = GS_WINDOW (widget);
++
++        screen = gs_window_get_screen (window);
++        min_distance = gdk_screen_get_width (screen) * min_percentage;
++
++        /* if the last position was not set then don't detect motion */
++        if (window->priv->last_x < 0 || window->priv->last_y < 0) {
++                window->priv->last_x = event->x;
++                window->priv->last_y = event->y;
++
++                return FALSE;
++        }
++
++        /* just an approximate distance */
++        distance = MAX (ABS (window->priv->last_x - event->x),
++                        ABS (window->priv->last_y - event->y));
++
++        if (distance > min_distance) {
++                maybe_handle_activity (window);
++
++                window->priv->last_x = -1;
++                window->priv->last_y = -1;
++        }
++
++        return FALSE;
++}
++
++static gboolean
++gs_window_real_button_press_event (GtkWidget      *widget,
++                                   GdkEventButton *event)
++{
++        GSWindow *window;
++
++        window = GS_WINDOW (widget);
++        maybe_handle_activity (window);
++
++        return FALSE;
++}
++
++static gboolean
++gs_window_real_scroll_event (GtkWidget      *widget,
++                             GdkEventScroll *event)
++{
++        GSWindow *window;
++
++        window = GS_WINDOW (widget);
++        maybe_handle_activity (window);
++
++        return FALSE;
++}
++
+ static void
+ gs_window_real_show (GtkWidget *widget)
+ {
+@@ -611,8 +693,6 @@ gs_window_real_show (GtkWidget *widget)
+         select_popup_events ();
+         window_select_shape_events (window);
+         gdk_window_add_filter (NULL, (GdkFilterFunc)xevent_filter, window);
+-
+-        g_idle_add ((GSourceFunc)maybe_handle_activity, window);
+ }
+ 
+ static void
+@@ -817,7 +897,10 @@ popdown_dialog (GSWindow *window)
+         window->priv->last_y = -1;
+ 
+         if (window->priv->lock_box != NULL) {
+-                gtk_container_remove (GTK_CONTAINER (window->priv->vbox), GTK_WIDGET (window->priv->lock_box));
++                gtk_widget_destroy (window->priv->lock_plug);
++                gtk_widget_destroy (window->priv->lock_box);
++//                gtk_container_remove (GTK_CONTAINER (window->priv->vbox), GTK_WIDGET (window->priv->lock_box));
++                window->priv->lock_plug = NULL;
+                 window->priv->lock_box = NULL;
+         }
+ 
+@@ -853,6 +936,12 @@ lock_plug_response_cb (GSLockPlug *plug, gint response_id, gpointer data)
+ 	}
+ }
+ 
++static void
++lock_plug_show_cb (GtkWidget *widget, GSWindow *window)
++{
++        gtk_widget_child_focus (window->priv->lock_plug, GTK_DIR_TAB_FORWARD);
++}
++
+ static void
+ popup_dialog (GSWindow *window)
+ {
+@@ -868,12 +957,15 @@ popup_dialog (GSWindow *window)
+ 
+         window->priv->lock_box = gtk_alignment_new (0.5, 0.5, 0, 0);
+         gtk_box_pack_start (GTK_BOX (window->priv->vbox), window->priv->lock_box, TRUE, TRUE, 0);
+-		gtk_widget_show (window->priv->lock_box);
++
+         window->priv->lock_plug = gs_lock_plug_new ();
+         gtk_container_add (GTK_CONTAINER (window->priv->lock_box), window->priv->lock_plug);
+-        gtk_widget_show (window->priv->lock_plug);
++
++        g_signal_connect (G_OBJECT (window->priv->lock_plug), "show", G_CALLBACK (lock_plug_show_cb), window);
+ 
+ 		g_signal_connect (G_OBJECT (window->priv->lock_plug), "response", G_CALLBACK (lock_plug_response_cb), window);
++
++        gtk_widget_show_all (window->priv->lock_box);
+ }
+ 
+ static gboolean
+@@ -1294,6 +1386,10 @@ gs_window_class_init (GSWindowClass *klass)
+         widget_class->hide                = gs_window_real_hide;
+         widget_class->realize             = gs_window_real_realize;
+         widget_class->unrealize           = gs_window_real_unrealize;
++        widget_class->key_press_event     = gs_window_real_key_press_event;
++        widget_class->motion_notify_event = gs_window_real_motion_notify_event;
++        widget_class->button_press_event  = gs_window_real_button_press_event;
++        widget_class->scroll_event        = gs_window_real_scroll_event;
+         widget_class->get_preferred_width        = gs_window_real_get_preferred_width;
+         widget_class->get_preferred_height       = gs_window_real_get_preferred_height;
+         widget_class->grab_broken_event   = gs_window_real_grab_broken;
