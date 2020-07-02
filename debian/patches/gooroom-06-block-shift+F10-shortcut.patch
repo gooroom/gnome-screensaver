@@ -1,0 +1,28 @@
+diff --git a/src/gs-lock-plug.c b/src/gs-lock-plug.c
+index c5b7ab2..cc2dae6 100644
+--- a/src/gs-lock-plug.c
++++ b/src/gs-lock-plug.c
+@@ -274,6 +274,14 @@ entry_button_press (GtkWidget      *widget,
+ 	return FALSE;
+ }
+ 
++/* block Shift+F10 */
++static gboolean
++entry_popup_cb (GtkWidget *widget,
++                gpointer   data)
++{
++	return GDK_EVENT_STOP;
++}
++
+ static gint
+ key_press_event_cb (GtkWidget   *widget,
+                     GdkEventKey *event,
+@@ -505,6 +513,8 @@ gs_lock_plug_init (GSLockPlug *plug)
+ 	/* button press handler used to inhibit popup menu */
+ 	g_signal_connect (priv->auth_prompt_entry, "button_press_event",
+                       G_CALLBACK (entry_button_press), NULL);
++	g_signal_connect (G_OBJECT (priv->auth_prompt_entry), "popup-menu",
++                      G_CALLBACK (entry_popup_cb), NULL);
+ 	g_signal_connect (priv->auth_unlock_button, "clicked",
+                       G_CALLBACK (unlock_button_clicked), plug);
+ 	g_signal_connect (priv->auth_logout_button, "clicked",
