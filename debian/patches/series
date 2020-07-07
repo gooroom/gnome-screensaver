@@ -10,3 +10,6 @@ gooroom-CWE-134-362-367.patch
 gooroom-01-enable-screensaver-background.patch
 gooroom-02-gooroom-ui.patch
 gooroom-03-CWE-134-362-367.patch
+gooroom-04-lock-plug-dialog-show-primary-monitor.patch
+gooroom-05-fix-error-for-delay-locking.patch
+gooroom-06-block-shift+F10-shortcut.patch

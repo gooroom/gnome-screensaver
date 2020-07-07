@@ -1,0 +1,39 @@
+diff --git a/src/gs-manager.c b/src/gs-manager.c
+index 16546f6..1068e07 100644
+--- a/src/gs-manager.c
++++ b/src/gs-manager.c
+@@ -657,23 +657,29 @@ find_window_at_pointer (GSManager *manager)
+ {
+         GdkDisplay *display;
+         GdkScreen  *screen;
+-        int         monitor;
+-        int         x, y;
+         GSWindow   *window;
+         int         screen_num;
++        int         i, n_monitors, primary_monitor;
+         GSList     *l;
+ 
+         display = gdk_display_get_default ();
+-        gdk_display_get_pointer (display, &screen, &x, &y, NULL);
+-        monitor = gdk_screen_get_monitor_at_point (screen, x, y);
+         screen_num = gdk_screen_get_number (screen);
+ 
++        n_monitors = gdk_display_get_n_monitors (display);
++        for (i = 0; i < n_monitors; i++) {
++            GdkMonitor *m = gdk_display_get_monitor (display, i);
++            if (gdk_monitor_is_primary (m)) {
++                primary_monitor = i;
++                break;
++            }
++        }
++
+         /* Find the gs-window that is on that screen */
+         window = NULL;
+         for (l = manager->priv->windows; l; l = l->next) {
+                 GSWindow *win = GS_WINDOW (l->data);
+                 if (gs_window_get_screen (win) == screen
+-                    && gs_window_get_monitor (win) == monitor) {
++                    && gs_window_get_monitor (win) == primary_monitor) {
+                         window = win;
+                 }
+         }
