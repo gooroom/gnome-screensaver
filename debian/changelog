@@ -1,3 +1,13 @@
+gnome-screensaver (3.6.1-10+grm2u3+han2u1) unstable; urgency=medium
+
+  [ cjheo ]
+  * [31c934a2] 잠금해제 윈도우가 주 모니터에 나타나도록 수정
+  * [106a5c66] 로고 이미지 교체(한컴 BI)
+  * [00cb9a8b] [Bug:2387] Bug fix for delay locking
+  * [abb970f4] Disabled shortcut(Shift+F10) in GtkEntry
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Tue, 07 Jul 2020 11:21:26 +0900
+
 gnome-screensaver (3.6.1-10+grm2u2) unstable; urgency=medium
 
   [ jongkyung.woo ]
