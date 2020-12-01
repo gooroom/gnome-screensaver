@@ -25,13 +25,20 @@ index 0000000..fc04d0a
 +</svg>
 diff --git a/data/images/logo-letter-white.svg b/data/images/logo-letter-white.svg
 new file mode 100644
-index 0000000..c0f0556
+index 0000000..fa85901
 --- /dev/null
 +++ b/data/images/logo-letter-white.svg
-@@ -0,0 +1,5 @@
-+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="13" viewBox="0 0 80 13">
-+    <g fill="#FFF" fill-rule="evenodd">
-+        <path d="M10.057 5.162h1.917c.048.311.073.63.073.956 0 3.378-2.697 6.117-6.023 6.117C2.697 12.235 0 9.496 0 6.118 0 2.739 2.697 0 6.024 0c2.311 0 4.318 1.322 5.328 3.263l-1.643.934c-.687-1.357-2.08-2.285-3.685-2.285-2.288 0-4.142 1.883-4.142 4.206 0 2.322 1.854 4.206 4.142 4.206 1.963 0 3.607-1.388 4.033-3.25H6.024V5.162h4.033zM18.635 12.235c-2.39 0-4.33-1.968-4.33-4.397 0-2.428 1.94-4.397 4.33-4.397 2.391 0 4.33 1.969 4.33 4.397 0 2.429-1.939 4.397-4.33 4.397zm0-1.911c1.352 0 2.447-1.113 2.447-2.486 0-1.372-1.095-2.485-2.447-2.485-1.351 0-2.447 1.113-2.447 2.485 0 1.373 1.096 2.486 2.447 2.486zM29.553 12.235c-2.391 0-4.33-1.968-4.33-4.397 0-2.428 1.939-4.397 4.33-4.397s4.33 1.969 4.33 4.397c0 2.429-1.939 4.397-4.33 4.397zm0-1.911C30.904 10.324 32 9.21 32 7.838c0-1.372-1.096-2.485-2.447-2.485-1.352 0-2.447 1.113-2.447 2.485 0 1.373 1.095 2.486 2.447 2.486zM47.059 12.235c-2.391 0-4.33-1.968-4.33-4.397 0-2.428 1.939-4.397 4.33-4.397 2.39 0 4.33 1.969 4.33 4.397 0 2.429-1.94 4.397-4.33 4.397zm0-1.911c1.351 0 2.447-1.113 2.447-2.486 0-1.372-1.096-2.485-2.447-2.485-1.352 0-2.447 1.113-2.447 2.485 0 1.373 1.095 2.486 2.447 2.486zM57.976 12.235c-2.39 0-4.329-1.968-4.329-4.397 0-2.428 1.938-4.397 4.33-4.397 2.39 0 4.329 1.969 4.329 4.397 0 2.429-1.938 4.397-4.33 4.397zm0-1.911c1.352 0 2.448-1.113 2.448-2.486 0-1.372-1.096-2.485-2.448-2.485-1.351 0-2.447 1.113-2.447 2.485 0 1.373 1.096 2.486 2.447 2.486zM80 7.838v4.397h-1.882V7.838c0-1.372-1.096-2.485-2.447-2.485-1.352 0-2.447 1.113-2.447 2.485v4.397H71.34V7.838c0-1.372-1.095-2.485-2.447-2.485-1.351 0-2.447 1.113-2.447 2.485v4.397h-1.882V7.838c0-2.428 1.938-4.397 4.33-4.397 1.371 0 2.594.648 3.387 1.66a4.297 4.297 0 0 1 3.389-1.66C78.06 3.441 80 5.41 80 7.838zM36.141 7.838c0-2.428 1.939-4.397 4.33-4.397v1.912c-1.352 0-2.447 1.113-2.447 2.485v4.397H36.14V7.838zm8.659 0h-1.882H44.8z"/>
+@@ -0,0 +1,12 @@
++<svg xmlns="http://www.w3.org/2000/svg" width="100" height="21" viewBox="0 0 100 21">
++    <g fill="none" fill-rule="evenodd">
++        <g>
++            <g>
++                <g>
++                    <path fill="#164193" d="M91.944 2.481c.907 0 1.794.094 2.65.271l.365.08.239.06c2.678.715 4.666 3.105 4.757 5.988l.004.216c0 2.906-1.926 5.347-4.571 6.142l-.19.054-.24.058c-.967.23-1.976.352-3.014.352-.923 0-1.822-.096-2.69-.279l-.37-.083-.174-.043c-1.473-.389-2.74-1.285-3.597-2.492l-.14-.204v2.904H78.32l-.35.001c-3.01 0-5.53-2.057-6.234-4.845-.687 2.725-3.11 4.753-6.03 4.843l-.205.003-.35-.001h-2.703v4.527h-3.953v-7.92h.002v-.08h6.727c1.618 0 2.936-1.372 2.936-2.938 0-1.574-1.237-2.861-2.791-2.94l-.152-.004-.446-.005h-6.274V2.672h6.31l.694-.002c3.01 0 5.53 2.056 6.234 4.844.687-2.724 3.11-4.75 6.03-4.84l.205-.003h7.004v2.911c.813-1.24 2.044-2.181 3.494-2.627l.243-.07.174-.041c.981-.237 2.006-.363 3.06-.363zm-41.273.19l.694.002h6.31v3.472h-6.273l-.447.007c-.91 0-1.723.417-2.263 1.069l-.104.133h9.088v3.473H48.58c.5.687 1.291 1.151 2.194 1.207l.181.005-.007-.005h6.728v3.473H50.67c-2.234 0-4.196-1.134-5.35-2.858l-.116-.18v3.038H39.9c-2.138 0-4.033-1.037-5.204-2.637l-.122-.174v2.806H30.62V2.675h3.953v2.806c1.118-1.64 2.977-2.733 5.098-2.806l.228-.004.694.002h4.61v3.036c1.098-1.763 3.023-2.957 5.237-3.034l.23-.004zM91.944 6.03c-.572 0-1.131.05-1.675.147-.136.025-.273.045-.407.083-1.193.331-2.083 1.398-2.15 2.68l-.003.166c0 1.296.84 2.397 2.004 2.79l.141.044.428.086c.54.095 1.096.146 1.664.146.571 0 1.13-.05 1.675-.148.136-.024.273-.045.406-.082 1.194-.332 2.083-1.398 2.15-2.681l.004-.165c0-1.296-.84-2.398-2.003-2.79l-.142-.044-.428-.086c-.54-.096-1.097-.146-1.664-.146zm-46.99.115H40.63l-.446.007c-1.625 0-2.942 1.32-2.942 2.944 0 1.575 1.236 2.86 2.79 2.94l.152.003-.007-.005h4.778c-.458-.881-.72-1.881-.72-2.945 0-.975.22-1.895.609-2.72l.11-.224zm39.694 0h-5.95l-.445.005c-1.625 0-2.942 1.319-2.942 2.944 0 1.574 1.236 2.86 2.79 2.938l.152.004-.007-.004h6.4c-.417-.806-.67-1.71-.71-2.672l-.005-.273c0-.974.22-1.894.607-2.719l.11-.223z" transform="translate(-1010 -619) translate(140 70) translate(870 549)"/>
++                    <path fill="#E20714" d="M25.97 6.08c.313.88.484 1.829.484 2.818 0 4.648-3.77 8.417-8.417 8.417-1.65 0-3.188-.476-4.486-1.295l-.241-.158L25.97 6.08zm-.622-1.354c.119.206.228.419.328.636l.144.329-12.593 8.507-3.287 2.98c-.495.09-1.003.137-1.523.137l-.245-.004-.244-.011 5.3-3.344 12.12-9.23zm-.796-1.157c.15.183.291.372.425.566l.195.296-11.945 8.04-5.933 4.77c-.342-.047-.678-.113-1.006-.199l-.325-.091 7.264-4.72 11.325-8.662zm-.986-1.017c.18.157.353.321.519.493l.243.262-11.1 7.436-7.713 6.058c-.283-.104-.559-.223-.826-.355l-.265-.137 8.803-5.807 10.339-7.95zm-1.19-.868c.239.145.47.3.693.467l.22.17-10.062 6.696-9.148 7.094c-.24-.144-.47-.3-.694-.466l-.22-.17 10.062-6.699 9.149-7.092zM20.94.994c.282.105.557.223.825.356l.265.137-8.803 5.802L2.89 15.244c-.18-.157-.354-.321-.52-.493l-.243-.262 11.101-7.44L20.94.996zM19.159.556c.342.046.678.112 1.006.198l.326.092-7.264 4.717-11.325 8.665c-.149-.182-.29-.371-.425-.566l-.195-.296L13.227 5.32 19.16.555zM18.037.481l.243.003.242.011-5.295 3.339L1.106 13.07c-.118-.206-.228-.418-.328-.635l-.145-.33 12.594-8.51L16.523.617c.491-.09.997-.136 1.514-.136zm-9.62 0c1.649 0 3.186.474 4.484 1.294l.241.157L.485 11.718C.17 10.836 0 9.887 0 8.898 0 4.249 3.768.48 8.417.48z" transform="translate(-1010 -619) translate(140 70) translate(870 549)"/>
++                </g>
++            </g>
++        </g>
 +    </g>
 +</svg>
 diff --git a/data/theme/theme.css b/data/theme/theme.css
@@ -363,7 +370,7 @@ index 0000000..8a630a4
 +</gresources>
 diff --git a/src/gs-lock-plug-common.h b/src/gs-lock-plug-common.h
 new file mode 100644
-index 0000000..ea17b40
+index 0000000..eed68fe
 --- /dev/null
 +++ b/src/gs-lock-plug-common.h
 @@ -0,0 +1,49 @@
@@ -417,7 +424,7 @@ index 0000000..ea17b40
 +
 +#endif /* __GS_LOCK_PLUG_COMMON_H__ */
 diff --git a/src/gs-lock-plug.c b/src/gs-lock-plug.c
-index 9cadedb..757a26b 100644
+index 9cadedb..c6e864f 100644
 --- a/src/gs-lock-plug.c
 +++ b/src/gs-lock-plug.c
 @@ -2,6 +2,7 @@
@@ -428,7 +435,7 @@ index 9cadedb..757a26b 100644
   *
   * This program is free software; you can redistribute it and/or modify
   * it under the terms of the GNU General Public License as published by
-@@ -36,1247 +37,229 @@
+@@ -36,1247 +37,251 @@
  #include <gdk/gdkx.h>
  #include <gtk/gtk.h>
  
@@ -530,32 +537,45 @@ index 9cadedb..757a26b 100644
 -        PROP_SWITCH_ENABLED,
 -        PROP_STATUS_MESSAGE
 -};
--
++static guint lock_plug_signals [LAST_SIGNAL] = { 0 };
+ 
 -static guint lock_plug_signals [LAST_SIGNAL];
--
++G_DEFINE_TYPE_WITH_PRIVATE (GSLockPlug, gs_lock_plug, GTK_TYPE_BOX)
+ 
 -G_DEFINE_TYPE (GSLockPlug, gs_lock_plug, GTK_TYPE_PLUG)
--
+ 
 -static void
 -gs_lock_plug_style_set (GtkWidget *widget,
 -                        GtkStyle  *previous_style)
--{
++
++static char *
++get_user_name (void)
+ {
 -        GSLockPlug *plug;
--
++	const char *name;
++	char       *utf8_name;
+ 
 -        if (GTK_WIDGET_CLASS (gs_lock_plug_parent_class)->style_set) {
 -                GTK_WIDGET_CLASS (gs_lock_plug_parent_class)->style_set (widget, previous_style);
 -        }
-+static guint lock_plug_signals [LAST_SIGNAL] = { 0 };
++	name = g_get_real_name ();
  
 -        plug = GS_LOCK_PLUG (widget);
-+G_DEFINE_TYPE_WITH_PRIVATE (GSLockPlug, gs_lock_plug, GTK_TYPE_BOX)
++	if (name == NULL || name[0] == '\0' || strcmp (name, "Unknown") == 0) {
++		name = g_get_user_name ();
++	}
  
 -        gtk_container_set_border_width (GTK_CONTAINER (plug->priv->vbox), 24);
 -        gtk_box_set_spacing (GTK_BOX (plug->priv->vbox), 12);
--
++	utf8_name = NULL;
+ 
 -        gtk_container_set_border_width (GTK_CONTAINER (plug->priv->auth_action_area), 0);
 -        gtk_box_set_spacing (GTK_BOX (plug->priv->auth_action_area), 5);
 -}
--
++	if (name != NULL) {
++		utf8_name = g_locale_to_utf8 (name, -1, NULL, NULL, NULL);
++	}
+ 
 -static void
 -do_user_switch (GSLockPlug *plug)
 -{
@@ -582,7 +602,8 @@ index 9cadedb..757a26b 100644
 -                gs_debug ("Unable to start GDM greeter: %s", error->message);
 -                g_error_free (error);
 -        }
--}
++	return utf8_name;
+ }
  
  static void
  set_status_text (GSLockPlug *plug,
@@ -932,12 +953,9 @@ index 9cadedb..757a26b 100644
 -        cairo_destroy (cr);
 -
 -        return surface;
-+	if (text != NULL) {
-+		*text = local_text;
-+	}
- }
- 
- static void
+-}
+-
+-static void
 -rounded_rectangle (cairo_t *cr,
 -                   gdouble  aspect,
 -                   gdouble  x,
@@ -1055,9 +1073,12 @@ index 9cadedb..757a26b 100644
 -                }
 -        }
 -#undef MULT
--}
--
--static void
++	if (text != NULL) {
++		*text = local_text;
++	}
+ }
+ 
+ static void
 -cairo_to_pixbuf (guint8    *src_data,
 -                 GdkPixbuf *dst_pixbuf)
 +gs_lock_plug_show (GtkWidget *widget)
@@ -1067,22 +1088,23 @@ index 9cadedb..757a26b 100644
 -        guint          w;
 -        guint          h;
 -        guint          rowstride;
--
++	gs_profile_start (NULL);
+ 
 -        w = gdk_pixbuf_get_width (dst_pixbuf);
 -        h = gdk_pixbuf_get_height (dst_pixbuf);
 -        rowstride = gdk_pixbuf_get_rowstride (dst_pixbuf);
-+	gs_profile_start (NULL);
- 
--        dst = gdk_pixbuf_get_pixels (dst_pixbuf);
--        src = src_data;
 +	gs_profile_start ("parent");
 +	if (GTK_WIDGET_CLASS (gs_lock_plug_parent_class)->show) {
 +		GTK_WIDGET_CLASS (gs_lock_plug_parent_class)->show (widget);
 +	}
  
--        go_cairo_convert_data_to_pixbuf (dst, src, w, h, rowstride);
--}
+-        dst = gdk_pixbuf_get_pixels (dst_pixbuf);
+-        src = src_data;
 +	gs_profile_end ("parent");
+ 
+-        go_cairo_convert_data_to_pixbuf (dst, src, w, h, rowstride);
++	gs_profile_end (NULL);
+ }
  
 -static GdkPixbuf *
 -frame_pixbuf (GdkPixbuf *source)
@@ -1147,9 +1169,8 @@ index 9cadedb..757a26b 100644
 -        g_free (data);
 -
 -        return dest;
-+	gs_profile_end (NULL);
- }
- 
+-}
+-
 -/* end copied from gdm-user.c */
 -
  static void
@@ -1293,18 +1314,22 @@ index 9cadedb..757a26b 100644
 -        GSLockPlug *plug = GS_LOCK_PLUG (widget);
 -
 -        gs_profile_start (NULL);
-+	GObjectClass *object_class = G_OBJECT_CLASS (klass);
-+	GtkWidgetClass *widget_class = GTK_WIDGET_CLASS (klass);
- 
+-
 -        gs_profile_start ("parent");
 -        if (GTK_WIDGET_CLASS (gs_lock_plug_parent_class)->show) {
 -                GTK_WIDGET_CLASS (gs_lock_plug_parent_class)->show (widget);
 -        }
-+	object_class->finalize = gs_lock_plug_finalize;
++	GObjectClass *object_class = G_OBJECT_CLASS (klass);
++	GtkWidgetClass *widget_class = GTK_WIDGET_CLASS (klass);
  
 -        gs_profile_end ("parent");
++	object_class->finalize = gs_lock_plug_finalize;
+ 
 +	widget_class->show     = gs_lock_plug_show;
  
+-        if (plug->priv->auth_face_image) {
+-                set_face_image (plug);
+-        }
 +	lock_plug_signals [RESPONSE] = g_signal_new ("response",
 +                                                 G_OBJECT_CLASS_TYPE (klass),
 +                                                 G_SIGNAL_RUN_LAST,
@@ -1321,25 +1346,13 @@ index 9cadedb..757a26b 100644
 +                                              g_cclosure_marshal_VOID__VOID,
 +                                              G_TYPE_NONE, 0);
  
--        if (plug->priv->auth_face_image) {
--                set_face_image (plug);
--        }
--
 -        kbd_lock_mode_update (plug, get_kbd_lock_mode ());
--
--        restart_cancel_timeout (plug);
--
--        gs_profile_end (NULL);
--}
 +	gtk_widget_class_set_template_from_resource (GTK_WIDGET_CLASS (klass),
 +                                                 "/org/gnome/screensaver/gs-lock-plug.ui");
  
--static void
--gs_lock_plug_hide (GtkWidget *widget)
--{
--        if (GTK_WIDGET_CLASS (gs_lock_plug_parent_class)->hide) {
--                GTK_WIDGET_CLASS (gs_lock_plug_parent_class)->hide (widget);
--        }
+-        restart_cancel_timeout (plug);
+-
+-        gs_profile_end (NULL);
 +	gtk_widget_class_bind_template_child_private (GTK_WIDGET_CLASS (klass), GSLockPlug, auth_message_label);
 +	gtk_widget_class_bind_template_child_private (GTK_WIDGET_CLASS (klass), GSLockPlug, auth_prompt_entry);
 +	gtk_widget_class_bind_template_child_private (GTK_WIDGET_CLASS (klass), GSLockPlug, auth_unlock_button);
@@ -1349,6 +1362,14 @@ index 9cadedb..757a26b 100644
  }
  
  static void
+-gs_lock_plug_hide (GtkWidget *widget)
+-{
+-        if (GTK_WIDGET_CLASS (gs_lock_plug_parent_class)->hide) {
+-                GTK_WIDGET_CLASS (gs_lock_plug_parent_class)->hide (widget);
+-        }
+-}
+-
+-static void
 -queue_key_event (GSLockPlug  *plug,
 -                 GdkEventKey *event)
 +logout_button_clicked (GtkButton  *button,
@@ -1405,17 +1426,17 @@ index 9cadedb..757a26b 100644
 +gs_lock_plug_set_busy (GSLockPlug *plug)
  {
 -        g_return_if_fail (GS_LOCK_PLUG (plug));
--
--        if (plug->priv->logout_enabled == logout_enabled) {
--                return;
--        }
 +	GdkCursor *cursor;
 +	GtkWidget *top_level;
  
--        plug->priv->logout_enabled = logout_enabled;
--        g_object_notify (G_OBJECT (plug), "logout-enabled");
+-        if (plug->priv->logout_enabled == logout_enabled) {
+-                return;
+-        }
 +	top_level = gtk_widget_get_toplevel (GTK_WIDGET (plug));
  
+-        plug->priv->logout_enabled = logout_enabled;
+-        g_object_notify (G_OBJECT (plug), "logout-enabled");
+-
 -        if (plug->priv->auth_logout_button == NULL) {
 -                return;
 -        }
@@ -1433,15 +1454,11 @@ index 9cadedb..757a26b 100644
  static void
 -gs_lock_plug_set_logout_command (GSLockPlug *plug,
 -                                 const char *command)
-+gs_lock_plug_set_ready (GSLockPlug *plug)
- {
+-{
 -        g_return_if_fail (GS_LOCK_PLUG (plug));
-+	GdkCursor *cursor;
-+	GtkWidget *top_level;
- 
+-
 -        g_free (plug->priv->logout_command);
-+	top_level = gtk_widget_get_toplevel (GTK_WIDGET (plug));
- 
+-
 -        if (command) {
 -                plug->priv->logout_command = g_strdup (command);
 -        } else {
@@ -1451,7 +1468,8 @@ index 9cadedb..757a26b 100644
 -
 -static gboolean
 -is_program_in_path (const char *program)
--{
++gs_lock_plug_set_ready (GSLockPlug *plug)
+ {
 -        char *tmp = g_find_program_in_path (program);
 -        if (tmp != NULL) {
 -                g_free (tmp);
@@ -1459,12 +1477,11 @@ index 9cadedb..757a26b 100644
 -        } else {
 -                return FALSE;
 -        }
-+	cursor = gdk_cursor_new_for_display (gdk_display_get_default (), GDK_LEFT_PTR);
-+	gdk_window_set_cursor (gtk_widget_get_window (top_level), cursor);
-+	g_object_unref (cursor);
- }
+-}
++	GdkCursor *cursor;
++	GtkWidget *top_level;
  
- static void
+-static void
 -gs_lock_plug_set_status_message (GSLockPlug *plug,
 -                                 const char *status_message)
 -{
@@ -1484,7 +1501,8 @@ index 9cadedb..757a26b 100644
 -                }
 -        }
 -}
--
++	top_level = gtk_widget_get_toplevel (GTK_WIDGET (plug));
+ 
 -static void
 -gs_lock_plug_get_property (GObject    *object,
 -                           guint       prop_id,
@@ -1512,9 +1530,12 @@ index 9cadedb..757a26b 100644
 -                G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
 -                break;
 -        }
--}
--
--static void
++	cursor = gdk_cursor_new_for_display (gdk_display_get_default (), GDK_LEFT_PTR);
++	gdk_window_set_cursor (gtk_widget_get_window (top_level), cursor);
++	g_object_unref (cursor);
+ }
+ 
+ static void
 -gs_lock_plug_set_switch_enabled (GSLockPlug *plug,
 -                                 gboolean    switch_enabled)
 +gs_lock_plug_disable_prompt (GSLockPlug *plug)
@@ -1583,20 +1604,26 @@ index 9cadedb..757a26b 100644
 +gs_lock_plug_enable_prompt (GSLockPlug *plug)
  {
 -        /* Synthesize delete_event to close dialog. */
--
++	g_return_if_fail (GS_IS_LOCK_PLUG (plug));
+ 
 -        GtkWidget *widget = GTK_WIDGET (plug);
 -        GdkEvent  *event;
--
++	gtk_widget_set_sensitive (plug->priv->auth_unlock_button, TRUE);
++	gtk_widget_grab_default (plug->priv->auth_unlock_button);
++	gtk_widget_set_sensitive (plug->priv->auth_prompt_entry, TRUE);
+ 
 -        event = gdk_event_new (GDK_DELETE);
 -        event->any.window = g_object_ref (gtk_widget_get_window (widget));
 -        event->any.send_event = TRUE;
 -
 -        gtk_main_do_event (event);
 -        gdk_event_free (event);
--}
-+	g_return_if_fail (GS_IS_LOCK_PLUG (plug));
++	if (!gtk_widget_has_focus (plug->priv->auth_prompt_entry)) {
++		gtk_widget_grab_focus (plug->priv->auth_prompt_entry);
++	}
+ }
  
--static void
+ static void
 -gs_lock_plug_class_init (GSLockPlugClass *klass)
 -{
 -        GObjectClass   *object_class = G_OBJECT_CLASS (klass);
@@ -1665,10 +1692,7 @@ index 9cadedb..757a26b 100644
 -        gtk_binding_entry_add_signal (binding_set, GDK_KEY_Escape, 0,
 -                                      "close", 0);
 -}
-+	gtk_widget_set_sensitive (plug->priv->auth_unlock_button, TRUE);
-+	gtk_widget_grab_default (plug->priv->auth_unlock_button);
-+	gtk_widget_set_sensitive (plug->priv->auth_prompt_entry, TRUE);
- 
+-
 -static void
 -clear_clipboards (GSLockPlug *plug)
 -{
@@ -1680,12 +1704,9 @@ index 9cadedb..757a26b 100644
 -        clipboard = gtk_widget_get_clipboard (GTK_WIDGET (plug), GDK_SELECTION_CLIPBOARD);
 -        gtk_clipboard_clear (clipboard);
 -        gtk_clipboard_set_text (clipboard, "", -1);
-+	if (!gtk_widget_has_focus (plug->priv->auth_prompt_entry)) {
-+		gtk_widget_grab_focus (plug->priv->auth_prompt_entry);
-+	}
- }
- 
- static void
+-}
+-
+-static void
 -logout_button_clicked (GtkButton  *button,
 -                       GSLockPlug *plug)
 -{
@@ -1806,7 +1827,7 @@ index 9cadedb..757a26b 100644
  }
  
  /* button press handler used to inhibit popup menu */
-@@ -1284,334 +267,264 @@ static gint
+@@ -1284,334 +289,267 @@ static gint
  entry_button_press (GtkWidget      *widget,
                      GdkEventButton *event)
  {
@@ -1830,7 +1851,7 @@ index 9cadedb..757a26b 100644
 +                    gpointer    *data)
  {
 -        restart_cancel_timeout (plug);
--
+ 
 -        /* if the input widget is visible and ready for input
 -         * then just carry on as usual
 -         */
@@ -1838,15 +1859,15 @@ index 9cadedb..757a26b 100644
 -            gtk_widget_get_sensitive (plug->priv->auth_prompt_entry)) {
 -                return FALSE;
 -        }
--
--        if (strcmp (event->string, "") == 0) {
--                return FALSE;
--        }
- 
--        queue_key_event (plug, event);
 +	if ((event->keyval == GDK_KEY_Up || event->keyval == GDK_KEY_Down))
 +		return TRUE;
  
+-        if (strcmp (event->string, "") == 0) {
+-                return FALSE;
+-        }
+-
+-        queue_key_event (plug, event);
+-
 -        return TRUE;
 +	return FALSE;
  }
@@ -1863,10 +1884,10 @@ index 9cadedb..757a26b 100644
 -
 -        g_return_val_if_fail (GS_IS_LOCK_PLUG (plug), NULL);
 -        g_return_val_if_fail (button_text != NULL, NULL);
--
--        button = gtk_button_new_from_stock (button_text);
 +	g_signal_emit (G_OBJECT (data), lock_plug_signals [RESPONSE], 0, GS_LOCK_PLUG_RESPONSE_AUTH_OK);
  
+-        button = gtk_button_new_from_stock (button_text);
+-
 -        gtk_widget_set_can_default (button, TRUE);
 -
 -        gtk_widget_show (button);
@@ -2106,16 +2127,16 @@ index 9cadedb..757a26b 100644
 -
 -        gtk_button_box_set_layout (GTK_BUTTON_BOX (plug->priv->auth_action_area),
 -                                   GTK_BUTTONBOX_END);
+-
+-        gtk_box_pack_end (GTK_BOX (vbox), plug->priv->auth_action_area,
+-                          FALSE, TRUE, 0);
+-        gtk_widget_show (plug->priv->auth_action_area);
 +	if (do_auth_check (plug)) {
 +		g_idle_add ((GSourceFunc)quit_response_ok, plug);
 +	} else {
 +		plug->priv->reset_idle_id = g_timeout_add (3000, (GSourceFunc)reset_idle_cb, plug);
 +	}
  
--        gtk_box_pack_end (GTK_BOX (vbox), plug->priv->auth_action_area,
--                          FALSE, TRUE, 0);
--        gtk_widget_show (plug->priv->auth_action_area);
--
 -        create_page_one_buttons (plug);
 -
 -        gs_profile_end ("page one");
@@ -2139,9 +2160,11 @@ index 9cadedb..757a26b 100644
 +	GSLockPlug *plug;
  
 -        remove_response_idle (plug);
--
--        gs_lock_plug_set_sensitive (plug, FALSE);
 +	plug = GS_LOCK_PLUG (data);
+ 
+-        gs_lock_plug_set_sensitive (plug, FALSE);
++	gtk_widget_grab_default (plug->priv->auth_unlock_button);
++	gtk_widget_grab_focus (plug->priv->auth_prompt_entry);
  
 -        plug->priv->response_idle_id = g_timeout_add (2000,
 -                                                      (GSourceFunc)response_cancel_idle_cb,
@@ -2157,9 +2180,7 @@ index 9cadedb..757a26b 100644
 -                gpointer     data)
 -{
 -        gs_lock_plug_response (plug, GS_LOCK_PLUG_RESPONSE_CANCEL);
-+	gtk_widget_grab_default (plug->priv->auth_unlock_button);
-+	gtk_widget_grab_focus (plug->priv->auth_prompt_entry);
- 
+-
 -        return TRUE; /* Do not destroy */
 +	return FALSE;
  }
@@ -2202,6 +2223,7 @@ index 9cadedb..757a26b 100644
 -                engine = xkl_engine_get_instance (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()));
 -                if (xkl_engine_get_num_groups (engine) > 1) {
 -                        GtkWidget *layout_indicator;
++	char *name = NULL;
 +	GtkCssProvider *provider;
 +	GSLockPlugPrivate *priv;
 +	GdkPixbuf *pixbuf = NULL;
@@ -2242,7 +2264,7 @@ index 9cadedb..757a26b 100644
 +	g_object_unref (provider);
  
 -        gtk_widget_grab_default (plug->priv->auth_unlock_button);
-+	pixbuf = gdk_pixbuf_new_from_resource_at_scale ("/org/gnome/screensaver/logo-letter-white.svg", -1, 15, TRUE, NULL);
++	pixbuf = gdk_pixbuf_new_from_resource_at_scale ("/org/gnome/screensaver/logo-letter-white.svg", 100, 21, TRUE, NULL);
 +	if (pixbuf) {
 +		gtk_image_set_from_pixbuf (GTK_IMAGE (priv->auth_logo_image), pixbuf);
 +		g_object_unref (pixbuf);
@@ -2264,7 +2286,9 @@ index 9cadedb..757a26b 100644
 +                      G_CALLBACK (key_press_event_cb), plug);
  
 -        plug->priv->timeout = DIALOG_TIMEOUT_MSEC;
-+	gtk_entry_set_text (GTK_ENTRY (priv->auth_user_entry), g_get_user_name ());
++	name = get_user_name ();
++	gtk_entry_set_text (GTK_ENTRY (priv->auth_user_entry), name);
++	g_free (name);
  
 -        g_signal_connect (plug, "key_press_event",
 -                          G_CALLBACK (entry_key_press), plug);
@@ -2342,7 +2366,7 @@ index 9cadedb..757a26b 100644
 +	return result;
  }
 diff --git a/src/gs-lock-plug.h b/src/gs-lock-plug.h
-index e48e3fe..721501d 100644
+index e48e3fe..e61ca0d 100644
 --- a/src/gs-lock-plug.h
 +++ b/src/gs-lock-plug.h
 @@ -1,6 +1,7 @@
@@ -2637,7 +2661,7 @@ index 0000000..b2138bd
 +  </object>
 +</interface>
 diff --git a/src/gs-window-x11.c b/src/gs-window-x11.c
-index d267f59..be1c9f7 100644
+index d267f59..7e4f22a 100644
 --- a/src/gs-window-x11.c
 +++ b/src/gs-window-x11.c
 @@ -2,6 +2,7 @@
