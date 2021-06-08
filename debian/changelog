@@ -1,9 +1,16 @@
-gnome-screensaver (3.6.1-10+grm2u3+kepco01) unstable; urgency=medium
+gnome-screensaver (3.6.1-10+grm2u4+kepco01) unstable; urgency=medium
 
   [ cjheo ]
   * [c9019ac7] Initial Release on kepco-2.0
 
  -- Gooroom Autobuilder <jenkins@gooroom.kr>  Thu, 03 Dec 2020 09:26:07 +0900
+
+gnome-screensaver (3.6.1-10+grm2u4) unstable; urgency=medium
+
+  [ cjheo ]
+  * [cfb77a7d] pam.d-update-gnome-screensaver.execute 파일에서 setuid 제거
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Tue, 08 Jun 2021 19:27:39 +0900
 
 gnome-screensaver (3.6.1-10+grm2u3) unstable; urgency=medium
 
